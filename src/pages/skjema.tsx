@@ -4,8 +4,11 @@ import { Button, Fieldset, Textfield } from "@digdir/designsystemet-react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import styles from '@/styles/skjema.module.css';
+import { useRouter } from 'next/router';
 
 export default function Skjema() {
+  const router = useRouter()
+
   const formik = useFormik({
     initialValues: {
       orgInfo: {
@@ -42,7 +45,7 @@ export default function Skjema() {
     onSubmit: (values) => {
       // Behandle innsending av skjemaet
       console.log("Innsendte data:", values);
-      // Naviger til takk-siden eller gjør annen handling
+      router.push("/thanks")
     },
   });
 
@@ -122,7 +125,7 @@ export default function Skjema() {
             initialValues={formik.values.signaturrett}
           />
 
-          <Button type="submit">Send inn</Button>
+          <Button className={styles.button} type="submit">Send inn</Button>
         </form>
       </main>
     </>
