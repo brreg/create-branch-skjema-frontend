@@ -1,179 +1,149 @@
-import Header from "@/components/header"
-import { Button, Fieldset, Textfield } from "@digdir/designsystemet-react"
-
-import styles from '@/styles/skjema.module.css'
-import { useState } from "react";
+import React from 'react';
+import Header from "@/components/header";
+import { Button, Fieldset, Textfield } from "@digdir/designsystemet-react";
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import styles from '@/styles/skjema.module.css';
 
 export default function Skjema() {
+  const formik = useFormik({
+    initialValues: {
+      orgInfo: {
+        navn: "Sveriges Riksdag AB",
+        orgnr: "123456789",
+        adresse: "Riksgatan 1",
+        postnummer: "100 12",
+        poststed: "Stockholm",
+      },
+      nyttForetakInfo: {
+        navn: "",
+        adresse: "",
+        postnummer: "",
+        poststed: "",
+      },
+      dagligLeder: {
+        navn: "",
+        fnr: "",
+        adresse: "",
+        postnummer: "",
+        poststed: "",
+      },
+      signaturrett: {
+        navn: "Ola Norman",
+        fnr: "11111111111",
+        adresse: "Karl Johans Gate 22",
+        postnummer: "0026",
+        poststed: "Oslo",
+      },
+    },
+    validationSchema: Yup.object({
+      // Her kan du legge til validering ved hjelp av Yup
+    }),
+    onSubmit: (values) => {
+      // Behandle innsending av skjemaet
+      console.log("Innsendte data:", values);
+      // Naviger til takk-siden eller gjør annen handling
+    },
+  });
+
   return (
     <>
       <Header />
       <main>
-        <form>
-          <InputOrgInfo
-            readOnly={true}
-            navn="Sveriges Riksdag AB"
-            orgnr="123456789"
-            adresse="Riksgatan 1"
-            postnummer="100 12"
-            poststed="Stockholm"
-          />
-          <InputNyttForetakInfo />
+        <form onSubmit={formik.handleSubmit}>
+          <Fieldset legend="Informasjon om virksomheten i hjemlandet" className={styles.fieldset}>
+            <div className={styles.horisontal}>
+              <Textfield
+                label="Navn"
+                name="orgInfo.navn"
+                value={formik.values.orgInfo.navn}
+                onChange={formik.handleChange}
+                readOnly={true}
+                htmlSize={40}
+                className={styles.textfield}
+                required
+              />
+              <Textfield
+                label="Orgnr"
+                name="orgInfo.orgnr"
+                value={formik.values.orgInfo.orgnr}
+                onChange={formik.handleChange}
+                readOnly={true}
+                htmlSize={40}
+                className={styles.textfield}
+                required
+              />
+            </div>
+            <AdresseField
+              prefix="orgInfo"
+              readOnly={true}
+              formik={formik}
+              adresse={formik.values.orgInfo.adresse}
+              postnummer={formik.values.orgInfo.postnummer}
+              poststed={formik.values.orgInfo.poststed}
+            />
+          </Fieldset>
+
+          <Fieldset legend="Informasjon om det norske foretaket" className={styles.fieldset}>
+            <div className={styles.horisontal}>
+              <Textfield
+                label="Navn"
+                name="nyttForetakInfo.navn"
+                value={formik.values.nyttForetakInfo.navn}
+                onChange={formik.handleChange}
+                htmlSize={80}
+                className={styles.textfield}
+                required
+              />
+            </div>
+            <AdresseField
+              prefix="nyttForetakInfo"
+              readOnly={false}
+              formik={formik}
+              adresse={formik.values.nyttForetakInfo.adresse}
+              postnummer={formik.values.nyttForetakInfo.postnummer}
+              poststed={formik.values.nyttForetakInfo.poststed}
+            />
+          </Fieldset>
+
           <InputPersonInfo
             legend="Daglig leder"
+            prefix="dagligLeder"
+            readOnly={false}
+            formik={formik}
+            initialValues={formik.values.dagligLeder}
           />
+
           <InputPersonInfo
             legend="Personer med signaturrett"
+            prefix="signaturrett"
             readOnly={true}
-            navn="Ola Norman"
-            fnr="11111111111"
-            adresse="Karl Johans Gate 22"
-            postnummer="0026"
-            poststed="Oslo"
+            formik={formik}
+            initialValues={formik.values.signaturrett}
           />
+
           <Button type="submit">Send inn</Button>
         </form>
       </main>
     </>
-  )
+  );
 }
 
-function InputOrgInfo(props: InputOrgInfoProps) {
+// AdresseField-komponenten
+function AdresseField(props: any) {
   const {
+    prefix,
     readOnly = false,
-    navn = "",
-    orgnr = "",
-    adresse = "",
-    postnummer = "",
-    poststed = "",
+    formik,
   } = props;
-
-  const [localNavn, setLocalNavn] = useState<string>(navn);
-  const [localOrgnr, setLocalOrgnr] = useState<string>(orgnr);
-
-  return (
-    <Fieldset
-      legend="Informasjon om virksomheten i hjemlandet"
-      className={styles.fieldset}
-    >
-      <div className={styles.horisontal}>
-        <Textfield
-          label="Navn"
-          value={navn}
-          onChange={(e) => setLocalNavn(e.target.value)}
-          readOnly={readOnly}
-          htmlSize={40}
-          className={styles.textfield}
-          required
-        />
-        <Textfield
-          label="Orgnr"
-          value={orgnr}
-          onChange={(e) => setLocalOrgnr(e.target.value)}
-          readOnly={readOnly}
-          htmlSize={40}
-          className={styles.textfield}
-          required
-        />
-      </div>
-      <AdresseField
-        readOnly={readOnly}
-        adresse={adresse}
-        postnummer={postnummer}
-        poststed={poststed}
-      />
-    </Fieldset>
-  )
-}
-
-function InputNyttForetakInfo() {
-  return (
-    <Fieldset
-      legend="Informasjon det norske foretaket"
-      className={styles.fieldset}
-    >
-      <div className={styles.horisontal}>
-        <Textfield
-          label="Navn"
-          htmlSize={80}
-          className={styles.textfield}
-          required
-        />
-      </div>
-      <AdresseField
-        readOnly={false}
-      />
-    </Fieldset>
-  )
-}
-
-function InputPersonInfo(props: InputPersonInfoProps) {
-  const {
-    legend = "",
-    readOnly = false,
-    navn = "",
-    fnr = "",
-    adresse = "",
-    postnummer = "",
-    poststed = "",
-  } = props;
-
-  const [localNavn, setLocalNavn] = useState<string>(navn);
-  const [localFnr, setLocalFnr] = useState<string>(fnr);
-
-  return (
-    <Fieldset
-      legend={legend}
-      className={styles.fieldset}
-    >
-      <div className={styles.horisontal}>
-        <Textfield
-          label="Navn"
-          value={navn}
-          onChange={(e) => setLocalNavn(e.target.value)}
-          readOnly={readOnly}
-          htmlSize={40}
-          className={styles.textfield}
-          required
-        />
-        <Textfield
-          label="Fnr"
-          value={fnr}
-          onChange={(e) => setLocalFnr(e.target.value)}
-          readOnly={readOnly}
-          htmlSize={40}
-          className={styles.textfield}
-          required
-        />
-      </div>
-      <AdresseField
-        readOnly={readOnly}
-        adresse={adresse}
-        postnummer={postnummer}
-        poststed={poststed}
-      />
-    </Fieldset>
-  )
-}
-
-function AdresseField(props: AdresseFieldProps) {
-  const {
-    readOnly = false,
-    adresse = "",
-    postnummer = "",
-    poststed = "",
-  } = props;
-
-  const [localAdresse, setLocalAdresse] = useState<string>(adresse);
-  const [localPostnummer, setLocalPostnummer] = useState<string>(postnummer);
-  const [localPoststed, setLocalPoststed] = useState<string>(poststed);
 
   return (
     <div className={styles.horisontal}>
       <Textfield
         label="Adresse"
-        value={localAdresse}
-        onChange={(e) => setLocalAdresse(e.target.value)}
+        name={`${prefix}.adresse`}
+        value={formik.values[prefix].adresse}
+        onChange={formik.handleChange}
         readOnly={readOnly}
         htmlSize={40}
         className={styles.textfield}
@@ -182,8 +152,9 @@ function AdresseField(props: AdresseFieldProps) {
       <div className={styles.horisontal}>
         <Textfield
           label="Postnummer"
-          value={localPostnummer}
-          onChange={(e) => setLocalPostnummer(e.target.value)}
+          name={`${prefix}.postnummer`}
+          value={formik.values[prefix].postnummer}
+          onChange={formik.handleChange}
           readOnly={readOnly}
           htmlSize={15}
           className={styles.textfield}
@@ -191,8 +162,9 @@ function AdresseField(props: AdresseFieldProps) {
         />
         <Textfield
           label="Poststed"
-          value={localPoststed}
-          onChange={(e) => setLocalPoststed(e.target.value)}
+          name={`${prefix}.poststed`}
+          value={formik.values[prefix].poststed}
+          onChange={formik.handleChange}
           readOnly={readOnly}
           htmlSize={20}
           className={styles.textfield}
@@ -200,32 +172,47 @@ function AdresseField(props: AdresseFieldProps) {
         />
       </div>
     </div>
-  )
-
+  );
 }
 
-interface InputOrgInfoProps {
-  readOnly?: boolean;
-  navn?: string;
-  orgnr?: string;
-  adresse?: string;
-  postnummer?: string;
-  poststed?: string;
-}
+// InputPersonInfo-komponenten
+function InputPersonInfo(props: any) {
+  const {
+    legend = "",
+    prefix,
+    readOnly = false,
+    formik,
+  } = props;
 
-interface InputPersonInfoProps {
-  legend: string;
-  readOnly?: boolean;
-  navn?: string;
-  fnr?: string;
-  adresse?: string;
-  postnummer?: string;
-  poststed?: string;
-}
-
-interface AdresseFieldProps {
-  readOnly?: boolean;
-  adresse?: string;
-  postnummer?: string;
-  poststed?: string;
+  return (
+    <Fieldset legend={legend} className={styles.fieldset}>
+      <div className={styles.horisontal}>
+        <Textfield
+          label="Navn"
+          name={`${prefix}.navn`}
+          value={formik.values[prefix].navn}
+          onChange={formik.handleChange}
+          readOnly={readOnly}
+          htmlSize={40}
+          className={styles.textfield}
+          required
+        />
+        <Textfield
+          label="Fnr"
+          name={`${prefix}.fnr`}
+          value={formik.values[prefix].fnr}
+          onChange={formik.handleChange}
+          readOnly={readOnly}
+          htmlSize={40}
+          className={styles.textfield}
+          required
+        />
+      </div>
+      <AdresseField
+        prefix={prefix}
+        readOnly={readOnly}
+        formik={formik}
+      />
+    </Fieldset>
+  );
 }
