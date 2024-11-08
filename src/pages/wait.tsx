@@ -11,7 +11,7 @@ export default function Wait() {
   const texts = [
     'Laster inn data fra lommeboken',
     'Gjør avansert prosessering',
-    'Selger sensitive data til Amerika',
+    'Selger sensitive data til Trump',
     'Gjør hverdagen din bedre'
   ]
 
