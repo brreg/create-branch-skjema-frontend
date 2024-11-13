@@ -3,6 +3,7 @@ import styles from '@/styles/index.module.css'
 
 import { useRouter } from 'next/router'
 import { Button, Textfield } from '@digdir/designsystemet-react';
+import Image from "next/image";
 
 export default function Home() {
   const router = useRouter()
@@ -15,7 +16,7 @@ export default function Home() {
         <p>Snedig info om hvordan denne prosessen vil være</p>
         <div className={styles.main}>
           <h2>Scan QR koden for å laste opp credentials</h2>
-          <img src='qr.png' alt='Scan to push credentials' />
+          <Image src='/qr.png' alt='Scan to push credentials' width={200} height={200} />
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
           <div className={styles.didinput}>
             <Textfield
