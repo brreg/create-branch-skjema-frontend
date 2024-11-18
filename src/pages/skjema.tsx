@@ -53,39 +53,42 @@ export default function Skjema() {
     <>
       <Header />
       <main>
+
         <form onSubmit={formik.handleSubmit}>
-          <Fieldset legend="Informasjon om virksomheten i hjemlandet" className={styles.fieldset}>
-            <div className={styles.horisontal}>
-              <Textfield
-                label="Navn"
-                name="orgInfo.navn"
-                value={formik.values.orgInfo.navn}
-                onChange={formik.handleChange}
+          <div className={styles.fieldset}>
+            <Fieldset legend="Informasjon om virksomheten i hjemlandet" className={styles.fieldset}>
+              <div className={styles.horisontal}>
+                <Textfield
+                  label="Navn"
+                  name="orgInfo.navn"
+                  value={formik.values.orgInfo.navn}
+                  onChange={formik.handleChange}
+                  readOnly={true}
+                  htmlSize={80}
+                  className={styles.textfield}
+                  required
+                />
+                <Textfield
+                  label="Orgnr"
+                  name="orgInfo.orgnr"
+                  value={formik.values.orgInfo.orgnr}
+                  onChange={formik.handleChange}
+                  readOnly={true}
+                  htmlSize={10}
+                  className={styles.textfield}
+                  required
+                />
+              </div>
+              <AdresseField
+                prefix="orgInfo"
                 readOnly={true}
-                htmlSize={40}
-                className={styles.textfield}
-                required
+                formik={formik}
+                adresse={formik.values.orgInfo.adresse}
+                postnummer={formik.values.orgInfo.postnummer}
+                poststed={formik.values.orgInfo.poststed}
               />
-              <Textfield
-                label="Orgnr"
-                name="orgInfo.orgnr"
-                value={formik.values.orgInfo.orgnr}
-                onChange={formik.handleChange}
-                readOnly={true}
-                htmlSize={40}
-                className={styles.textfield}
-                required
-              />
-            </div>
-            <AdresseField
-              prefix="orgInfo"
-              readOnly={true}
-              formik={formik}
-              adresse={formik.values.orgInfo.adresse}
-              postnummer={formik.values.orgInfo.postnummer}
-              poststed={formik.values.orgInfo.poststed}
-            />
-          </Fieldset>
+            </Fieldset>
+          </div>
 
           <Fieldset legend="Informasjon om det norske foretaket" className={styles.fieldset}>
             <div className={styles.horisontal}>
@@ -127,7 +130,7 @@ export default function Skjema() {
 
           <Button className={styles.button} type="submit">Send inn</Button>
         </form>
-      </main>
+      </main >
     </>
   );
 }
@@ -148,7 +151,7 @@ function AdresseField(props: any) {
         value={formik.values[prefix].adresse}
         onChange={formik.handleChange}
         readOnly={readOnly}
-        htmlSize={40}
+        htmlSize={80}
         className={styles.textfield}
         required
       />
@@ -159,7 +162,7 @@ function AdresseField(props: any) {
           value={formik.values[prefix].postnummer}
           onChange={formik.handleChange}
           readOnly={readOnly}
-          htmlSize={15}
+          htmlSize={10}
           className={styles.textfield}
           required
         />
@@ -169,7 +172,6 @@ function AdresseField(props: any) {
           value={formik.values[prefix].poststed}
           onChange={formik.handleChange}
           readOnly={readOnly}
-          htmlSize={20}
           className={styles.textfield}
           required
         />
@@ -196,7 +198,7 @@ function InputPersonInfo(props: any) {
           value={formik.values[prefix].navn}
           onChange={formik.handleChange}
           readOnly={readOnly}
-          htmlSize={40}
+          htmlSize={80}
           className={styles.textfield}
           required
         />
@@ -206,7 +208,7 @@ function InputPersonInfo(props: any) {
           value={formik.values[prefix].fnr}
           onChange={formik.handleChange}
           readOnly={readOnly}
-          htmlSize={40}
+          htmlSize={10}
           className={styles.textfield}
           required
         />
