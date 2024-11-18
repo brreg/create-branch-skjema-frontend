@@ -6,7 +6,6 @@ import styles from '@/styles/wait.module.css'
 
 export default function Wait() {
   const [textIndex, setTextIndex] = useState(0)
-  const [count, setCount] = useState(0);
 
   const [finishedArray, setFinishedArray] = useState(new Array(4).fill(false))
   const [activeArray, setActiveArray] = useState([true, false, false, false])
