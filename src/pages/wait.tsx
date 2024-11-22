@@ -11,6 +11,7 @@ export default function Wait() {
   const [activeArray, setActiveArray] = useState([true, false, false, false])
   const router = useRouter()
 
+  // husk å oppdatere finishedArray default array length når du endrer lengden på listen med texts
   const texts = [
     'Kobler til lommeboken',
     'Henter NPID',
