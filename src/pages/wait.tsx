@@ -1,15 +1,14 @@
+import './wait.css'
 import { Spinner } from "@digdir/designsystemet-react";
 import { useEffect, useState } from "react";
-import { useRouter } from 'next/router'
+import { useNavigate } from 'react-router';
 
-import styles from '@/styles/wait.module.css'
-
-export default function Wait() {
+export default function WaitPage() {
+  const navigate = useNavigate();
   const [textIndex, setTextIndex] = useState(0)
 
   const [finishedArray, setFinishedArray] = useState(new Array(4).fill(false))
   const [activeArray, setActiveArray] = useState([true, false, false, false])
-  const router = useRouter()
 
   // husk å oppdatere finishedArray default array length når du endrer lengden på listen med texts
   const texts = [
@@ -26,17 +25,17 @@ export default function Wait() {
     }, 2000)
 
     const navigationTimeout = setTimeout(() => {
-      router.push('/skjema')
+      navigate("/skjema")
     }, 9000)
 
     return () => {
       clearInterval(textInterval)
       clearTimeout(navigationTimeout)
     }
-  }, [router])
+  }, [])
 
   useEffect(() => {
-    const nextFinishedArray = finishedArray.map((b, i) => {
+    const nextFinishedArray = finishedArray.map((_, i) => {
       if (i < textIndex) {
         return true
       } else {
@@ -45,7 +44,7 @@ export default function Wait() {
     })
     setFinishedArray(nextFinishedArray)
 
-    const nextActiveArray = finishedArray.map((b, i) => {
+    const nextActiveArray = finishedArray.map((_, i) => {
       if (i === textIndex) {
         return true
       } else {
@@ -56,9 +55,9 @@ export default function Wait() {
   },[textIndex])
 
   return (
-    <main className={styles.main}>
-      <div className={styles.main2}>
-        <div className={styles.maincontent}>
+    <main className='main'>
+      <div className='main2'>
+        <div className='maincontent'>
           {
             texts.map((s, i) => {
               return <StatusRow key={i} text={s} finished={finishedArray[i]} active={activeArray[i]} />
@@ -74,8 +73,8 @@ function StatusRow(props: any) {
   const { text, finished, active } = props;
 
   return (
-    <div className={styles.statusrow}>
-      <div className={styles.statusicon} >
+    <div className='statusrow'>
+      <div className='statusicon' >
         {finished ?
           <p>✅</p> : null
         }

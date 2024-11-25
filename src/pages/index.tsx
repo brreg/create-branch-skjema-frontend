@@ -1,16 +1,15 @@
-import Header from "@/components/header"
-import styles from '@/styles/index.module.css'
-
-import {QRCodeSVG} from "qrcode.react";
-import { useRouter } from 'next/router'
+import './index.css'
+import { useEffect, useState } from 'react'
+import { useSession } from '../context/SessionContext'
+import { QRCodeSVG } from 'qrcode.react'
 import { Button, Textfield } from '@digdir/designsystemet-react';
-import { useSession } from "@/context/SessionContext";
-import { useEffect, useState } from "react";
+import { useNavigate } from 'react-router';
 
-export default function Home() {
+
+function IndexPage() {
+  const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("")
-  const router = useRouter()
-  const { sessionId } = useSession();
+  const { sessionId } = useSession()
 
   useEffect(() => {
     fetchQrLink()
@@ -21,7 +20,7 @@ export default function Home() {
       if (!sessionId) {
         throw new Error("SessionId is missing")
       }
-      const response = await fetch( process.env.NEXT_PUBLIC_BACKEND_URL+"/api/qr-code", {
+      const response = await fetch( import.meta.env.NEXT_PUBLIC_BACKEND_URL+"/api/qr-code", {
         headers: {
           "x-session-id": sessionId
         }
@@ -39,28 +38,28 @@ export default function Home() {
     }
   }
 
-
   return (
     <>
-      <Header />
-      <main className={styles.main}>
+      <main className='center'>
         <h1>Create branch info side</h1>
         <p>Snedig info om hvordan denne prosessen vil være</p>
-        <div className={styles.main}>
+        <div className='center'>
           <h2>Scan QR koden for å laste opp credentials</h2>
-          <QRCodeSVG value={qrLink} />
+          <QRCodeSVG value={qrLink} className='qrimage'/>
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
-          <div className={styles.didinput}>
+          <div className="didinput">
             <Textfield
               data-size="md"
               label="DID addresse til din personlommebok"
               htmlSize={40}
               required
             />
-            <Button onClick={() => router.push('/wait')}>Send inn</Button>
+            <Button onClick={() => navigate("/wait")}>Send inn</Button>
           </div>
         </div>
       </main>
     </>
-  );
+  )
 }
+
+export default IndexPage

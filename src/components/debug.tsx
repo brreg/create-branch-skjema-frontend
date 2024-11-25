@@ -1,6 +1,7 @@
-import { useSession } from "@/context/SessionContext";
+import { useSession } from "../context/SessionContext"; 
 import CSS from "csstype";
 import { useEffect, useState } from "react";
+import { DeleteCookie } from "../context/Cookie";
 
 export default function Debug() {
   const [ttl, setTtl] = useState(0)
@@ -10,7 +11,8 @@ export default function Debug() {
     backgroundColor: "yellow",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    marginTop: "20px"
   };
 
   useEffect(() => {
@@ -26,7 +28,7 @@ export default function Debug() {
   }, [expiresAt])
 
   const handleDeleteSession = () => {
-    document.cookie = 'sessionData=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    DeleteCookie()
     window.location.reload()
   }
 

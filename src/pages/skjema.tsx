@@ -1,13 +1,11 @@
-import React from 'react';
-import Header from "@/components/header";
+import './skjema.css'
 import { Button, Fieldset, Textfield } from "@digdir/designsystemet-react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import styles from '@/styles/skjema.module.css';
-import { useRouter } from 'next/router';
+import { useNavigate } from "react-router";
 
-export default function Skjema() {
-  const router = useRouter()
+export default function SkjemaPage() {
+  const navigate = useNavigate();
 
   const formik = useFormik({
     initialValues: {
@@ -45,19 +43,17 @@ export default function Skjema() {
     onSubmit: (values) => {
       // Behandle innsending av skjemaet
       console.log("Innsendte data:", values);
-      router.push("/thanks")
+      navigate("/thanks")
     },
   });
 
   return (
     <>
-      <Header />
       <main>
-
         <form onSubmit={formik.handleSubmit}>
-          <div className={styles.fieldset}>
-            <Fieldset legend="Informasjon om virksomheten i hjemlandet" className={styles.fieldset}>
-              <div className={styles.horisontal}>
+          <div className='fieldset'>
+            <Fieldset legend="Informasjon om virksomheten i hjemlandet" className='fieldset'>
+              <div className='horisontal'>
                 <Textfield
                   label="Navn"
                   name="orgInfo.navn"
@@ -65,7 +61,7 @@ export default function Skjema() {
                   onChange={formik.handleChange}
                   readOnly={true}
                   htmlSize={80}
-                  className={styles.textfield}
+                  className='textfield'
                   required
                 />
                 <Textfield
@@ -75,7 +71,7 @@ export default function Skjema() {
                   onChange={formik.handleChange}
                   readOnly={true}
                   htmlSize={10}
-                  className={styles.textfield}
+                  className='textfield'
                   required
                 />
               </div>
@@ -90,15 +86,15 @@ export default function Skjema() {
             </Fieldset>
           </div>
 
-          <Fieldset legend="Informasjon om det norske foretaket" className={styles.fieldset}>
-            <div className={styles.horisontal}>
+          <Fieldset legend="Informasjon om det norske foretaket" className='fieldset'>
+            <div className='horisontal'>
               <Textfield
                 label="Navn"
                 name="nyttForetakInfo.navn"
                 value={formik.values.nyttForetakInfo.navn}
                 onChange={formik.handleChange}
                 htmlSize={80}
-                className={styles.textfield}
+                className='textfield'
                 required
               />
             </div>
@@ -128,7 +124,7 @@ export default function Skjema() {
             initialValues={formik.values.signaturrett}
           />
 
-          <Button className={styles.button} type="submit">Send inn</Button>
+          <Button className='button' type="submit">Send inn</Button>
         </form>
       </main >
     </>
@@ -144,7 +140,7 @@ function AdresseField(props: any) {
   } = props;
 
   return (
-    <div className={styles.horisontal}>
+    <div className='horisontal'>
       <Textfield
         label="Adresse"
         name={`${prefix}.adresse`}
@@ -152,10 +148,10 @@ function AdresseField(props: any) {
         onChange={formik.handleChange}
         readOnly={readOnly}
         htmlSize={80}
-        className={styles.textfield}
+        className='textfield'
         required
       />
-      <div className={styles.horisontal}>
+      <div className='horisontal'>
         <Textfield
           label="Postnummer"
           name={`${prefix}.postnummer`}
@@ -163,7 +159,7 @@ function AdresseField(props: any) {
           onChange={formik.handleChange}
           readOnly={readOnly}
           htmlSize={10}
-          className={styles.textfield}
+          className='textfield'
           required
         />
         <Textfield
@@ -172,7 +168,7 @@ function AdresseField(props: any) {
           value={formik.values[prefix].poststed}
           onChange={formik.handleChange}
           readOnly={readOnly}
-          className={styles.textfield}
+          className='textfield'
           required
         />
       </div>
@@ -190,8 +186,8 @@ function InputPersonInfo(props: any) {
   } = props;
 
   return (
-    <Fieldset legend={legend} className={styles.fieldset}>
-      <div className={styles.horisontal}>
+    <Fieldset legend={legend} className='fieldset'>
+      <div className='horisontal'>
         <Textfield
           label="Navn"
           name={`${prefix}.navn`}
@@ -199,7 +195,7 @@ function InputPersonInfo(props: any) {
           onChange={formik.handleChange}
           readOnly={readOnly}
           htmlSize={80}
-          className={styles.textfield}
+          className='textfield'
           required
         />
         <Textfield
@@ -209,7 +205,7 @@ function InputPersonInfo(props: any) {
           onChange={formik.handleChange}
           readOnly={readOnly}
           htmlSize={10}
-          className={styles.textfield}
+          className='textfield'
           required
         />
       </div>
