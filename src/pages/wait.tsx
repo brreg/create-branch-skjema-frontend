@@ -35,7 +35,7 @@ export default function WaitPage() {
   }, [])
 
   useEffect(() => {
-    const nextFinishedArray = finishedArray.map((b, i) => {
+    const nextFinishedArray = finishedArray.map((_, i) => {
       if (i < textIndex) {
         return true
       } else {
@@ -44,7 +44,7 @@ export default function WaitPage() {
     })
     setFinishedArray(nextFinishedArray)
 
-    const nextActiveArray = finishedArray.map((b, i) => {
+    const nextActiveArray = finishedArray.map((_, i) => {
       if (i === textIndex) {
         return true
       } else {
