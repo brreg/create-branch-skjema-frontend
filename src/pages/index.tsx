@@ -1,15 +1,13 @@
-
-import Debug from '../components/debug'
-import { CreateCookieIfMissing } from '../context/Cookie'
-import Header from '../components/header'
+import './index.css'
 import { useEffect, useState } from 'react'
 import { useSession } from '../context/SessionContext'
 import { QRCodeSVG } from 'qrcode.react'
 import { Button, Textfield } from '@digdir/designsystemet-react';
+import { useNavigate } from 'react-router';
 
 
 function IndexPage() {
-  CreateCookieIfMissing()
+  const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("")
   const { sessionId } = useSession()
 
@@ -42,23 +40,21 @@ function IndexPage() {
 
   return (
     <>
-      <Debug />
-      <Header />
-      <main>
+      <main className='center'>
         <h1>Create branch info side</h1>
         <p>Snedig info om hvordan denne prosessen vil være</p>
-        <div>
+        <div className='center'>
           <h2>Scan QR koden for å laste opp credentials</h2>
-          <QRCodeSVG value={qrLink} />
+          <QRCodeSVG value={qrLink} className='qrimage'/>
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
-          <div>
+          <div className="didinput">
             <Textfield
               data-size="md"
               label="DID addresse til din personlommebok"
               htmlSize={40}
               required
             />
-            <Button >Send inn</Button>
+            <Button onClick={() => navigate("/wait")}>Send inn</Button>
           </div>
         </div>
       </main>

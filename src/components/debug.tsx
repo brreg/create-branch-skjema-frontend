@@ -11,7 +11,8 @@ export default function Debug() {
     backgroundColor: "yellow",
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-around"
+    justifyContent: "space-around",
+    marginTop: "20px"
   };
 
   useEffect(() => {
