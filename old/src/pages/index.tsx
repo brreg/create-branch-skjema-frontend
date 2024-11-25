@@ -1,17 +1,16 @@
+import Header from "@/components/header"
+import styles from '@/styles/index.module.css'
 
-import Debug from '../components/debug'
-import { CreateCookieIfMissing } from '../context/Cookie'
-import Header from '../components/header'
-import { useEffect, useState } from 'react'
-import { useSession } from '../context/SessionContext'
-import { QRCodeSVG } from 'qrcode.react'
+import {QRCodeSVG} from "qrcode.react";
+import { useRouter } from 'next/router'
 import { Button, Textfield } from '@digdir/designsystemet-react';
+import { useSession } from "@/context/SessionContext";
+import { useEffect, useState } from "react";
 
-
-function IndexPage() {
-  CreateCookieIfMissing()
+export default function Home() {
   const [qrLink, setQrLink] = useState("")
-  const { sessionId } = useSession()
+  const router = useRouter()
+  const { sessionId } = useSession();
 
   useEffect(() => {
     fetchQrLink()
@@ -22,7 +21,7 @@ function IndexPage() {
       if (!sessionId) {
         throw new Error("SessionId is missing")
       }
-      const response = await fetch( import.meta.env.NEXT_PUBLIC_BACKEND_URL+"/api/qr-code", {
+      const response = await fetch( process.env.NEXT_PUBLIC_BACKEND_URL+"/api/qr-code", {
         headers: {
           "x-session-id": sessionId
         }
@@ -40,30 +39,28 @@ function IndexPage() {
     }
   }
 
+
   return (
     <>
-      <Debug />
       <Header />
-      <main>
+      <main className={styles.main}>
         <h1>Create branch info side</h1>
         <p>Snedig info om hvordan denne prosessen vil være</p>
-        <div>
+        <div className={styles.main}>
           <h2>Scan QR koden for å laste opp credentials</h2>
           <QRCodeSVG value={qrLink} />
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
-          <div>
+          <div className={styles.didinput}>
             <Textfield
               data-size="md"
               label="DID addresse til din personlommebok"
               htmlSize={40}
               required
             />
-            <Button >Send inn</Button>
+            <Button onClick={() => router.push('/wait')}>Send inn</Button>
           </div>
         </div>
       </main>
     </>
-  )
+  );
 }
-
-export default IndexPage

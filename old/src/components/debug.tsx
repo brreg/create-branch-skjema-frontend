@@ -1,7 +1,6 @@
-import { useSession } from "../context/SessionContext"; 
+import { useSession } from "@/context/SessionContext";
 import CSS from "csstype";
 import { useEffect, useState } from "react";
-import { DeleteCookie } from "../context/Cookie";
 
 export default function Debug() {
   const [ttl, setTtl] = useState(0)
@@ -27,7 +26,7 @@ export default function Debug() {
   }, [expiresAt])
 
   const handleDeleteSession = () => {
-    DeleteCookie()
+    document.cookie = 'sessionData=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     window.location.reload()
   }
 
