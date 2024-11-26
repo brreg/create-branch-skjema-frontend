@@ -34,5 +34,5 @@ export function CreateCookieIfMissing() {
 }
 
 export function DeleteCookie() {
-  document.cookie = sessionCookieName + "; Max-Age=0; path=/"
+  document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=" + import.meta.env.VITE_COOKIE_DOMAIN
 }
