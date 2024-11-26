@@ -20,7 +20,7 @@ function IndexPage() {
       if (!sessionId) {
         throw new Error("SessionId is missing")
       }
-      const response = await fetch( import.meta.env.NEXT_PUBLIC_BACKEND_URL+"/api/qr-code", {
+      const response = await fetch( import.meta.env.VITE_BACKEND_URL+"/api/qr-code", {
         headers: {
           "x-session-id": sessionId
         }
