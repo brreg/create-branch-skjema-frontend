@@ -34,9 +34,6 @@ export function CreateCookieIfMissing() {
 }
 
 export function DeleteCookie() {
-
-  document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=.polite-bush-0c26cb003.5.azurestaticapps.net"
-  document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=" + import.meta.env.VITE_COOKIE_DOMAIN
-  console.log(import.meta.env.VITE_COOKIE_DOMAIN)
-
+  document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=polite-bush-0c26cb003.5.azurestaticapps.net"
+  document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=localhost"
 }
