@@ -31,9 +31,14 @@ export function CreateCookieIfMissing() {
 
     document.cookie = sessionCookieName + encodeURIComponent(sessionValue) + "; Max-Age="+ sessionDurationSeconds + "; path=/"
   }
+  console.log(import.meta.env)
 }
 
 export function DeleteCookie() {
-  document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=polite-bush-0c26cb003.5.azurestaticapps.net"
-  document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=localhost"
+  if (import.meta.env.PROD) {
+    document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=.polite-bush-0c26cb003.5.azurestaticapps.net"
+    document.cookie = sessionCookieName + "; Max-Age=0; Path=/"
+  } else {
+    document.cookie = sessionCookieName + "; Max-Age=0; Path=/; Domain=localhost"
+  }
 }
