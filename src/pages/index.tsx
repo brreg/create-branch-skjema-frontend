@@ -19,6 +19,7 @@ function IndexPage() {
     try {
       if (sessionId) {
         const response = await fetch("https://create-branch-java-backend.ashyflower-f0c84bfc.westeurope.azurecontainerapps.io/api/qrcode", {
+          method: "POST",
           headers: {
             "x-session-id": sessionId
           }
