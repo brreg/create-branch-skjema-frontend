@@ -17,23 +17,21 @@ function IndexPage() {
 
   const fetchQrLink = async () => {
     try {
-      if (!sessionId) {
-        throw new Error("SessionId is missing")
-      }
-      console.log('backend url:', import.meta.env.VITE_BACKEND_URL)
-      const response = await fetch( import.meta.env.VITE_BACKEND_URL+"/api/qrcode", {
-        headers: {
-          "x-session-id": sessionId
+      if (sessionId) {
+        const response = await fetch("https://create-branch-java-backend.ashyflower-f0c84bfc.westeurope.azurecontainerapps.io/api/qrcode", {
+          headers: {
+            "x-session-id": sessionId
+          }
+        })
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch QR link")
         }
-      })
 
-      if (!response.ok) {
-        throw new Error("Failed to fetch QR link")
+        const data = await response.json()
+        console.log("received data from /api/qrcode")
+        setQrLink(data.didcommUri)
       }
-
-      const data = await response.json()
-      console.log("received data from /api/qrcode")
-      setQrLink(data.didcommUri)
     } catch (error) {
       console.error("Error fetching QR link:", error)
     }
@@ -46,7 +44,7 @@ function IndexPage() {
         <p>Snedig info om hvordan denne prosessen vil være</p>
         <div className='center'>
           <h2>Scan QR koden for å laste opp credentials</h2>
-          <QRCodeSVG value={qrLink} className='qrimage'/>
+          <QRCodeSVG value={qrLink} className='qrimage' />
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
           <div className="didinput">
             <Textfield
