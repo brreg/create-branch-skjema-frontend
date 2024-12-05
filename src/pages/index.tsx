@@ -16,12 +16,12 @@ function IndexPage() {
   }, [sessionId])
 
   const fetchQrLink = async () => {
-    console.log(sessionId)
     try {
       if (!sessionId) {
         throw new Error("SessionId is missing")
       }
-      const response = await fetch( import.meta.env.VITE_BACKEND_URL+"/api/qr-code", {
+      console.log('backend url:', import.meta.env.VITE_BACKEND_URL)
+      const response = await fetch( import.meta.env.VITE_BACKEND_URL+"/api/qrcode", {
         headers: {
           "x-session-id": sessionId
         }
