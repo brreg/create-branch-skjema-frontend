@@ -16,6 +16,7 @@ function IndexPage() {
   }, [sessionId])
 
   const fetchQrLink = async () => {
+    console.log(sessionId)
     try {
       if (!sessionId) {
         throw new Error("SessionId is missing")
