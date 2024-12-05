@@ -31,7 +31,7 @@ function IndexPage() {
       }
 
       const data = await response.json()
-      console.log("received data from /api/qr-code")
+      console.log("received data from /api/qrcode")
       setQrLink(data.didcommUri)
     } catch (error) {
       console.error("Error fetching QR link:", error)
@@ -56,6 +56,10 @@ function IndexPage() {
             />
             <Button onClick={() => navigate("/wait")}>Send inn</Button>
           </div>
+        </div>
+        <div className='center'>
+          <h1></h1>
+          <Button onClick={() => navigate("/testdata")}>MEN JEG TRENGER TESTDATA!</Button>
         </div>
       </main>
     </>
