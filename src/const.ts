@@ -5,7 +5,7 @@ let backendUrl: string
 if (import.meta.env.PROD) {
   url = "create-branch-java-backend.ashyflower-f0c84bfc.westeurope.azurecontainerapps.io"
   backendUrl = "https://" + url
-  backendWebsocketUrl = "ws://" + url
+  backendWebsocketUrl = "wss://" + url
 } else {
   url = "localhost:8080"
   backendUrl = "http://" + url
