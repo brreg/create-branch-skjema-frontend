@@ -4,6 +4,7 @@ import { useSession } from '../context/SessionContext'
 import { QRCodeSVG } from 'qrcode.react'
 import { Button, Textfield } from '@digdir/designsystemet-react';
 import { useNavigate } from 'react-router';
+import { HashLoader } from 'react-spinners';
 
 
 function IndexPage() {
@@ -18,7 +19,13 @@ function IndexPage() {
   const fetchQrLink = async () => {
     try {
       if (sessionId) {
-        const response = await fetch("https://create-branch-java-backend.ashyflower-f0c84bfc.westeurope.azurecontainerapps.io/api/qrcode", {
+        let backendUrl
+        if (import.meta.env.PROD) {
+          backendUrl = "https://create-branch-java-backend.ashyflower-f0c84bfc.westeurope.azurecontainerapps.io"
+        } else {
+          backendUrl = "localhost:8080"
+        }
+        const response = await fetch(backendUrl + "/api/qrcode", {
           method: "POST",
           headers: {
             "x-session-id": sessionId
@@ -45,7 +52,13 @@ function IndexPage() {
         <p>Snedig info om hvordan denne prosessen vil være</p>
         <div className='center'>
           <h2>Scan QR koden for å laste opp credentials</h2>
-          <QRCodeSVG value={qrLink} className='qrimage' />
+          {qrLink === "" ?
+            <div className='loader'>
+              <HashLoader />
+            </div> 
+            :
+            <QRCodeSVG value={qrLink} className='qrimage' />
+          }
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
           <div className="didinput">
             <Textfield
