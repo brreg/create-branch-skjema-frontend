@@ -3,18 +3,52 @@ import { Button, Fieldset, Textfield } from "@digdir/designsystemet-react";
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { useNavigate } from "react-router";
+import { useSession } from '../context/SessionContext';
+import { useEffect, useState } from 'react';
+import { backendUrl } from '../const';
+import { SessionResponse } from '../types/SessionResponse';
 
 export default function SkjemaPage() {
   const navigate = useNavigate();
+  const [data, setData] = useState<SessionResponse | null>(null);
+  const { sessionId } = useSession()
+
+  useEffect(() => {
+    getSessionData();
+  }, [sessionId])
+
+  const getSessionData = async () => {
+    try {
+      if (sessionId) {        
+        const response = await fetch(backendUrl + "/api/session", {
+          headers: {
+            "x-session-id": sessionId
+          }
+        })
+        if (response.status === 200) {
+          console.log("Data funnet i /api/session");
+          const sessionData: SessionResponse = await response.json();
+          setData(sessionData);
+        }
+
+        if (response.status === 204) {
+          console.log("Ingen data funnet i /api/session");
+          navigate("/");
+        }
+      }
+    } catch (error) {
+      console.error("Feil ved henting av data for sesjon: ", error);
+    }
+  }
 
   const formik = useFormik({
     initialValues: {
       orgInfo: {
-        navn: "Sveriges Riksdag AB",
-        orgnr: "123456789",
-        adresse: "Riksgatan 1",
-        postnummer: "100 12",
-        poststed: "Stockholm",
+        navn: data?.foretakNavn || "",
+        orgnr: data?.foretakOrgnr || "",
+        adresse: data?.foretakAdresse ? data.foretakAdresse.split(';')[0] : "",
+        postnummer: data?.foretakAdresse ? data.foretakAdresse.split(';')[1]?.slice(0, 4) : "",
+        poststed: data?.foretakAdresse ? data.foretakAdresse.split(';')[2] : "",
       },
       nyttForetakInfo: {
         navn: "",
@@ -23,29 +57,64 @@ export default function SkjemaPage() {
         poststed: "",
       },
       dagligLeder: {
-        navn: "",
-        fnr: "",
+        navn: data?.representantNavn || "",
+        fnr: data?.personFnr || "",
         adresse: "",
         postnummer: "",
         poststed: "",
       },
       signaturrett: {
-        navn: "Ola Norman",
-        fnr: "11111111111",
-        adresse: "Karl Johans Gate 22",
-        postnummer: "0026",
-        poststed: "Oslo",
+        navn: data?.representantNavn || "",
+        fnr: data?.personFnr || "",
+        adresse: "",
+        postnummer: "",
+        poststed: "",
       },
     },
+    enableReinitialize: true, // VIKTIG: Tillater oppdatering av initialValues etter at data er hentet
     validationSchema: Yup.object({
       // Her kan du legge til validering ved hjelp av Yup
     }),
     onSubmit: (values) => {
       // Behandle innsending av skjemaet
       console.log("Innsendte data:", values);
-      navigate("/thanks")
+      navigate("/thanks");
     },
   });
+
+  useEffect(() => {
+    if (data) {
+      formik.setValues({
+        orgInfo: {
+          navn: data.foretakNavn || "",
+          orgnr: data.foretakOrgnr || "",
+          adresse: data.foretakAdresse ? data.foretakAdresse.split(';')[0] : "",
+          postnummer: data.foretakAdresse ? data.foretakAdresse.split(';')[1]?.slice(0, 4) : "",
+          poststed: data.foretakAdresse ? data.foretakAdresse.split(';')[2] : "",
+        },
+        nyttForetakInfo: {
+          navn: "",
+          adresse: "",
+          postnummer: "",
+          poststed: "",
+        },
+        dagligLeder: {
+          navn: data.representantNavn || "",
+          fnr: data.personFnr || "",
+          adresse: "",
+          postnummer: "",
+          poststed: "",
+        },
+        signaturrett: {
+          navn: data.representantNavn || "",
+          fnr: data.personFnr || "",
+          adresse: "",
+          postnummer: "",
+          poststed: "",
+        },
+      });
+    }
+  }, [data]);
 
   return (
     <>
@@ -130,6 +199,7 @@ export default function SkjemaPage() {
     </>
   );
 }
+
 
 // AdresseField-komponenten
 function AdresseField(props: any) {

@@ -1,30 +1,83 @@
 import './index.css'
 import { useEffect, useState } from 'react'
 import { useSession } from '../context/SessionContext'
+import { backendWebsocketUrl, backendUrl } from '../const'
 import { QRCodeSVG } from 'qrcode.react'
 import { Button, Textfield } from '@digdir/designsystemet-react';
 import { useNavigate } from 'react-router';
 import { HashLoader } from 'react-spinners';
-
+import { Client } from '@stomp/stompjs';
+import { WebSocket } from 'ws';
+import { createPortal } from 'react-dom'
+import WaitModal from '../components/waitModal'
+Object.assign(global, { WebSocket });
 
 function IndexPage() {
   const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("")
+  const [showWaitModal, setShowWaitModal] = useState(false)
+  const [didAddress, setDidAddress] = useState('');
   const { sessionId } = useSession()
 
+  const stompClient = new Client({
+    brokerURL: backendWebsocketUrl + "/ws"
+  })
+
+  // stompClient.debug = (str) => {
+  //   console.log('STOMP: ' + str);
+  // };
+
+  stompClient.onConnect = () => {
+    console.log('STOMP connected');
+    stompClient.subscribe(`/topic/sessions/${sessionId}`, (message) => {
+      console.log("Data mottatt: ", message.body);
+      navigate("/skjema")
+    });
+  };
+
+  stompClient.onWebSocketError = (error) => {
+    console.error('Error with websocket', error);
+  };
+
+  stompClient.onDisconnect = () => {
+    console.log("STOMP disconnected")
+  }
+
   useEffect(() => {
+    stompClient.activate();
+    checkIfSessionHasData();
     fetchQrLink()
+
+    return () => {
+      stompClient.deactivate()
+    }
   }, [sessionId])
+
+  const checkIfSessionHasData = async () => {
+    try {
+      if (sessionId) {
+        const response = await fetch(backendUrl + "/api/session", {
+          headers: {
+            "x-session-id": sessionId
+          }
+        })
+        if (response.status == 200) {
+          console.log("data found in /api/session")
+          navigate("/skjema")
+        }
+
+        if (response.status == 204) {
+          console.log("no data found in /api/session")
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching data for session: ", error)
+    }
+  }
 
   const fetchQrLink = async () => {
     try {
       if (sessionId) {
-        let backendUrl
-        if (import.meta.env.PROD) {
-          backendUrl = "https://create-branch-java-backend.ashyflower-f0c84bfc.westeurope.azurecontainerapps.io"
-        } else {
-          backendUrl = "localhost:8080"
-        }
         const response = await fetch(backendUrl + "/api/qrcode", {
           method: "POST",
           headers: {
@@ -45,6 +98,29 @@ function IndexPage() {
     }
   }
 
+  async function sendDIDaddress() {
+    try {
+      setShowWaitModal(true)
+      if (!didAddress.trim()) return; // sjekker om input er tom
+      if (!sessionId) return;
+
+      const response = await fetch(backendUrl + "/api/message", {
+        method: "POST",
+        headers: {
+          "x-session-id": sessionId,
+          "recipient-did-url": didAddress
+        }
+      })
+
+      if (!response.ok) {
+        throw new Error("Failed to fetch QR link")
+      }
+
+    } catch (error) {
+      console.error("Error fetching QR link:", error)
+    }
+  }
+
   return (
     <>
       <main className='center'>
@@ -55,7 +131,7 @@ function IndexPage() {
           {qrLink === "" ?
             <div className='loader'>
               <HashLoader />
-            </div> 
+            </div>
             :
             <QRCodeSVG value={qrLink} className='qrimage' />
           }
@@ -66,9 +142,18 @@ function IndexPage() {
               label="DID addresse til din personlommebok"
               htmlSize={40}
               required
+              value={didAddress}
+              onChange={(e) => setDidAddress(e.target.value)}
             />
-            <Button onClick={() => navigate("/wait")}>Send inn</Button>
+            <Button
+              onClick={() => sendDIDaddress()}
+              disabled={didAddress.trim().length === 0}
+            >Send inn</Button>
           </div>
+          {showWaitModal && createPortal(
+            <WaitModal onClose={() => setShowWaitModal(false)} />,
+            document.body
+          )}
         </div>
         <div className='center'>
           <h1></h1>
