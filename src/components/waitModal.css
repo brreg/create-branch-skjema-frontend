@@ -1,0 +1,43 @@
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+/* Dimmer overlay (bakgrunnen) */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Gjennomsiktig mørk bakgrunn */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Sørg for at dette er høyere enn all annen z-index i appen */
+}
+
+/* Modal innholdsboks */
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  width: 100%;
+  max-width: 500px;
+  z-index: 1001; /* For å sikre at innholdet er over overlayen */
+}
+
+/* Lukk-knappen */
+.modal-close {
+  margin-top: 1em;
+}

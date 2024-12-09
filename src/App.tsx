@@ -4,7 +4,6 @@ import { CreateCookieIfMissing } from './context/Cookie'
 import IndexPage from './pages'
 import Debug from './components/debug'
 import Header from './components/header'
-import WaitPage from './pages/wait'
 import SkjemaPage from './pages/skjema'
 import ThanksPage from './pages/thanks'
 import TestdataPage from './pages/testdata'
@@ -18,7 +17,6 @@ function App() {
       <Debug />
       <Routes>
         <Route path="/" element={<IndexPage />} />
-        <Route path="/wait" element={<WaitPage />} />
         <Route path='/skjema' element={<SkjemaPage />} />
         <Route path='/thanks' element={<ThanksPage />} />
         <Route path='/testdata' element={<TestdataPage />} />
