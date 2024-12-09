@@ -31,7 +31,6 @@ export function CreateCookieIfMissing() {
 
     document.cookie = sessionCookieName + encodeURIComponent(sessionValue) + "; Max-Age="+ sessionDurationSeconds + "; path=/"
   }
-  console.log(import.meta.env)
 }
 
 export function DeleteCookie() {
