@@ -7,11 +7,9 @@ import { useFormik } from 'formik';
 export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
   const existingCookie = getCookie();
 
-  console.log(existingCookie)
-
   const formik = useFormik({
     initialValues: {
-      personNavn: existingCookie?.formData?.personNavn || '',
+      personNavn: existingCookie?.formData?.representantNavn || '',
       personAdresse: existingCookie?.formData?.personAdresse || '',
       personPostnummer: existingCookie?.formData?.personPostnummer || '',
       personPoststed: existingCookie?.formData?.personPoststed || '',

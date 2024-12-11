@@ -49,6 +49,8 @@ export function DeleteCookie() {
 // }
 
 export function storeFormDataInCookie(formData: FormComplete) {
+  console.log('stored data in cookie:')
+  console.log(formData)
   const existingData = getCookie();
   const updatedData = { 
     ...existingData, 
