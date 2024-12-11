@@ -1,0 +1,50 @@
+/* Generell styling for hovedinnholdet */
+.progress-bar-main-content {
+  display: flex;
+  background-color: #E5F3F9;
+  padding: 1em 3em 1em 3em;
+  justify-content: space-between;
+}
+
+.progress-bar-main-content p {
+  width: auto;
+}
+.progress-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.progress-segment {
+  display: flex;
+  align-items: center;
+  width: 70%; /* Full bredde */
+  justify-content: space-between;
+}
+
+.circle {
+  width: 1em;
+  height: 1em;
+  border-radius: 50%; /* Gjør den til en perfekt sirkel */
+  background-color: #C2D1D7; /* Grå farge for inaktive sirkler */
+  flex-shrink: 0; /* Hindrer at sirkelen krymper */
+  display: inline-block; /* Holder på formen */
+  transition: background-color 0.3s ease-in-out;
+  aspect-ratio: 1 / 1; /* Sørger for at den forblir en sirkel */
+}
+
+.active-circle {
+  background-color: #004785; /* Aktiv farge for sirkler */
+}
+
+.line {
+  height: 2px;
+  width: 100%;
+  background-color: #C2D1D7; /* Grå farge for inaktive linjer */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.active-line {
+  background-color: #004785; /* Aktiv farge for linjene */
+}

@@ -1,11 +1,18 @@
 export interface SessionResponse {
   personNavn: string;
   personFnr: string;
+  personAdresse: string;
+  personPostnummer: string;
+  personPoststed: string;
+  personLand: string;
   issuingAuthority: string;
   issuingAuthorityId: string;
   issuingCountry: string;
+  authenticSourceName: string;
+  authenticSourceID: string;
   foretakNavn: string;
   foretakOrgnr: string;
+  foretakOrgform: string;
   foretakStiftet: string;
   foretakAdresse: string;
   foretakNaceKode: string;
@@ -14,11 +21,4 @@ export interface SessionResponse {
   representantNavn: string;
   representantFodselsdato: string;
   representantSignaturRegel: string;
-  id: number;
-  userSessionId: string;
-  issuerWalletName: string;
-  issuerWalletAddress: string;
-  holderWalletAddress: string;
-  authenticSourceName: string;
-  authenticSourceID: string;
 }

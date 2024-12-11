@@ -5,6 +5,8 @@ import { SessionProvider } from './context/SessionContext.tsx'
 import '@digdir/designsystemet-theme';
 // @ts-ignore
 import '@digdir/designsystemet-css';
+// @ts-ignore
+import '@fontsource/open-sans' 
 
 import './index.css'
 import App from './App.tsx'

@@ -4,7 +4,7 @@ import { CreateCookieIfMissing } from './context/Cookie'
 import IndexPage from './pages'
 import Debug from './components/debug'
 import Header from './components/header'
-import SkjemaPage from './pages/skjema'
+import SkjemaPage from './pages/skjema/skjema'
 import ThanksPage from './pages/thanks'
 import TestdataPage from './pages/testdata'
 
