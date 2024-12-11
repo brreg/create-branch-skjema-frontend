@@ -1,6 +1,6 @@
 import SkjemaProgressBar from '../../components/skjema/progressBar';
 import { Button } from '@digdir/designsystemet-react';
-import { getCookie } from '../../context/Cookie';
+// import { getCookie } from '../../context/Cookie';
 
 
 interface Props {
@@ -8,7 +8,7 @@ interface Props {
 }
 
 export default function SkjemaPage4({ prevPage }: Props) {
-  const existingCookie = getCookie();
+  // const existingCookie = getCookie();
 
   return (
     <main className="main-content">
