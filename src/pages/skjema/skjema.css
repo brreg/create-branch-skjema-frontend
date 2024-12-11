@@ -1,0 +1,51 @@
+.fieldset {
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.horisontal {
+  display: flex;
+  flex-direction: row;
+}
+
+.textfield {
+  margin-right: 1rem;
+}
+
+.button {
+ margin-top: 4rem; 
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column;
+  padding: 5em;
+}
+
+.info-section h1 {
+  font-size: xx-large;
+  margin: 0;
+}
+
+.info-section p {
+  width: 70%;
+  font-size: medium;
+}
+
+.horisontal-divider {
+  margin-top: 2em;
+  background-color: black;
+  height: 2px;
+  width: 100%;
+}
+
+/* .textfield.error {
+  border-color: red !important;
+}
+
+.error-message {
+  color: red;
+  font-size: 0.875rem;
+  margin-top: 4px;
+} */
