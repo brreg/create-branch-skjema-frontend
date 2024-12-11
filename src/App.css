@@ -1,3 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
+  font-size: 16px; /* Endre grunnstørrelsen */
+  font-weight: 600; /* Endre vekten */
+  color: #333; /* Endre tekstfargen */
+  line-height: 1.6; /* Linjeavstand for bedre lesbarhet */
 }

@@ -1,0 +1,3279 @@
+{
+  "authenticated": false,
+  "timeTaken": 0,
+  "data": [
+  {
+  "naceCode": "00.000",
+  "description": "Ikke oppgitt"
+  },
+  {
+  "naceCode": "01.110",
+  "description": "Dyrking av korn (unntatt ris), belgvekster og oljeholdige vekster"
+  },
+  {
+  "naceCode": "01.120",
+  "description": "Dyrking av ris"
+  },
+  {
+  "naceCode": "01.130",
+  "description": "Dyrking av grønnsaker, meloner, rot- og knollvekster"
+  },
+  {
+  "naceCode": "01.140",
+  "description": "Dyrking av sukkerrør"
+  },
+  {
+  "naceCode": "01.150",
+  "description": "Dyrking av tobakk"
+  },
+  {
+  "naceCode": "01.160",
+  "description": "Dyrking av fibervekster"
+  },
+  {
+  "naceCode": "01.190",
+  "description": "Dyrking av ettårige vekster ellers"
+  },
+  {
+  "naceCode": "01.210",
+  "description": "Dyrking av druer"
+  },
+  {
+  "naceCode": "01.220",
+  "description": "Dyrking av tropiske og subtropiske frukter"
+  },
+  {
+  "naceCode": "01.230",
+  "description": "Dyrking av sitrusfrukter"
+  },
+  {
+  "naceCode": "01.240",
+  "description": "Dyrking av kjernefrukter og steinfrukter"
+  },
+  {
+  "naceCode": "01.250",
+  "description": "Dyrking av annen frukt som vokser på trær eller busker samt nøtter"
+  },
+  {
+  "naceCode": "01.260",
+  "description": "Dyrking av oljeholdige frukter"
+  },
+  {
+  "naceCode": "01.270",
+  "description": "Dyrking av vekster for produksjon av drikkevarer"
+  },
+  {
+  "naceCode": "01.280",
+  "description": "Dyrking av krydder og aromatiske, medisinske og farmasøytiske vekster"
+  },
+  {
+  "naceCode": "01.290",
+  "description": "Dyrking av flerårige vekster ellers"
+  },
+  {
+  "naceCode": "01.300",
+  "description": "Planteformering"
+  },
+  {
+  "naceCode": "01.410",
+  "description": "Melkeproduksjon på storfe"
+  },
+  {
+  "naceCode": "01.420",
+  "description": "Oppdrett av annet storfe"
+  },
+  {
+  "naceCode": "01.430",
+  "description": "Oppdrett av hester og andre dyr av hestefamilien"
+  },
+  {
+  "naceCode": "01.440",
+  "description": "Oppdrett av kameler og andre kameldyr"
+  },
+  {
+  "naceCode": "01.451",
+  "description": "Sauehold"
+  },
+  {
+  "naceCode": "01.452",
+  "description": "Geitehold"
+  },
+  {
+  "naceCode": "01.460",
+  "description": "Svinehold"
+  },
+  {
+  "naceCode": "01.471",
+  "description": "Hold av verpehøner for konsumeggproduksjon"
+  },
+  {
+  "naceCode": "01.479",
+  "description": "Annet fjørfehold"
+  },
+  {
+  "naceCode": "01.490",
+  "description": "Husdyrhold ellers"
+  },
+  {
+  "naceCode": "01.500",
+  "description": "Kombinert husdyrhold og planteproduksjon"
+  },
+  {
+  "naceCode": "01.610",
+  "description": "Tjenester tilknyttet planteproduksjon"
+  },
+  {
+  "naceCode": "01.620",
+  "description": "Tjenester tilknyttet husdyrhold"
+  },
+  {
+  "naceCode": "01.630",
+  "description": "Etterbehandling av vekster etter innhøsting"
+  },
+  {
+  "naceCode": "01.640",
+  "description": "Behandling av såfrø"
+  },
+  {
+  "naceCode": "01.700",
+  "description": "Jakt, viltstell og tjenester tilknyttet jakt og viltstell"
+  },
+  {
+  "naceCode": "02.100",
+  "description": "Skogskjøtsel og andre skogbruksaktiviteter"
+  },
+  {
+  "naceCode": "02.200",
+  "description": "Avvirkning"
+  },
+  {
+  "naceCode": "02.300",
+  "description": "Innsamling av viltvoksende produkter av annet enn tre"
+  },
+  {
+  "naceCode": "02.400",
+  "description": "Tjenester tilknyttet skogbruk"
+  },
+  {
+  "naceCode": "03.111",
+  "description": "Hav- og kystfiske"
+  },
+  {
+  "naceCode": "03.112",
+  "description": "Hvalfangst"
+  },
+  {
+  "naceCode": "03.120",
+  "description": "Ferskvannsfiske"
+  },
+  {
+  "naceCode": "03.211",
+  "description": "Produksjon av matfisk og skalldyr i hav- og kystbasert fiskeoppdrett"
+  },
+  {
+  "naceCode": "03.212",
+  "description": "Produksjon av yngel og settefisk i hav- og kystbasert fiskeoppdrett"
+  },
+  {
+  "naceCode": "03.213",
+  "description": "Tjenester tilknyttet hav- og kystbasert fiskeoppdrett"
+  },
+  {
+  "naceCode": "03.221",
+  "description": "Produksjon av matfisk og skalldyr i ferskvannsbasert fiskeoppdrett"
+  },
+  {
+  "naceCode": "03.222",
+  "description": "Produksjon av yngel og settefisk i ferskvannsbasert fiskeoppdrett"
+  },
+  {
+  "naceCode": "03.223",
+  "description": "Tjenester tilknyttet ferskvannsbasert fiskeoppdrett"
+  },
+  {
+  "naceCode": "05.100",
+  "description": "Bryting av steinkull"
+  },
+  {
+  "naceCode": "05.200",
+  "description": "Bryting av brunkull"
+  },
+  {
+  "naceCode": "06.100",
+  "description": "Utvinning av råolje"
+  },
+  {
+  "naceCode": "06.200",
+  "description": "Utvinning av naturgass"
+  },
+  {
+  "naceCode": "07.100",
+  "description": "Bryting av jernmalm"
+  },
+  {
+  "naceCode": "07.210",
+  "description": "Bryting av uran- og thoriummalm"
+  },
+  {
+  "naceCode": "07.290",
+  "description": "Bryting av ikke-jernholdig malm ellers"
+  },
+  {
+  "naceCode": "08.111",
+  "description": "Bryting av stein til bygge- og anleggsvirksomhet"
+  },
+  {
+  "naceCode": "08.112",
+  "description": "Bryting av kalkstein, gips og kritt"
+  },
+  {
+  "naceCode": "08.113",
+  "description": "Bryting av skifer"
+  },
+  {
+  "naceCode": "08.120",
+  "description": "Utvinning fra grus- og sandtak, og utvinning av leire og kaolin"
+  },
+  {
+  "naceCode": "08.910",
+  "description": "Bryting og utvinning av kjemiske mineraler og gjødselsmineraler"
+  },
+  {
+  "naceCode": "08.920",
+  "description": "Stikking av torv"
+  },
+  {
+  "naceCode": "08.930",
+  "description": "Utvinning av salt"
+  },
+  {
+  "naceCode": "08.990",
+  "description": "Annen bryting og utvinning ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "09.101",
+  "description": "Boretjenester tilknyttet utvinning av råolje og naturgass"
+  },
+  {
+  "naceCode": "09.109",
+  "description": "Andre tjenester tilknyttet utvinning av råolje og naturgass"
+  },
+  {
+  "naceCode": "09.900",
+  "description": "Tjenester tilknyttet annen bergverksdrift"
+  },
+  {
+  "naceCode": "10.110",
+  "description": "Bearbeiding og konservering av kjøtt"
+  },
+  {
+  "naceCode": "10.120",
+  "description": "Bearbeiding og konservering av fjørfekjøtt"
+  },
+  {
+  "naceCode": "10.130",
+  "description": "Produksjon av kjøtt- og fjørfevarer"
+  },
+  {
+  "naceCode": "10.201",
+  "description": "Produksjon av saltfisk, tørrfisk og klippfisk"
+  },
+  {
+  "naceCode": "10.202",
+  "description": "Frysing av fisk, fiskefileter, skalldyr og bløtdyr"
+  },
+  {
+  "naceCode": "10.203",
+  "description": "Produksjon av fiskehermetikk"
+  },
+  {
+  "naceCode": "10.209",
+  "description": "Slakting, bearbeiding og konservering av fisk og fiskevarer ellers"
+  },
+  {
+  "naceCode": "10.310",
+  "description": "Bearbeiding og konservering av poteter"
+  },
+  {
+  "naceCode": "10.320",
+  "description": "Produksjon av juice av frukt og grønnsaker"
+  },
+  {
+  "naceCode": "10.390",
+  "description": "Bearbeiding og konservering av frukt og grønnsaker ellers"
+  },
+  {
+  "naceCode": "10.411",
+  "description": "Produksjon av rå fiskeoljer og fett"
+  },
+  {
+  "naceCode": "10.412",
+  "description": "Produksjon av andre uraffinerte oljer og fett"
+  },
+  {
+  "naceCode": "10.413",
+  "description": "Produksjon av raffinerte oljer og fett"
+  },
+  {
+  "naceCode": "10.420",
+  "description": "Produksjon av margarin og lignende spiselige fettstoffer"
+  },
+  {
+  "naceCode": "10.510",
+  "description": "Produksjon av meierivarer"
+  },
+  {
+  "naceCode": "10.520",
+  "description": "Produksjon av iskrem"
+  },
+  {
+  "naceCode": "10.610",
+  "description": "Produksjon av kornvarer"
+  },
+  {
+  "naceCode": "10.620",
+  "description": "Produksjon av stivelse og stivelsesprodukter"
+  },
+  {
+  "naceCode": "10.710",
+  "description": "Produksjon av brød og ferske konditorvarer"
+  },
+  {
+  "naceCode": "10.720",
+  "description": "Produksjon av kavringer, kjeks og konserverte konditorvarer"
+  },
+  {
+  "naceCode": "10.730",
+  "description": "Produksjon av makaroni, nudler, couscous og lignende pastavarer"
+  },
+  {
+  "naceCode": "10.810",
+  "description": "Produksjon av sukker"
+  },
+  {
+  "naceCode": "10.820",
+  "description": "Produksjon av kakao, sjokolade og sukkervarer"
+  },
+  {
+  "naceCode": "10.830",
+  "description": "Bearbeiding av te og kaffe"
+  },
+  {
+  "naceCode": "10.840",
+  "description": "Produksjon av smakstilsettingsstoffer og krydderier"
+  },
+  {
+  "naceCode": "10.850",
+  "description": "Produksjon av ferdigmat"
+  },
+  {
+  "naceCode": "10.860",
+  "description": "Produksjon av homogeniserte matprodukter og diettmat"
+  },
+  {
+  "naceCode": "10.890",
+  "description": "Produksjon av næringsmidler ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "10.910",
+  "description": "Produksjon av fôrvarer til husdyrhold"
+  },
+  {
+  "naceCode": "10.920",
+  "description": "Produksjon av fôrvarer til kjæledyr"
+  },
+  {
+  "naceCode": "11.010",
+  "description": "Destillering, rektifisering og blanding av sprit"
+  },
+  {
+  "naceCode": "11.020",
+  "description": "Produksjon av vin"
+  },
+  {
+  "naceCode": "11.030",
+  "description": "Produksjon av sider og annen fruktvin"
+  },
+  {
+  "naceCode": "11.040",
+  "description": "Produksjon av andre ikke-destillerte gjærede drikkevarer"
+  },
+  {
+  "naceCode": "11.050",
+  "description": "Produksjon av øl"
+  },
+  {
+  "naceCode": "11.060",
+  "description": "Produksjon av malt"
+  },
+  {
+  "naceCode": "11.070",
+  "description": "Produksjon av mineralvann, leskedrikker og annet vann på flaske"
+  },
+  {
+  "naceCode": "12.000",
+  "description": "Produksjon av tobakksvarer"
+  },
+  {
+  "naceCode": "13.100",
+  "description": "Bearbeiding og spinning av tekstilfibrer"
+  },
+  {
+  "naceCode": "13.200",
+  "description": "Veving av tekstiler"
+  },
+  {
+  "naceCode": "13.300",
+  "description": "Etterbehandling av tekstiler"
+  },
+  {
+  "naceCode": "13.910",
+  "description": "Produksjon av stoffer av trikotasje"
+  },
+  {
+  "naceCode": "13.921",
+  "description": "Produksjon av utstyrsvarer"
+  },
+  {
+  "naceCode": "13.929",
+  "description": "Produksjon av andre tekstilvarer, unntatt klær"
+  },
+  {
+  "naceCode": "13.930",
+  "description": "Produksjon av gulvtepper, -matter og -ryer"
+  },
+  {
+  "naceCode": "13.940",
+  "description": "Produksjon av tauverk og nett"
+  },
+  {
+  "naceCode": "13.950",
+  "description": "Produksjon av ikke-vevde tekstiler og tekstilvarer, unntatt klær"
+  },
+  {
+  "naceCode": "13.960",
+  "description": "Produksjon av tekstiler til teknisk og industriell bruk"
+  },
+  {
+  "naceCode": "13.990",
+  "description": "Produksjon av tekstiler ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "14.110",
+  "description": "Produksjon av klær av lær"
+  },
+  {
+  "naceCode": "14.120",
+  "description": "Produksjon av arbeidstøy"
+  },
+  {
+  "naceCode": "14.130",
+  "description": "Produksjon av annet yttertøy"
+  },
+  {
+  "naceCode": "14.140",
+  "description": "Produksjon av undertøy og innertøy"
+  },
+  {
+  "naceCode": "14.190",
+  "description": "Produksjon av klær og tilbehør ellers"
+  },
+  {
+  "naceCode": "14.200",
+  "description": "Produksjon av pelsvarer"
+  },
+  {
+  "naceCode": "14.310",
+  "description": "Produksjon av strømpevarer"
+  },
+  {
+  "naceCode": "14.390",
+  "description": "Produksjon av andre klær av trikotasje"
+  },
+  {
+  "naceCode": "15.110",
+  "description": "Beredning av lær, og beredning og farging av pelsskinn"
+  },
+  {
+  "naceCode": "15.120",
+  "description": "Produksjon av reiseeffekter og salmakerartikler"
+  },
+  {
+  "naceCode": "15.200",
+  "description": "Produksjon av skotøy"
+  },
+  {
+  "naceCode": "16.100",
+  "description": "Saging, høvling og impregnering av tre"
+  },
+  {
+  "naceCode": "16.210",
+  "description": "Produksjon av finerplater og andre bygnings- og møbelplater av tre"
+  },
+  {
+  "naceCode": "16.220",
+  "description": "Produksjon av sammensatte parkettstaver"
+  },
+  {
+  "naceCode": "16.231",
+  "description": "Produksjon av monteringsferdige hus"
+  },
+  {
+  "naceCode": "16.232",
+  "description": "Produksjon av bygningsartikler"
+  },
+  {
+  "naceCode": "16.240",
+  "description": "Produksjon av treemballasje"
+  },
+  {
+  "naceCode": "16.290",
+  "description": "Produksjon av andre trevarer og varer av kork, strå og flettematerialer"
+  },
+  {
+  "naceCode": "17.110",
+  "description": "Produksjon av papirmasse"
+  },
+  {
+  "naceCode": "17.120",
+  "description": "Produksjon av papir og papp"
+  },
+  {
+  "naceCode": "17.210",
+  "description": "Produksjon av bølgepapp og emballasje av papir og papp"
+  },
+  {
+  "naceCode": "17.220",
+  "description": "Produksjon av husholdnings-, sanitær- og toalettartikler av papir"
+  },
+  {
+  "naceCode": "17.230",
+  "description": "Produksjon av kontorartikler av papir"
+  },
+  {
+  "naceCode": "17.240",
+  "description": "Produksjon av tapeter"
+  },
+  {
+  "naceCode": "17.290",
+  "description": "Produksjon av varer av papir og papp ellers"
+  },
+  {
+  "naceCode": "18.110",
+  "description": "Trykking av aviser"
+  },
+  {
+  "naceCode": "18.120",
+  "description": "Trykking ellers"
+  },
+  {
+  "naceCode": "18.130",
+  "description": "Ferdiggjøring før trykking og publisering"
+  },
+  {
+  "naceCode": "18.140",
+  "description": "Bokbinding og tilknyttede tjenester"
+  },
+  {
+  "naceCode": "18.200",
+  "description": "Reproduksjon av innspilte opptak"
+  },
+  {
+  "naceCode": "19.100",
+  "description": "Produksjon av kullprodukter"
+  },
+  {
+  "naceCode": "19.200",
+  "description": "Produksjon av raffinerte petroleumsprodukter"
+  },
+  {
+  "naceCode": "20.110",
+  "description": "Produksjon av industrigasser"
+  },
+  {
+  "naceCode": "20.120",
+  "description": "Produksjon av fargestoffer og pigmenter"
+  },
+  {
+  "naceCode": "20.130",
+  "description": "Produksjon av andre uorganiske kjemikalier"
+  },
+  {
+  "naceCode": "20.140",
+  "description": "Produksjon av andre organiske kjemiske råvarer"
+  },
+  {
+  "naceCode": "20.150",
+  "description": "Produksjon av gjødsel, nitrogenforbindelser og vekstjord"
+  },
+  {
+  "naceCode": "20.160",
+  "description": "Produksjon av basisplast"
+  },
+  {
+  "naceCode": "20.170",
+  "description": "Produksjon av syntetisk gummi"
+  },
+  {
+  "naceCode": "20.200",
+  "description": "Produksjon av plantevern- og skadedyrmidler og andre landbrukskjemiske produkter"
+  },
+  {
+  "naceCode": "20.300",
+  "description": "Produksjon av maling og lakk, trykkfarger og tetningsmidler"
+  },
+  {
+  "naceCode": "20.410",
+  "description": "Produksjon av såpe og vaskemidler, rense- og polermidler"
+  },
+  {
+  "naceCode": "20.420",
+  "description": "Produksjon av parfyme og toalettartikler"
+  },
+  {
+  "naceCode": "20.510",
+  "description": "Produksjon av eksplosiver"
+  },
+  {
+  "naceCode": "20.520",
+  "description": "Produksjon av lim"
+  },
+  {
+  "naceCode": "20.530",
+  "description": "Produksjon av eteriske oljer"
+  },
+  {
+  "naceCode": "20.590",
+  "description": "Produksjon av kjemiske produkter ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "20.600",
+  "description": "Produksjon av kunstfibrer"
+  },
+  {
+  "naceCode": "21.100",
+  "description": "Produksjon av farmasøytiske råvarer"
+  },
+  {
+  "naceCode": "21.200",
+  "description": "Produksjon av farmasøytiske preparater"
+  },
+  {
+  "naceCode": "22.110",
+  "description": "Produksjon av gummidekk og slanger til gummidekk, og regummiering og vulkanisering av gummidekk"
+  },
+  {
+  "naceCode": "22.190",
+  "description": "Produksjon av gummiprodukter ellers"
+  },
+  {
+  "naceCode": "22.210",
+  "description": "Produksjon av halvfabrikater av plast"
+  },
+  {
+  "naceCode": "22.220",
+  "description": "Produksjon av plastemballasje"
+  },
+  {
+  "naceCode": "22.230",
+  "description": "Produksjon av byggevarer av plast"
+  },
+  {
+  "naceCode": "22.290",
+  "description": "Produksjon av plastprodukter ellers"
+  },
+  {
+  "naceCode": "23.110",
+  "description": "Produksjon av planglass"
+  },
+  {
+  "naceCode": "23.120",
+  "description": "Bearbeiding av planglass"
+  },
+  {
+  "naceCode": "23.130",
+  "description": "Produksjon av emballasje og husholdningsartikler av glass og krystall"
+  },
+  {
+  "naceCode": "23.140",
+  "description": "Produksjon av glassfibrer"
+  },
+  {
+  "naceCode": "23.190",
+  "description": "Produksjon av teknisk glass og andre glassvarer"
+  },
+  {
+  "naceCode": "23.200",
+  "description": "Produksjon av ildfaste produkter"
+  },
+  {
+  "naceCode": "23.310",
+  "description": "Produksjon av keramiske vegg- og gulvfliser"
+  },
+  {
+  "naceCode": "23.320",
+  "description": "Produksjon av murstein, teglstein og andre byggevarer av brent leire"
+  },
+  {
+  "naceCode": "23.410",
+  "description": "Produksjon av keramiske husholdningsartikler og dekorasjonsgjenstander"
+  },
+  {
+  "naceCode": "23.420",
+  "description": "Produksjon av sanitærutstyr av keramisk materiale"
+  },
+  {
+  "naceCode": "23.430",
+  "description": "Produksjon av isolatorer og isoleringsdeler av keramisk materiale"
+  },
+  {
+  "naceCode": "23.440",
+  "description": "Produksjon av andre keramiske produkter for teknisk bruk"
+  },
+  {
+  "naceCode": "23.490",
+  "description": "Produksjon av andre keramiske produkter"
+  },
+  {
+  "naceCode": "23.510",
+  "description": "Produksjon av sement"
+  },
+  {
+  "naceCode": "23.520",
+  "description": "Produksjon av kalk og gips"
+  },
+  {
+  "naceCode": "23.610",
+  "description": "Produksjon av betongprodukter for bygge- og anleggsvirksomhet"
+  },
+  {
+  "naceCode": "23.620",
+  "description": "Produksjon av gipsprodukter for bygge- og anleggsvirksomhet"
+  },
+  {
+  "naceCode": "23.630",
+  "description": "Produksjon av ferdigblandet betong"
+  },
+  {
+  "naceCode": "23.640",
+  "description": "Produksjon av mørtel"
+  },
+  {
+  "naceCode": "23.650",
+  "description": "Produksjon av fibersement"
+  },
+  {
+  "naceCode": "23.690",
+  "description": "Produksjon av betong-, sement- og gipsprodukter ellers"
+  },
+  {
+  "naceCode": "23.700",
+  "description": "Hogging og bearbeiding av monument- og bygningsstein"
+  },
+  {
+  "naceCode": "23.910",
+  "description": "Produksjon av slipestoffer"
+  },
+  {
+  "naceCode": "23.990",
+  "description": "Produksjon av ikke-metallholdige mineralprodukter ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "24.101",
+  "description": "Produksjon av jern og stål"
+  },
+  {
+  "naceCode": "24.102",
+  "description": "Produksjon av ferrolegeringer"
+  },
+  {
+  "naceCode": "24.200",
+  "description": "Produksjon av andre rør og rørdeler av stål"
+  },
+  {
+  "naceCode": "24.310",
+  "description": "Kaldtrekking av stenger og profiler"
+  },
+  {
+  "naceCode": "24.320",
+  "description": "Kaldvalsing av bånd"
+  },
+  {
+  "naceCode": "24.330",
+  "description": "Kaldvalsing og pressing av profilerte plater og profiler"
+  },
+  {
+  "naceCode": "24.340",
+  "description": "Kaldtrekking av tråd"
+  },
+  {
+  "naceCode": "24.410",
+  "description": "Produksjon av edelmetaller"
+  },
+  {
+  "naceCode": "24.421",
+  "description": "Produksjon av primæraluminium"
+  },
+  {
+  "naceCode": "24.422",
+  "description": "Produksjon av halvfabrikater av aluminium"
+  },
+  {
+  "naceCode": "24.430",
+  "description": "Produksjon av bly, sink og tinn"
+  },
+  {
+  "naceCode": "24.440",
+  "description": "Produksjon av kobber"
+  },
+  {
+  "naceCode": "24.450",
+  "description": "Produksjon av ikke-jernholdige metaller ellers"
+  },
+  {
+  "naceCode": "24.460",
+  "description": "Produksjon av kjernebrensel"
+  },
+  {
+  "naceCode": "24.510",
+  "description": "Støping av jern"
+  },
+  {
+  "naceCode": "24.520",
+  "description": "Støping av stål"
+  },
+  {
+  "naceCode": "24.530",
+  "description": "Støping av lettmetaller"
+  },
+  {
+  "naceCode": "24.540",
+  "description": "Støping av andre ikke-jernholdige metaller"
+  },
+  {
+  "naceCode": "25.110",
+  "description": "Produksjon av metallkonstruksjoner og deler"
+  },
+  {
+  "naceCode": "25.120",
+  "description": "Produksjon av dører og vinduer av metall"
+  },
+  {
+  "naceCode": "25.210",
+  "description": "Produksjon av radiatorer og kjeler til sentralvarmeanlegg"
+  },
+  {
+  "naceCode": "25.290",
+  "description": "Produksjon av andre tanker, cisterner og beholdere av metall"
+  },
+  {
+  "naceCode": "25.300",
+  "description": "Produksjon av dampkjeler, unntatt kjeler til sentralvarmeanlegg"
+  },
+  {
+  "naceCode": "25.400",
+  "description": "Produksjon av våpen og ammunisjon"
+  },
+  {
+  "naceCode": "25.500",
+  "description": "Smiing, stansing og valsing av metall, og pulvermetallurgi"
+  },
+  {
+  "naceCode": "25.610",
+  "description": "Overflatebehandling av metaller"
+  },
+  {
+  "naceCode": "25.620",
+  "description": "Bearbeiding av metaller"
+  },
+  {
+  "naceCode": "25.710",
+  "description": "Produksjon av kjøkkenredskaper og skjære- og klipperedskaper"
+  },
+  {
+  "naceCode": "25.720",
+  "description": "Produksjon av låser og beslag"
+  },
+  {
+  "naceCode": "25.730",
+  "description": "Produksjon av håndverktøy"
+  },
+  {
+  "naceCode": "25.910",
+  "description": "Produksjon av stålfat og lignende beholdere av jern og stål"
+  },
+  {
+  "naceCode": "25.920",
+  "description": "Produksjon av emballasje av lettmetall"
+  },
+  {
+  "naceCode": "25.930",
+  "description": "Produksjon av varer av metalltråd, kjetting og fjærer"
+  },
+  {
+  "naceCode": "25.940",
+  "description": "Produksjon av bolter og skruer"
+  },
+  {
+  "naceCode": "25.990",
+  "description": "Produksjon av metallvarer ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "26.110",
+  "description": "Produksjon av elektroniske komponenter"
+  },
+  {
+  "naceCode": "26.120",
+  "description": "Produksjon av kretskort"
+  },
+  {
+  "naceCode": "26.200",
+  "description": "Produksjon av datamaskiner og tilleggsutstyr"
+  },
+  {
+  "naceCode": "26.300",
+  "description": "Produksjon av kommunikasjonsutstyr"
+  },
+  {
+  "naceCode": "26.400",
+  "description": "Produksjon av elektronikk til husholdningsbruk"
+  },
+  {
+  "naceCode": "26.510",
+  "description": "Produksjon av måle-, kontroll- og navigasjonsinstrumenter"
+  },
+  {
+  "naceCode": "26.520",
+  "description": "Produksjon av klokker og ur"
+  },
+  {
+  "naceCode": "26.600",
+  "description": "Produksjon av strålingsutstyr, elektromedisinsk- og elektroterapeutisk utstyr"
+  },
+  {
+  "naceCode": "26.700",
+  "description": "Produksjon av optiske instrumenter og fotografisk utstyr"
+  },
+  {
+  "naceCode": "26.800",
+  "description": "Produksjon av magnetiske og optiske media"
+  },
+  {
+  "naceCode": "27.110",
+  "description": "Produksjon av elektromotorer, generatorer og transformatorer"
+  },
+  {
+  "naceCode": "27.120",
+  "description": "Produksjon av elektriske fordelings- og kontrolltavler og paneler"
+  },
+  {
+  "naceCode": "27.200",
+  "description": "Produksjon av batterier og akkumulatorer"
+  },
+  {
+  "naceCode": "27.310",
+  "description": "Produksjon av optiske fiberkabler"
+  },
+  {
+  "naceCode": "27.320",
+  "description": "Produksjon av andre elektroniske og elektriske ledninger og kabler"
+  },
+  {
+  "naceCode": "27.330",
+  "description": "Produksjon av ledningsmateriell"
+  },
+  {
+  "naceCode": "27.400",
+  "description": "Produksjon av belysningsutstyr"
+  },
+  {
+  "naceCode": "27.510",
+  "description": "Produksjon av elektriske husholdningsmaskiner og -apparater"
+  },
+  {
+  "naceCode": "27.520",
+  "description": "Produksjon av ikke-elektriske husholdningsmaskiner og -apparater"
+  },
+  {
+  "naceCode": "27.900",
+  "description": "Produksjon av annet elektrisk utstyr"
+  },
+  {
+  "naceCode": "28.110",
+  "description": "Produksjon av motorer og turbiner, unntatt motorer til luftfartøyer og motorvogner"
+  },
+  {
+  "naceCode": "28.120",
+  "description": "Produksjon av komponenter til hydraulisk og pneumatisk utstyr"
+  },
+  {
+  "naceCode": "28.130",
+  "description": "Produksjon av pumper og kompressorer ellers"
+  },
+  {
+  "naceCode": "28.140",
+  "description": "Produksjon av kraner og ventiler ellers"
+  },
+  {
+  "naceCode": "28.150",
+  "description": "Produksjon av lagre, gir, tannhjulsutvekslinger og andre innretninger for kraftoverføring"
+  },
+  {
+  "naceCode": "28.210",
+  "description": "Produksjon av industri- og laboratorieovner samt brennere"
+  },
+  {
+  "naceCode": "28.221",
+  "description": "Produksjon av løfte- og håndteringsutstyr til skip og båter"
+  },
+  {
+  "naceCode": "28.229",
+  "description": "Produksjon av løfte- og håndteringsutstyr ellers"
+  },
+  {
+  "naceCode": "28.230",
+  "description": "Produksjon av kontormaskiner og utstyr (unntatt datamaskiner og tilleggsutstyr)"
+  },
+  {
+  "naceCode": "28.240",
+  "description": "Produksjon av motordrevet håndverktøy"
+  },
+  {
+  "naceCode": "28.250",
+  "description": "Produksjon av kjøle- og ventilasjonsanlegg, unntatt til husholdningsbruk"
+  },
+  {
+  "naceCode": "28.290",
+  "description": "Produksjon av maskiner og utstyr til generell bruk, ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "28.300",
+  "description": "Produksjon av jordbruks- og skogbruksmaskiner"
+  },
+  {
+  "naceCode": "28.410",
+  "description": "Produksjon av maskinverktøy til metallbearbeiding"
+  },
+  {
+  "naceCode": "28.490",
+  "description": "Produksjon av maskinverktøy ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "28.910",
+  "description": "Produksjon av maskiner og utstyr til metallurgisk industri"
+  },
+  {
+  "naceCode": "28.920",
+  "description": "Produksjon av maskiner og utstyr til bergverksdrift og bygge- og anleggsvirksomhet"
+  },
+  {
+  "naceCode": "28.930",
+  "description": "Produksjon av maskiner og utstyr til nærings- og nytelsesmiddelindustri"
+  },
+  {
+  "naceCode": "28.940",
+  "description": "Produksjon av maskiner og utstyr til tekstil-, konfeksjons- og lærvare industri"
+  },
+  {
+  "naceCode": "28.950",
+  "description": "Produksjon av maskiner og utstyr til papir- og pappvareindustri"
+  },
+  {
+  "naceCode": "28.960",
+  "description": "Produksjon av maskiner og utstyr til plast- og gummiindustri"
+  },
+  {
+  "naceCode": "28.990",
+  "description": "Produksjon av spesialmaskiner ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "29.100",
+  "description": "Produksjon av motorvogner"
+  },
+  {
+  "naceCode": "29.200",
+  "description": "Produksjon av karosserier og tilhengere"
+  },
+  {
+  "naceCode": "29.310",
+  "description": "Produksjon av elektrisk og elektronisk utstyr til motorvogner"
+  },
+  {
+  "naceCode": "29.320",
+  "description": "Produksjon av andre deler og annet utstyr til motorvogner"
+  },
+  {
+  "naceCode": "30.111",
+  "description": "Bygging av skip og skrog over 100 br.tonn"
+  },
+  {
+  "naceCode": "30.112",
+  "description": "Bygging av skip under 100 br.tonn"
+  },
+  {
+  "naceCode": "30.113",
+  "description": "Bygging av oljeplattformer og moduler"
+  },
+  {
+  "naceCode": "30.114",
+  "description": "Produksjon av annet flytende materiell"
+  },
+  {
+  "naceCode": "30.115",
+  "description": "Innrednings- og installasjonsarbeid utført på skip over 100 br.tonn"
+  },
+  {
+  "naceCode": "30.116",
+  "description": "Innrednings- og installasjonsarbeid utført på borerigger og moduler"
+  },
+  {
+  "naceCode": "30.120",
+  "description": "Bygging av fritidsbåter"
+  },
+  {
+  "naceCode": "30.200",
+  "description": "Produksjon av lokomotiver og annet rullende materiell til jernbane og sporvei"
+  },
+  {
+  "naceCode": "30.300",
+  "description": "Produksjon av luftfartøyer og romfartøyer og lignende utstyr"
+  },
+  {
+  "naceCode": "30.400",
+  "description": "Produksjon av militære stridskjøretøyer"
+  },
+  {
+  "naceCode": "30.910",
+  "description": "Produksjon av motorsykler"
+  },
+  {
+  "naceCode": "30.920",
+  "description": "Produksjon av sykler og invalidevogner"
+  },
+  {
+  "naceCode": "30.990",
+  "description": "Produksjon av andre transportmidler ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "31.010",
+  "description": "Produksjon av kontor- og butikkmøbler"
+  },
+  {
+  "naceCode": "31.020",
+  "description": "Produksjon av kjøkkenmøbler"
+  },
+  {
+  "naceCode": "31.030",
+  "description": "Produksjon av madrasser"
+  },
+  {
+  "naceCode": "31.090",
+  "description": "Produksjon av møbler ellers"
+  },
+  {
+  "naceCode": "32.110",
+  "description": "Preging av mynter og medaljer"
+  },
+  {
+  "naceCode": "32.120",
+  "description": "Produksjon av gull- og sølvvarer og lignende artikler"
+  },
+  {
+  "naceCode": "32.130",
+  "description": "Produksjon av bijouteri og lignende artikler"
+  },
+  {
+  "naceCode": "32.200",
+  "description": "Produksjon av musikkinstrumenter"
+  },
+  {
+  "naceCode": "32.300",
+  "description": "Produksjon av sportsartikler"
+  },
+  {
+  "naceCode": "32.400",
+  "description": "Produksjon av spill og leker"
+  },
+  {
+  "naceCode": "32.500",
+  "description": "Produksjon av medisinske og tanntekniske instrumenter og utstyr"
+  },
+  {
+  "naceCode": "32.910",
+  "description": "Produksjon av koster og børster"
+  },
+  {
+  "naceCode": "32.990",
+  "description": "Annen industriproduksjon ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "33.110",
+  "description": "Reparasjon av bearbeidede metallprodukter"
+  },
+  {
+  "naceCode": "33.120",
+  "description": "Reparasjon av maskiner"
+  },
+  {
+  "naceCode": "33.130",
+  "description": "Reparasjon av elektronisk og optisk utstyr"
+  },
+  {
+  "naceCode": "33.140",
+  "description": "Reparasjon av elektrisk utstyr"
+  },
+  {
+  "naceCode": "33.150",
+  "description": "Reparasjon og vedlikehold av skip og båter"
+  },
+  {
+  "naceCode": "33.160",
+  "description": "Reparasjon og vedlikehold av luftfartøyer og romfartøyer"
+  },
+  {
+  "naceCode": "33.170",
+  "description": "Reparasjon og vedlikehold av andre transportmidler"
+  },
+  {
+  "naceCode": "33.190",
+  "description": "Reparasjon av annet utstyr"
+  },
+  {
+  "naceCode": "33.200",
+  "description": "Installasjon av industrimaskiner og -utstyr"
+  },
+  {
+  "naceCode": "35.111",
+  "description": "Produksjon av elektrisitet fra vannkraft"
+  },
+  {
+  "naceCode": "35.112",
+  "description": "Produksjon av elektrisitet fra vindkraft"
+  },
+  {
+  "naceCode": "35.113",
+  "description": "Produksjon av elektrisitet fra biobrensel, avfallsforbrenning og deponigass"
+  },
+  {
+  "naceCode": "35.114",
+  "description": "Produksjon av elektrisitet fra naturgass"
+  },
+  {
+  "naceCode": "35.119",
+  "description": "Produksjon av elektrisitet ellers"
+  },
+  {
+  "naceCode": "35.120",
+  "description": "Overføring av elektrisitet"
+  },
+  {
+  "naceCode": "35.130",
+  "description": "Distribusjon av elektrisitet"
+  },
+  {
+  "naceCode": "35.140",
+  "description": "Handel med elektrisitet"
+  },
+  {
+  "naceCode": "35.210",
+  "description": "Produksjon av gass"
+  },
+  {
+  "naceCode": "35.220",
+  "description": "Distribusjon av gass gjennom ledningsnett"
+  },
+  {
+  "naceCode": "35.230",
+  "description": "Handel med gass gjennom ledningsnett"
+  },
+  {
+  "naceCode": "35.300",
+  "description": "Damp- og varmtvannsforsyning"
+  },
+  {
+  "naceCode": "36.000",
+  "description": "Uttak fra kilde, rensing og distribusjon av vann"
+  },
+  {
+  "naceCode": "37.000",
+  "description": "Oppsamling og behandling av avløpsvann"
+  },
+  {
+  "naceCode": "38.110",
+  "description": "Innsamling av ikke-farlig avfall"
+  },
+  {
+  "naceCode": "38.120",
+  "description": "Innsamling av farlig avfall"
+  },
+  {
+  "naceCode": "38.210",
+  "description": "Behandling og disponering av ikke-farlig avfall"
+  },
+  {
+  "naceCode": "38.220",
+  "description": "Behandling og disponering av farlig avfall"
+  },
+  {
+  "naceCode": "38.310",
+  "description": "Demontering av vrakede gjenstander"
+  },
+  {
+  "naceCode": "38.320",
+  "description": "Sortering og bearbeiding av avfall for materialgjenvinning"
+  },
+  {
+  "naceCode": "39.000",
+  "description": "Miljørydding, miljørensing og lignende virksomhet"
+  },
+  {
+  "naceCode": "41.101",
+  "description": "Boligbyggelag"
+  },
+  {
+  "naceCode": "41.109",
+  "description": "Utvikling og salg av egen fast eiendom ellers"
+  },
+  {
+  "naceCode": "41.200",
+  "description": "Oppføring av bygninger"
+  },
+  {
+  "naceCode": "42.110",
+  "description": "Bygging av veier og motorveier"
+  },
+  {
+  "naceCode": "42.120",
+  "description": "Bygging av jernbaner og undergrunnsbaner"
+  },
+  {
+  "naceCode": "42.130",
+  "description": "Bygging av bruer og tunneler"
+  },
+  {
+  "naceCode": "42.210",
+  "description": "Bygging av vann- og kloakkanlegg"
+  },
+  {
+  "naceCode": "42.220",
+  "description": "Bygging av anlegg for elektrisitet og telekommunikasjon"
+  },
+  {
+  "naceCode": "42.910",
+  "description": "Bygging av havne- og damanlegg"
+  },
+  {
+  "naceCode": "42.990",
+  "description": "Bygging av andre anlegg ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "43.110",
+  "description": "Riving av bygninger og andre konstruksjoner"
+  },
+  {
+  "naceCode": "43.120",
+  "description": "Grunnarbeid"
+  },
+  {
+  "naceCode": "43.130",
+  "description": "Prøveboring"
+  },
+  {
+  "naceCode": "43.210",
+  "description": "Elektrisk installasjonsarbeid"
+  },
+  {
+  "naceCode": "43.221",
+  "description": "Rørlegger- og ventilasjonsarbeid"
+  },
+  {
+  "naceCode": "43.222",
+  "description": "Kuldeanlegg- og varmepumpearbeid"
+  },
+  {
+  "naceCode": "43.290",
+  "description": "Annet installasjonsarbeid"
+  },
+  {
+  "naceCode": "43.310",
+  "description": "Stukkatørarbeid og pussing"
+  },
+  {
+  "naceCode": "43.320",
+  "description": "Snekkerarbeid"
+  },
+  {
+  "naceCode": "43.330",
+  "description": "Gulvlegging og tapetsering"
+  },
+  {
+  "naceCode": "43.341",
+  "description": "Malerarbeid"
+  },
+  {
+  "naceCode": "43.342",
+  "description": "Glassarbeid"
+  },
+  {
+  "naceCode": "43.390",
+  "description": "Annen ferdiggjøring av bygninger"
+  },
+  {
+  "naceCode": "43.911",
+  "description": "Blikkenslagerarbeid"
+  },
+  {
+  "naceCode": "43.919",
+  "description": "Takarbeid ellers"
+  },
+  {
+  "naceCode": "43.990",
+  "description": "Annen spesialisert bygge- og anleggsvirksomhet"
+  },
+  {
+  "naceCode": "45.111",
+  "description": "Agentur- og engroshandel med biler og lette motorvogner, unntatt motorsykler"
+  },
+  {
+  "naceCode": "45.112",
+  "description": "Detaljhandel med biler og lette motorvogner, unntatt motorsykler"
+  },
+  {
+  "naceCode": "45.191",
+  "description": "Agentur- og engroshandel med andre motorvogner, unntatt motorsykler"
+  },
+  {
+  "naceCode": "45.192",
+  "description": "Detaljhandel med andre motorvogner, unntatt motorsykler"
+  },
+  {
+  "naceCode": "45.200",
+  "description": "Vedlikehold og reparasjon av motorvogner, unntatt motorsykler"
+  },
+  {
+  "naceCode": "45.310",
+  "description": "Agentur- og engroshandel med deler og utstyr til motorvogner, unntatt motorsykler"
+  },
+  {
+  "naceCode": "45.320",
+  "description": "Detaljhandel med deler og utstyr til motorvogner, unntatt motorsykler"
+  },
+  {
+  "naceCode": "45.401",
+  "description": "Agentur- og engroshandel med motorsykler, deler og utstyr"
+  },
+  {
+  "naceCode": "45.402",
+  "description": "Detaljhandel med motorsykler, deler og utstyr"
+  },
+  {
+  "naceCode": "45.403",
+  "description": "Vedlikehold og reparasjon av motorsykler"
+  },
+  {
+  "naceCode": "46.110",
+  "description": "Agenturhandel med jordbruksråvarer, levende dyr, tekstilråvarer og innsatsvarer"
+  },
+  {
+  "naceCode": "46.120",
+  "description": "Agenturhandel med brensel, drivstoff, malm, metaller og industrikjemikalier"
+  },
+  {
+  "naceCode": "46.130",
+  "description": "Agenturhandel med tømmer, trelast og byggevarer"
+  },
+  {
+  "naceCode": "46.140",
+  "description": "Agenturhandel med maskiner, produksjonsutstyr, båter og luftfartøyer"
+  },
+  {
+  "naceCode": "46.150",
+  "description": "Agenturhandel med møbler, husholdningsvarer og jernvarer"
+  },
+  {
+  "naceCode": "46.160",
+  "description": "Agenturhandel med tekstiler, klær, pelsskinn, skotøy og lærvarer"
+  },
+  {
+  "naceCode": "46.170",
+  "description": "Agenturhandel med nærings- og nytelsesmidler"
+  },
+  {
+  "naceCode": "46.180",
+  "description": "Agenturhandel med spesialisert vareutvalg ellers"
+  },
+  {
+  "naceCode": "46.190",
+  "description": "Agenturhandel med bredt vareutvalg"
+  },
+  {
+  "naceCode": "46.210",
+  "description": "Engroshandel med korn, råtobakk, såvarer og fôrvarer"
+  },
+  {
+  "naceCode": "46.220",
+  "description": "Engroshandel med blomster og planter"
+  },
+  {
+  "naceCode": "46.230",
+  "description": "Engroshandel med levende dyr"
+  },
+  {
+  "naceCode": "46.240",
+  "description": "Engroshandel med huder, skinn og lær"
+  },
+  {
+  "naceCode": "46.310",
+  "description": "Engroshandel med frukt og grønnsaker"
+  },
+  {
+  "naceCode": "46.320",
+  "description": "Engroshandel med kjøtt og kjøttvarer"
+  },
+  {
+  "naceCode": "46.330",
+  "description": "Engroshandel med meierivarer, egg, matolje og -fett"
+  },
+  {
+  "naceCode": "46.341",
+  "description": "Engroshandel med vin og brennevin"
+  },
+  {
+  "naceCode": "46.349",
+  "description": "Engroshandel med drikkevarer ellers"
+  },
+  {
+  "naceCode": "46.350",
+  "description": "Engroshandel med tobakksvarer"
+  },
+  {
+  "naceCode": "46.360",
+  "description": "Engroshandel med sukker, sjokolade og sukkervarer"
+  },
+  {
+  "naceCode": "46.370",
+  "description": "Engroshandel med kaffe, te, kakao og krydder"
+  },
+  {
+  "naceCode": "46.381",
+  "description": "Engroshandel med fisk, skalldyr og bløtdyr"
+  },
+  {
+  "naceCode": "46.389",
+  "description": "Engroshandel med spesialisert utvalg av nærings- og nytelsesmidler ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "46.390",
+  "description": "Engroshandel med bredt utvalg av nærings- og nytelsesmidler"
+  },
+  {
+  "naceCode": "46.410",
+  "description": "Engroshandel med tekstiler og utstyrsvarer"
+  },
+  {
+  "naceCode": "46.421",
+  "description": "Engroshandel med klær"
+  },
+  {
+  "naceCode": "46.422",
+  "description": "Engroshandel med skotøy"
+  },
+  {
+  "naceCode": "46.431",
+  "description": "Engroshandel med elektriske husholdningsapparater og -maskiner"
+  },
+  {
+  "naceCode": "46.432",
+  "description": "Engroshandel med radio og fjernsyn"
+  },
+  {
+  "naceCode": "46.433",
+  "description": "Engroshandel med plater, musikk- og videokassetter og CD- og DVD-plater"
+  },
+  {
+  "naceCode": "46.434",
+  "description": "Engroshandel med fotoutstyr"
+  },
+  {
+  "naceCode": "46.435",
+  "description": "Engroshandel med optiske artikler"
+  },
+  {
+  "naceCode": "46.441",
+  "description": "Engroshandel med kjøkkenutstyr, glass og steintøy"
+  },
+  {
+  "naceCode": "46.442",
+  "description": "Engroshandel med rengjøringsmidler"
+  },
+  {
+  "naceCode": "46.450",
+  "description": "Engroshandel med parfyme og kosmetikk"
+  },
+  {
+  "naceCode": "46.460",
+  "description": "Engroshandel med sykepleie- og apotekvarer"
+  },
+  {
+  "naceCode": "46.471",
+  "description": "Engroshandel med møbler"
+  },
+  {
+  "naceCode": "46.472",
+  "description": "Engroshandel med gulvtepper"
+  },
+  {
+  "naceCode": "46.473",
+  "description": "Engroshandel med belysningsutstyr"
+  },
+  {
+  "naceCode": "46.481",
+  "description": "Engroshandel med klokker og ur"
+  },
+  {
+  "naceCode": "46.482",
+  "description": "Engroshandel med gull- og sølvvarer"
+  },
+  {
+  "naceCode": "46.491",
+  "description": "Engroshandel med bøker, aviser og blader"
+  },
+  {
+  "naceCode": "46.492",
+  "description": "Engroshandel med reiseeffekter og lærvarer"
+  },
+  {
+  "naceCode": "46.493",
+  "description": "Engroshandel med fritidsbåter og -utstyr"
+  },
+  {
+  "naceCode": "46.494",
+  "description": "Engroshandel med sportsutstyr"
+  },
+  {
+  "naceCode": "46.495",
+  "description": "Engroshandel med spill og leker"
+  },
+  {
+  "naceCode": "46.499",
+  "description": "Engroshandel med husholdningsvarer og varer til personlig bruk ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "46.510",
+  "description": "Engroshandel med datamaskiner, tilleggsutstyr til datamaskiner samt programvare"
+  },
+  {
+  "naceCode": "46.520",
+  "description": "Engroshandel med elektronikkutstyr og telekommunikasjonsutstyr samt deler"
+  },
+  {
+  "naceCode": "46.610",
+  "description": "Engroshandel med maskiner og utstyr til jordbruk og skogbruk"
+  },
+  {
+  "naceCode": "46.620",
+  "description": "Engroshandel med maskinverktøy"
+  },
+  {
+  "naceCode": "46.630",
+  "description": "Engroshandel med maskiner og utstyr til bergverksdrift, olje- og gassutvinning og bygge- og anleggsvirksomhet"
+  },
+  {
+  "naceCode": "46.640",
+  "description": "Engroshandel med maskiner og utstyr til tekstilproduksjon"
+  },
+  {
+  "naceCode": "46.650",
+  "description": "Engroshandel med kontormøbler"
+  },
+  {
+  "naceCode": "46.660",
+  "description": "Engroshandel med maskiner og utstyr til kontor ellers"
+  },
+  {
+  "naceCode": "46.691",
+  "description": "Engroshandel med maskiner og utstyr til kraftproduksjon og installasjon"
+  },
+  {
+  "naceCode": "46.692",
+  "description": "Engroshandel med skipsutstyr og fiskeredskap"
+  },
+  {
+  "naceCode": "46.693",
+  "description": "Engroshandel med maskiner og utstyr til industri ellers"
+  },
+  {
+  "naceCode": "46.694",
+  "description": "Engroshandel med maskiner og utstyr til handel, transport og tjenesteyting ellers"
+  },
+  {
+  "naceCode": "46.710",
+  "description": "Engroshandel med drivstoff og brensel"
+  },
+  {
+  "naceCode": "46.720",
+  "description": "Engroshandel med metaller og metallholdig malm"
+  },
+  {
+  "naceCode": "46.731",
+  "description": "Engroshandel med tømmer"
+  },
+  {
+  "naceCode": "46.732",
+  "description": "Engroshandel med trelast"
+  },
+  {
+  "naceCode": "46.733",
+  "description": "Engroshandel med fargevarer"
+  },
+  {
+  "naceCode": "46.739",
+  "description": "Engroshandel med byggevarer ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "46.740",
+  "description": "Engroshandel med jernvarer, rørleggerartikler og oppvarmingsutstyr"
+  },
+  {
+  "naceCode": "46.750",
+  "description": "Engroshandel med kjemiske produkter"
+  },
+  {
+  "naceCode": "46.761",
+  "description": "Engroshandel med papir og papp"
+  },
+  {
+  "naceCode": "46.769",
+  "description": "Engroshandel med innsatsvarer ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "46.770",
+  "description": "Engroshandel med avfall og skrap"
+  },
+  {
+  "naceCode": "46.900",
+  "description": "Uspesifisert engroshandel"
+  },
+  {
+  "naceCode": "47.111",
+  "description": "Butikkhandel med bredt vareutvalg med hovedvekt på nærings- og nytelsesmidler"
+  },
+  {
+  "naceCode": "47.112",
+  "description": "Kioskhandel med bredt vareutvalg med hovedvekt på nærings- og nytelsesmidler"
+  },
+  {
+  "naceCode": "47.190",
+  "description": "Butikkhandel med bredt vareutvalg ellers"
+  },
+  {
+  "naceCode": "47.210",
+  "description": "Butikkhandel med frukt og grønnsaker"
+  },
+  {
+  "naceCode": "47.220",
+  "description": "Butikkhandel med kjøtt og kjøttvarer"
+  },
+  {
+  "naceCode": "47.230",
+  "description": "Butikkhandel med fisk, skalldyr og bløtdyr"
+  },
+  {
+  "naceCode": "47.241",
+  "description": "Butikkhandel med bakervarer og konditorvarer"
+  },
+  {
+  "naceCode": "47.242",
+  "description": "Butikkhandel med sukkervarer"
+  },
+  {
+  "naceCode": "47.251",
+  "description": "Butikkhandel med vin og brennevin"
+  },
+  {
+  "naceCode": "47.259",
+  "description": "Butikkhandel med drikkevarer ellers"
+  },
+  {
+  "naceCode": "47.260",
+  "description": "Butikkhandel med tobakksvarer"
+  },
+  {
+  "naceCode": "47.291",
+  "description": "Butikkhandel med helsekost"
+  },
+  {
+  "naceCode": "47.292",
+  "description": "Butikkhandel med kaffe og te"
+  },
+  {
+  "naceCode": "47.299",
+  "description": "Butikkhandel med nærings- og nytelsesmidler ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "47.300",
+  "description": "Detaljhandel med drivstoff til motorvogner"
+  },
+  {
+  "naceCode": "47.410",
+  "description": "Butikkhandel med datamaskiner og utstyr til datamaskiner"
+  },
+  {
+  "naceCode": "47.420",
+  "description": "Butikkhandel med telekommunikasjonsutstyr"
+  },
+  {
+  "naceCode": "47.430",
+  "description": "Butikkhandel med audio- og videoutstyr"
+  },
+  {
+  "naceCode": "47.510",
+  "description": "Butikkhandel med tekstiler og utstyrsvarer"
+  },
+  {
+  "naceCode": "47.521",
+  "description": "Butikkhandel med bredt utvalg av jernvarer, fargevarer og andre byggevarer"
+  },
+  {
+  "naceCode": "47.522",
+  "description": "Butikkhandel med jernvarer"
+  },
+  {
+  "naceCode": "47.523",
+  "description": "Butikkhandel med fargevarer"
+  },
+  {
+  "naceCode": "47.524",
+  "description": "Butikkhandel med trelast"
+  },
+  {
+  "naceCode": "47.529",
+  "description": "Butikkhandel med byggevarer ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "47.531",
+  "description": "Butikkhandel med tapeter og gulvbelegg"
+  },
+  {
+  "naceCode": "47.532",
+  "description": "Butikkhandel med tepper"
+  },
+  {
+  "naceCode": "47.533",
+  "description": "Butikkhandel med gardiner"
+  },
+  {
+  "naceCode": "47.540",
+  "description": "Butikkhandel med elektriske husholdningsapparater"
+  },
+  {
+  "naceCode": "47.591",
+  "description": "Butikkhandel med møbler"
+  },
+  {
+  "naceCode": "47.592",
+  "description": "Butikkhandel med belysningsutstyr"
+  },
+  {
+  "naceCode": "47.593",
+  "description": "Butikkhandel med kjøkkenutstyr, glass og steintøy"
+  },
+  {
+  "naceCode": "47.594",
+  "description": "Butikkhandel med musikkinstrumenter og noter"
+  },
+  {
+  "naceCode": "47.599",
+  "description": "Butikkhandel med innredningsartikler ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "47.610",
+  "description": "Butikkhandel med bøker"
+  },
+  {
+  "naceCode": "47.620",
+  "description": "Butikkhandel med aviser og papirvarer"
+  },
+  {
+  "naceCode": "47.630",
+  "description": "Butikkhandel med innspillinger av musikk og video"
+  },
+  {
+  "naceCode": "47.641",
+  "description": "Butikkhandel med sportsutstyr"
+  },
+  {
+  "naceCode": "47.642",
+  "description": "Butikkhandel med fritidsbåter og -utstyr"
+  },
+  {
+  "naceCode": "47.650",
+  "description": "Butikkhandel med spill og leker"
+  },
+  {
+  "naceCode": "47.710",
+  "description": "Butikkhandel med klær"
+  },
+  {
+  "naceCode": "47.721",
+  "description": "Butikkhandel med skotøy"
+  },
+  {
+  "naceCode": "47.722",
+  "description": "Butikkhandel med reiseeffekter av lær og lærimitasjoner og varer av lær"
+  },
+  {
+  "naceCode": "47.730",
+  "description": "Butikkhandel med apotekvarer"
+  },
+  {
+  "naceCode": "47.740",
+  "description": "Butikkhandel med medisinske og ortopediske artikler"
+  },
+  {
+  "naceCode": "47.750",
+  "description": "Butikkhandel med kosmetikk og toalettartikler"
+  },
+  {
+  "naceCode": "47.761",
+  "description": "Butikkhandel med blomster og planter"
+  },
+  {
+  "naceCode": "47.762",
+  "description": "Butikkhandel med kjæledyr og fôr til kjæledyr"
+  },
+  {
+  "naceCode": "47.771",
+  "description": "Butikkhandel med ur og klokker"
+  },
+  {
+  "naceCode": "47.772",
+  "description": "Butikkhandel med gull- og sølvvarer"
+  },
+  {
+  "naceCode": "47.781",
+  "description": "Butikkhandel med fotoutstyr"
+  },
+  {
+  "naceCode": "47.782",
+  "description": "Butikkhandel med optiske artikler"
+  },
+  {
+  "naceCode": "47.789",
+  "description": "Butikkhandel ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "47.791",
+  "description": "Butikkhandel med antikviteter"
+  },
+  {
+  "naceCode": "47.792",
+  "description": "Butikkhandel med brukte klær"
+  },
+  {
+  "naceCode": "47.799",
+  "description": "Butikkhandel med brukte varer ellers"
+  },
+  {
+  "naceCode": "47.810",
+  "description": "Torghandel med næringsmidler, drikkevarer og tobakksvarer"
+  },
+  {
+  "naceCode": "47.820",
+  "description": "Torghandel med tekstiler, klær, skotøy og utstyrsvarer"
+  },
+  {
+  "naceCode": "47.890",
+  "description": "Torghandel med andre varer"
+  },
+  {
+  "naceCode": "47.911",
+  "description": "Postordre-/Internetthandel med bredt vareutvalg"
+  },
+  {
+  "naceCode": "47.912",
+  "description": "Postordre-/Internetthandel med tekstiler, utstyrsvarer, klær, skotøy, reiseeffekter og lærvarer"
+  },
+  {
+  "naceCode": "47.913",
+  "description": "Postordre-/Internetthandel med belysningsutstyr, kjøkkenutstyr, møbler og innredningsartikler"
+  },
+  {
+  "naceCode": "47.914",
+  "description": "Postordre-/Internetthandel med elektriske husholdningsapparater, radio, fjernsyn, plater, kassetter og musikkinstrumenter"
+  },
+  {
+  "naceCode": "47.915",
+  "description": "Postordre-/Internetthandel med bøker, papir, aviser og blader"
+  },
+  {
+  "naceCode": "47.916",
+  "description": "Postordre-/Internetthandel med IKT-utstyr"
+  },
+  {
+  "naceCode": "47.917",
+  "description": "Postordre-/Internetthandel med helsekost"
+  },
+  {
+  "naceCode": "47.919",
+  "description": "Postordre-/Internetthandel med annet spesialisert vareutvalg"
+  },
+  {
+  "naceCode": "47.990",
+  "description": "Detaljhandel utenom utsalgssted ellers"
+  },
+  {
+  "naceCode": "49.100",
+  "description": "Passasjertransport med jernbane"
+  },
+  {
+  "naceCode": "49.200",
+  "description": "Godstransport med jernbane"
+  },
+  {
+  "naceCode": "49.311",
+  "description": "Rutebiltransport i by- og forstadsområde"
+  },
+  {
+  "naceCode": "49.312",
+  "description": "Transport med sporveis- og forstadsbane"
+  },
+  {
+  "naceCode": "49.320",
+  "description": "Drosjebiltransport"
+  },
+  {
+  "naceCode": "49.391",
+  "description": "Rutebiltransport utenfor by- og forstadsområde"
+  },
+  {
+  "naceCode": "49.392",
+  "description": "Turbiltransport"
+  },
+  {
+  "naceCode": "49.393",
+  "description": "Transport med taubaner, kabelbaner og skiheiser"
+  },
+  {
+  "naceCode": "49.410",
+  "description": "Godstransport på vei"
+  },
+  {
+  "naceCode": "49.420",
+  "description": "Flyttetransport"
+  },
+  {
+  "naceCode": "49.500",
+  "description": "Rørtransport"
+  },
+  {
+  "naceCode": "50.101",
+  "description": "Utenriks sjøfart med passasjerer"
+  },
+  {
+  "naceCode": "50.102",
+  "description": "Innenlandske kystruter med passasjerer"
+  },
+  {
+  "naceCode": "50.109",
+  "description": "Kysttrafikk ellers med passasjerer"
+  },
+  {
+  "naceCode": "50.201",
+  "description": "Utenriks sjøfart med gods"
+  },
+  {
+  "naceCode": "50.202",
+  "description": "Innenriks sjøfart med gods"
+  },
+  {
+  "naceCode": "50.203",
+  "description": "Slepebåter"
+  },
+  {
+  "naceCode": "50.204",
+  "description": "Forsyning og andre sjøtransporttjenester for offshore"
+  },
+  {
+  "naceCode": "50.300",
+  "description": "Passasjertransport på elver og innsjøer"
+  },
+  {
+  "naceCode": "50.400",
+  "description": "Godstransport på elver og innsjøer"
+  },
+  {
+  "naceCode": "51.100",
+  "description": "Lufttransport med passasjerer"
+  },
+  {
+  "naceCode": "51.210",
+  "description": "Lufttransport med gods"
+  },
+  {
+  "naceCode": "51.220",
+  "description": "Romfart"
+  },
+  {
+  "naceCode": "52.100",
+  "description": "Lagring"
+  },
+  {
+  "naceCode": "52.211",
+  "description": "Drift av gods- og transportsentraler"
+  },
+  {
+  "naceCode": "52.212",
+  "description": "Drift av parkeringsplasser og parkeringshus"
+  },
+  {
+  "naceCode": "52.213",
+  "description": "Drift av bomstasjoner"
+  },
+  {
+  "naceCode": "52.214",
+  "description": "Drift av taxisentraler og annen formidling av persontransport"
+  },
+  {
+  "naceCode": "52.216",
+  "description": "Kondensering av gass med henblikk på transport"
+  },
+  {
+  "naceCode": "52.219",
+  "description": "Tjenester tilknyttet landtransport ellers"
+  },
+  {
+  "naceCode": "52.221",
+  "description": "Drift av havne- og kaianlegg"
+  },
+  {
+  "naceCode": "52.222",
+  "description": "Redningstjeneste"
+  },
+  {
+  "naceCode": "52.223",
+  "description": "Forsyningsbaser"
+  },
+  {
+  "naceCode": "52.229",
+  "description": "Tjenester tilknyttet sjøtransport ellers"
+  },
+  {
+  "naceCode": "52.230",
+  "description": "Andre tjenester tilknyttet lufttransport"
+  },
+  {
+  "naceCode": "52.240",
+  "description": "Lasting og lossing"
+  },
+  {
+  "naceCode": "52.291",
+  "description": "Spedisjon"
+  },
+  {
+  "naceCode": "52.292",
+  "description": "Skipsmegling"
+  },
+  {
+  "naceCode": "52.293",
+  "description": "Flymegling"
+  },
+  {
+  "naceCode": "52.299",
+  "description": "Transportformidling ellers"
+  },
+  {
+  "naceCode": "53.100",
+  "description": "Landsdekkende posttjenester"
+  },
+  {
+  "naceCode": "53.200",
+  "description": "Andre post- og budtjenester"
+  },
+  {
+  "naceCode": "55.101",
+  "description": "Drift av hoteller, pensjonater og moteller med restaurant"
+  },
+  {
+  "naceCode": "55.102",
+  "description": "Drift av hoteller, pensjonater og moteller uten restaurant"
+  },
+  {
+  "naceCode": "55.201",
+  "description": "Drift av vandrerhjem"
+  },
+  {
+  "naceCode": "55.202",
+  "description": "Drift av ferieleiligheter"
+  },
+  {
+  "naceCode": "55.300",
+  "description": "Drift av campingplasser"
+  },
+  {
+  "naceCode": "55.900",
+  "description": "Annen overnatting"
+  },
+  {
+  "naceCode": "56.101",
+  "description": "Drift av restauranter og kafeer"
+  },
+  {
+  "naceCode": "56.102",
+  "description": "Drift av gatekjøkken"
+  },
+  {
+  "naceCode": "56.210",
+  "description": "Cateringvirksomhet"
+  },
+  {
+  "naceCode": "56.290",
+  "description": "Kantiner drevet som selvstendig virksomhet"
+  },
+  {
+  "naceCode": "56.301",
+  "description": "Drift av puber"
+  },
+  {
+  "naceCode": "56.309",
+  "description": "Drift av barer ellers"
+  },
+  {
+  "naceCode": "58.110",
+  "description": "Utgivelse av bøker"
+  },
+  {
+  "naceCode": "58.120",
+  "description": "Utgivelse av kataloger og adresselister"
+  },
+  {
+  "naceCode": "58.130",
+  "description": "Utgivelse av aviser"
+  },
+  {
+  "naceCode": "58.140",
+  "description": "Utgivelse av blader og tidsskrifter"
+  },
+  {
+  "naceCode": "58.190",
+  "description": "Forlagsvirksomhet ellers"
+  },
+  {
+  "naceCode": "58.210",
+  "description": "Utgivelse av programvare for dataspill"
+  },
+  {
+  "naceCode": "58.290",
+  "description": "Utgivelse av annen programvare"
+  },
+  {
+  "naceCode": "59.110",
+  "description": "Produksjon av film, video og fjernsynsprogrammer"
+  },
+  {
+  "naceCode": "59.120",
+  "description": "Etterarbeid knyttet til produksjon av film, video og fjernsynsprogramm er"
+  },
+  {
+  "naceCode": "59.130",
+  "description": "Distribusjon av film, video og fjernsynsprogrammer"
+  },
+  {
+  "naceCode": "59.140",
+  "description": "Filmframvisning"
+  },
+  {
+  "naceCode": "59.200",
+  "description": "Produksjon og utgivelse av musikk- og lydopptak"
+  },
+  {
+  "naceCode": "60.100",
+  "description": "Radiokringkasting"
+  },
+  {
+  "naceCode": "60.200",
+  "description": "Fjernsynskringkasting"
+  },
+  {
+  "naceCode": "61.100",
+  "description": "Kabelbasert telekommunikasjon"
+  },
+  {
+  "naceCode": "61.200",
+  "description": "Trådløs telekommunikasjon"
+  },
+  {
+  "naceCode": "61.300",
+  "description": "Satellittbasert telekommunikasjon"
+  },
+  {
+  "naceCode": "61.900",
+  "description": "Telekommunikasjon ellers"
+  },
+  {
+  "naceCode": "62.010",
+  "description": "Programmeringstjenester"
+  },
+  {
+  "naceCode": "62.020",
+  "description": "Konsulentvirksomhet tilknyttet informasjonsteknologi"
+  },
+  {
+  "naceCode": "62.030",
+  "description": "Forvaltning og drift av IT-systemer"
+  },
+  {
+  "naceCode": "62.090",
+  "description": "Andre tjenester tilknyttet informasjonsteknologi"
+  },
+  {
+  "naceCode": "63.110",
+  "description": "Databehandling, datalagring og tilknyttede tjenester"
+  },
+  {
+  "naceCode": "63.120",
+  "description": "Drift av web-portaler"
+  },
+  {
+  "naceCode": "63.910",
+  "description": "Nyhetsbyråer"
+  },
+  {
+  "naceCode": "63.990",
+  "description": "Andre informasjonstjenester ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "64.110",
+  "description": "Sentralbankvirksomhet"
+  },
+  {
+  "naceCode": "64.190",
+  "description": "Bankvirksomhet ellers"
+  },
+  {
+  "naceCode": "64.201",
+  "description": "Finansielle holdingselskaper"
+  },
+  {
+  "naceCode": "64.202",
+  "description": "Spesielle holdingselskaper"
+  },
+  {
+  "naceCode": "64.301",
+  "description": "Verdipapirfond"
+  },
+  {
+  "naceCode": "64.302",
+  "description": "Investeringsselskaper/-fond åpne for allmennheten"
+  },
+  {
+  "naceCode": "64.305",
+  "description": "Forvaltningsstiftelser for fond og legater opprettet for veldedige og allmennyttige formål, men som selv ikke fordeler støtte"
+  },
+  {
+  "naceCode": "64.306",
+  "description": "Aktive eierfond"
+  },
+  {
+  "naceCode": "64.308",
+  "description": "Investeringsselskaper og lignende lukket for allmennheten"
+  },
+  {
+  "naceCode": "64.910",
+  "description": "Finansiell leasing"
+  },
+  {
+  "naceCode": "64.920",
+  "description": "Annen kredittgivning"
+  },
+  {
+  "naceCode": "64.990",
+  "description": "Annen finansieringsvirksomhet ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "65.110",
+  "description": "Livsforsikring"
+  },
+  {
+  "naceCode": "65.120",
+  "description": "Skadeforsikring"
+  },
+  {
+  "naceCode": "65.200",
+  "description": "Gjenforsikring"
+  },
+  {
+  "naceCode": "65.300",
+  "description": "Pensjonskasser"
+  },
+  {
+  "naceCode": "66.110",
+  "description": "Administrasjon av finansmarkeder"
+  },
+  {
+  "naceCode": "66.120",
+  "description": "Verdipapirmegling"
+  },
+  {
+  "naceCode": "66.190",
+  "description": "Andre tjenester tilknyttet finansieringsvirksomhet"
+  },
+  {
+  "naceCode": "66.210",
+  "description": "Risiko- og skadevurdering"
+  },
+  {
+  "naceCode": "66.220",
+  "description": "Forsikringsformidling"
+  },
+  {
+  "naceCode": "66.290",
+  "description": "Andre tjenester tilknyttet forsikringsvirksomhet og pensjonskasser"
+  },
+  {
+  "naceCode": "66.300",
+  "description": "Fondsforvaltningsvirksomhet"
+  },
+  {
+  "naceCode": "68.100",
+  "description": "Kjøp og salg av egen fast eiendom"
+  },
+  {
+  "naceCode": "68.201",
+  "description": "Borettslag"
+  },
+  {
+  "naceCode": "68.209",
+  "description": "Utleie av egen eller leid fast eiendom ellers"
+  },
+  {
+  "naceCode": "68.310",
+  "description": "Eiendomsmegling"
+  },
+  {
+  "naceCode": "68.320",
+  "description": "Eiendomsforvaltning"
+  },
+  {
+  "naceCode": "69.100",
+  "description": "Juridisk tjenesteyting"
+  },
+  {
+  "naceCode": "69.201",
+  "description": "Regnskap og bokføring"
+  },
+  {
+  "naceCode": "69.202",
+  "description": "Revisjon"
+  },
+  {
+  "naceCode": "69.203",
+  "description": "Skatterådgivning"
+  },
+  {
+  "naceCode": "70.100",
+  "description": "Hovedkontortjenester"
+  },
+  {
+  "naceCode": "70.210",
+  "description": "PR og kommunikasjonstjenester"
+  },
+  {
+  "naceCode": "70.220",
+  "description": "Bedriftsrådgivning og annen administrativ rådgivning"
+  },
+  {
+  "naceCode": "71.111",
+  "description": "Plan- og reguleringsarbeid"
+  },
+  {
+  "naceCode": "71.112",
+  "description": "Arkitekttjenester vedrørende byggverk"
+  },
+  {
+  "naceCode": "71.113",
+  "description": "Landskapsarkitekttjenester"
+  },
+  {
+  "naceCode": "71.121",
+  "description": "Byggeteknisk konsulentvirksomhet"
+  },
+  {
+  "naceCode": "71.122",
+  "description": "Geologiske undersøkelser"
+  },
+  {
+  "naceCode": "71.129",
+  "description": "Annen teknisk konsulentvirksomhet"
+  },
+  {
+  "naceCode": "71.200",
+  "description": "Teknisk prøving og analyse"
+  },
+  {
+  "naceCode": "72.110",
+  "description": "Forskning og utviklingsarbeid innen bioteknologi"
+  },
+  {
+  "naceCode": "72.190",
+  "description": "Annen forskning og annet utviklingsarbeid innen naturvitenskap og teknikk"
+  },
+  {
+  "naceCode": "72.200",
+  "description": "Forskning og utviklingsarbeid innen samfunnsvitenskap og humanistiske fag"
+  },
+  {
+  "naceCode": "73.110",
+  "description": "Reklamebyråer"
+  },
+  {
+  "naceCode": "73.120",
+  "description": "Medieformidlingstjenester"
+  },
+  {
+  "naceCode": "73.200",
+  "description": "Markeds- og opinionsundersøkelser"
+  },
+  {
+  "naceCode": "74.101",
+  "description": "Industridesign, produktdesign og annen teknisk designvirksomhet"
+  },
+  {
+  "naceCode": "74.102",
+  "description": "Grafisk og visuell kommunikasjonsdesign"
+  },
+  {
+  "naceCode": "74.103",
+  "description": "Interiørarkitekt, interiørdesign og interiørkonsulentvirksomhet"
+  },
+  {
+  "naceCode": "74.200",
+  "description": "Fotografvirksomhet"
+  },
+  {
+  "naceCode": "74.300",
+  "description": "Oversettelses- og tolkevirksomhet"
+  },
+  {
+  "naceCode": "74.901",
+  "description": "Takseringsvirksomhet"
+  },
+  {
+  "naceCode": "74.902",
+  "description": "Modellbyråvirksomhet"
+  },
+  {
+  "naceCode": "74.903",
+  "description": "Impresariovirksomhet"
+  },
+  {
+  "naceCode": "74.909",
+  "description": "Annen faglig, vitenskapelig og teknisk virksomhet ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "75.000",
+  "description": "Veterinærtjenester"
+  },
+  {
+  "naceCode": "77.110",
+  "description": "Utleie og leasing av biler og andre lette motorvogner"
+  },
+  {
+  "naceCode": "77.120",
+  "description": "Utleie og leasing av lastebiler"
+  },
+  {
+  "naceCode": "77.210",
+  "description": "Utleie og leasing av sports- og fritidsutstyr"
+  },
+  {
+  "naceCode": "77.220",
+  "description": "Utleie av videofilm, DVD og lignende"
+  },
+  {
+  "naceCode": "77.290",
+  "description": "Utleie og leasing av andre husholdningsvarer og varer til personlig bruk"
+  },
+  {
+  "naceCode": "77.310",
+  "description": "Utleie og leasing av landbruksmaskiner og -utstyr"
+  },
+  {
+  "naceCode": "77.320",
+  "description": "Utleie og leasing av bygge- og anleggsmaskiner og -utstyr"
+  },
+  {
+  "naceCode": "77.330",
+  "description": "Utleie og leasing av kontor- og datamaskiner"
+  },
+  {
+  "naceCode": "77.340",
+  "description": "Utleie og leasing av sjøtransportmateriell"
+  },
+  {
+  "naceCode": "77.350",
+  "description": "Utleie og leasing av lufttransportmateriell"
+  },
+  {
+  "naceCode": "77.390",
+  "description": "Utleie og leasing av andre maskiner og annet utstyr og materiell ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "77.400",
+  "description": "Leasing av immateriell eiendom og lignende produkter, unntatt opphavsrettsbeskyttede verker"
+  },
+  {
+  "naceCode": "78.100",
+  "description": "Rekruttering og formidling av arbeidskraft"
+  },
+  {
+  "naceCode": "78.200",
+  "description": "Utleie av arbeidskraft"
+  },
+  {
+  "naceCode": "78.300",
+  "description": "Andre personaladministrative tjenester"
+  },
+  {
+  "naceCode": "79.110",
+  "description": "Reisebyråvirksomhet"
+  },
+  {
+  "naceCode": "79.120",
+  "description": "Reisearrangørvirksomhet"
+  },
+  {
+  "naceCode": "79.901",
+  "description": "Turistkontorvirksomhet og destinasjonsselskaper"
+  },
+  {
+  "naceCode": "79.902",
+  "description": "Guider og reiseledere"
+  },
+  {
+  "naceCode": "79.903",
+  "description": "Opplevelses-, arrangements- og aktivitetsarrangørvirksomhet"
+  },
+  {
+  "naceCode": "79.909",
+  "description": "Turistrelaterte tjenester ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "80.100",
+  "description": "Private vakttjenester"
+  },
+  {
+  "naceCode": "80.200",
+  "description": "Tjenester tilknyttet vakttjenester"
+  },
+  {
+  "naceCode": "80.300",
+  "description": "Etterforskning"
+  },
+  {
+  "naceCode": "81.101",
+  "description": "Vaktmestertjenester"
+  },
+  {
+  "naceCode": "81.109",
+  "description": "Andre kombinerte tjenester tilknyttet eiendomsdrift"
+  },
+  {
+  "naceCode": "81.210",
+  "description": "Rengjøring av bygninger"
+  },
+  {
+  "naceCode": "81.220",
+  "description": "Utvendig rengjøring av bygninger og industriell rengjøring"
+  },
+  {
+  "naceCode": "81.291",
+  "description": "Skadedyrkontroll"
+  },
+  {
+  "naceCode": "81.299",
+  "description": "Annen rengjøringsvirksomhet ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "81.300",
+  "description": "Beplantning av hager og parkanlegg"
+  },
+  {
+  "naceCode": "82.110",
+  "description": "Kombinerte kontortjenester"
+  },
+  {
+  "naceCode": "82.190",
+  "description": "Fotokopiering, forberedelse av dokumenter og andre spesialiserte kontortjenester"
+  },
+  {
+  "naceCode": "82.201",
+  "description": "Telefonvakttjenester"
+  },
+  {
+  "naceCode": "82.202",
+  "description": "Telefonsalg"
+  },
+  {
+  "naceCode": "82.300",
+  "description": "Kongress-, messe- og utstillingsvirksomhet"
+  },
+  {
+  "naceCode": "82.910",
+  "description": "Inkasso- og kredittopplysningsvirksomhet"
+  },
+  {
+  "naceCode": "82.920",
+  "description": "Pakkevirksomhet"
+  },
+  {
+  "naceCode": "82.990",
+  "description": "Annen forretningsmessig tjenesteyting ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "84.110",
+  "description": "Generell offentlig administrasjon"
+  },
+  {
+  "naceCode": "84.120",
+  "description": "Offentlig administrasjon tilknyttet helsestell, sosial virksomhet, undervisning, kirke, kultur og miljøvern"
+  },
+  {
+  "naceCode": "84.130",
+  "description": "Offentlig administrasjon tilknyttet næringsvirksomhet og arbeidsmarked"
+  },
+  {
+  "naceCode": "84.210",
+  "description": "Utenrikssaker"
+  },
+  {
+  "naceCode": "84.220",
+  "description": "Forsvar"
+  },
+  {
+  "naceCode": "84.230",
+  "description": "Retts- og fengselsvesen"
+  },
+  {
+  "naceCode": "84.240",
+  "description": "Politi- og påtalemyndighet"
+  },
+  {
+  "naceCode": "84.250",
+  "description": "Brannvern"
+  },
+  {
+  "naceCode": "84.300",
+  "description": "Trygdeordninger underlagt offentlig forvaltning"
+  },
+  {
+  "naceCode": "85.100",
+  "description": "Førskoleundervisning"
+  },
+  {
+  "naceCode": "85.201",
+  "description": "Ordinær grunnskoleundervisning"
+  },
+  {
+  "naceCode": "85.202",
+  "description": "Spesialskoleundervisning for funksjonshemmede"
+  },
+  {
+  "naceCode": "85.203",
+  "description": "Kompetansesentra og annen spesialundervisning"
+  },
+  {
+  "naceCode": "85.310",
+  "description": "Videregående opplæring innen allmennfaglige studieretninger"
+  },
+  {
+  "naceCode": "85.320",
+  "description": "Videregående opplæring innen tekniske og andre yrkesfaglige studieretninger"
+  },
+  {
+  "naceCode": "85.410",
+  "description": "Undervisning ved fagskoler"
+  },
+  {
+  "naceCode": "85.421",
+  "description": "Undervisning ved universiteter"
+  },
+  {
+  "naceCode": "85.422",
+  "description": "Undervisning ved vitenskapelige høgskoler"
+  },
+  {
+  "naceCode": "85.423",
+  "description": "Undervisning ved statlige høgskoler"
+  },
+  {
+  "naceCode": "85.424",
+  "description": "Undervisning ved militære høgskoler"
+  },
+  {
+  "naceCode": "85.429",
+  "description": "Undervisning ved andre høgskoler"
+  },
+  {
+  "naceCode": "85.510",
+  "description": "Undervisning innen idrett og rekreasjon"
+  },
+  {
+  "naceCode": "85.521",
+  "description": "Kommunal kulturskoleundervisning"
+  },
+  {
+  "naceCode": "85.522",
+  "description": "Undervisning i kunstfag"
+  },
+  {
+  "naceCode": "85.529",
+  "description": "Annen undervisning innen kultur"
+  },
+  {
+  "naceCode": "85.530",
+  "description": "Trafikkskoleundervisning"
+  },
+  {
+  "naceCode": "85.591",
+  "description": "Folkehøgskoleundervisning"
+  },
+  {
+  "naceCode": "85.592",
+  "description": "Arbeidsmarkedskurs"
+  },
+  {
+  "naceCode": "85.593",
+  "description": "Studieforbunds- og frivillige organisasjoners kurs"
+  },
+  {
+  "naceCode": "85.594",
+  "description": "Voksenopplæringssentre"
+  },
+  {
+  "naceCode": "85.595",
+  "description": "Timelærervirksomhet"
+  },
+  {
+  "naceCode": "85.596",
+  "description": "Undervisning innen religion"
+  },
+  {
+  "naceCode": "85.599",
+  "description": "Annen undervisning ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "85.601",
+  "description": "Pedagogisk-psykologisk rådgivningstjeneste"
+  },
+  {
+  "naceCode": "85.609",
+  "description": "Andre tjenester tilknyttet undervisning"
+  },
+  {
+  "naceCode": "86.101",
+  "description": "Alminnelige somatiske sykehus"
+  },
+  {
+  "naceCode": "86.102",
+  "description": "Somatiske spesialsykehus"
+  },
+  {
+  "naceCode": "86.103",
+  "description": "Andre somatiske spesialinstitusjoner"
+  },
+  {
+  "naceCode": "86.104",
+  "description": "Institusjoner i psykisk helsevern for voksne"
+  },
+  {
+  "naceCode": "86.105",
+  "description": "Institusjoner i psykisk helsevern for barn og unge"
+  },
+  {
+  "naceCode": "86.106",
+  "description": "Rusmiddelinstitusjoner"
+  },
+  {
+  "naceCode": "86.107",
+  "description": "Rehabilitering- og opptreningsinstitusjoner"
+  },
+  {
+  "naceCode": "86.211",
+  "description": "Allmenn legetjeneste"
+  },
+  {
+  "naceCode": "86.212",
+  "description": "Somatiske poliklinikker"
+  },
+  {
+  "naceCode": "86.221",
+  "description": "Spesialisert legetjeneste, unntatt psykiatrisk legetjeneste"
+  },
+  {
+  "naceCode": "86.222",
+  "description": "Legetjenester innen psykisk helsevern"
+  },
+  {
+  "naceCode": "86.223",
+  "description": "Poliklinikker i psykisk helsevern for voksne"
+  },
+  {
+  "naceCode": "86.224",
+  "description": "Poliklinikker i psykisk helsevern for barn og unge"
+  },
+  {
+  "naceCode": "86.225",
+  "description": "Rusmiddelpoliklinikker"
+  },
+  {
+  "naceCode": "86.230",
+  "description": "Tannhelsetjenester"
+  },
+  {
+  "naceCode": "86.901",
+  "description": "Hjemmesykepleie"
+  },
+  {
+  "naceCode": "86.902",
+  "description": "Fysioterapitjeneste"
+  },
+  {
+  "naceCode": "86.903",
+  "description": "Helsestasjon og skolehelsetjeneste"
+  },
+  {
+  "naceCode": "86.904",
+  "description": "Annen forebyggende helsetjeneste"
+  },
+  {
+  "naceCode": "86.905",
+  "description": "Klinisk psykologtjeneste"
+  },
+  {
+  "naceCode": "86.906",
+  "description": "Medisinske laboratorietjenester"
+  },
+  {
+  "naceCode": "86.907",
+  "description": "Ambulansetjenester"
+  },
+  {
+  "naceCode": "86.909",
+  "description": "Andre helsetjenester"
+  },
+  {
+  "naceCode": "87.101",
+  "description": "Somatiske spesialsykehjem"
+  },
+  {
+  "naceCode": "87.102",
+  "description": "Somatiske sykehjem"
+  },
+  {
+  "naceCode": "87.201",
+  "description": "Psykiatriske sykehjem"
+  },
+  {
+  "naceCode": "87.202",
+  "description": "Omsorgsinstitusjoner for rusmiddelmisbrukere"
+  },
+  {
+  "naceCode": "87.203",
+  "description": "Bofellesskap for psykisk utviklingshemmede"
+  },
+  {
+  "naceCode": "87.301",
+  "description": "Aldershjem"
+  },
+  {
+  "naceCode": "87.302",
+  "description": "Bofellesskap for eldre og funksjonshemmede med fast tilknyttet personell hele døgnet"
+  },
+  {
+  "naceCode": "87.303",
+  "description": "Bofellesskap for eldre og funksjonshemmede med fast tilknyttet personell deler av døgnet"
+  },
+  {
+  "naceCode": "87.304",
+  "description": "Avlastningsboliger/-institusjoner"
+  },
+  {
+  "naceCode": "87.305",
+  "description": "Barneboliger"
+  },
+  {
+  "naceCode": "87.901",
+  "description": "Institusjoner innen barne- og ungdomsvern"
+  },
+  {
+  "naceCode": "87.909",
+  "description": "Omsorgsinstitusjoner ellers"
+  },
+  {
+  "naceCode": "88.101",
+  "description": "Hjemmehjelp"
+  },
+  {
+  "naceCode": "88.102",
+  "description": "Dagsentra/aktivitetssentra for eldre og funksjonshemmede"
+  },
+  {
+  "naceCode": "88.103",
+  "description": "Eldresentre"
+  },
+  {
+  "naceCode": "88.911",
+  "description": "Barnehager"
+  },
+  {
+  "naceCode": "88.912",
+  "description": "Barneparker og dagmammaer"
+  },
+  {
+  "naceCode": "88.913",
+  "description": "Skolefritidsordninger"
+  },
+  {
+  "naceCode": "88.914",
+  "description": "Fritidsklubber for barn og ungdom"
+  },
+  {
+  "naceCode": "88.991",
+  "description": "Barneverntjenester"
+  },
+  {
+  "naceCode": "88.992",
+  "description": "Familieverntjenester"
+  },
+  {
+  "naceCode": "88.993",
+  "description": "Arbeidstrening for ordinært arbeidsmarked"
+  },
+  {
+  "naceCode": "88.994",
+  "description": "Varig tilrettelagt arbeid"
+  },
+  {
+  "naceCode": "88.995",
+  "description": "Sosiale velferdsorganisasjoner"
+  },
+  {
+  "naceCode": "88.996",
+  "description": "Asylmottak"
+  },
+  {
+  "naceCode": "88.997",
+  "description": "Sosialtjenester for rusmiddelmisbrukere uten botilbud"
+  },
+  {
+  "naceCode": "88.998",
+  "description": "Kommunale sosialkontortjenester"
+  },
+  {
+  "naceCode": "88.999",
+  "description": "Andre sosialtjenester uten botilbud"
+  },
+  {
+  "naceCode": "90.011",
+  "description": "Utøvende kunstnere og underholdningsvirksomhet innen musikk"
+  },
+  {
+  "naceCode": "90.012",
+  "description": "Utøvende kunstnere og underholdningsvirksomhet innen scenekunst"
+  },
+  {
+  "naceCode": "90.019",
+  "description": "Utøvende kunstnere og underholdningsvirksomhet ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "90.020",
+  "description": "Tjenester tilknyttet underholdningsvirksomhet"
+  },
+  {
+  "naceCode": "90.031",
+  "description": "Selvstendig kunstnerisk virksomhet innen visuell kunst"
+  },
+  {
+  "naceCode": "90.032",
+  "description": "Selvstendig kunstnerisk virksomhet innen musikk"
+  },
+  {
+  "naceCode": "90.033",
+  "description": "Selvstendig kunstnerisk virksomhet innen scenekunst"
+  },
+  {
+  "naceCode": "90.034",
+  "description": "Selvstendig kunstnerisk virksomhet innen litteratur"
+  },
+  {
+  "naceCode": "90.039",
+  "description": "Selvstendig kunstnerisk virksomhet ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "90.040",
+  "description": "Drift av lokaler tilknyttet kunstnerisk virksomhet"
+  },
+  {
+  "naceCode": "91.011",
+  "description": "Drift av folkebiblioteker"
+  },
+  {
+  "naceCode": "91.012",
+  "description": "Drift av fag- og forskningsbiblioteker"
+  },
+  {
+  "naceCode": "91.013",
+  "description": "Drift av arkiver"
+  },
+  {
+  "naceCode": "91.021",
+  "description": "Drift av kunst- og kunstindustrimuseer"
+  },
+  {
+  "naceCode": "91.022",
+  "description": "Drift av kulturhistoriske museer"
+  },
+  {
+  "naceCode": "91.023",
+  "description": "Drift av naturhistoriske museer"
+  },
+  {
+  "naceCode": "91.029",
+  "description": "Drift av museer ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "91.030",
+  "description": "Drift av historiske steder og bygninger og lignende severdigheter"
+  },
+  {
+  "naceCode": "91.040",
+  "description": "Drift av botaniske og zoologiske hager og naturreservater"
+  },
+  {
+  "naceCode": "92.000",
+  "description": "Lotteri og totalisatorspill"
+  },
+  {
+  "naceCode": "93.110",
+  "description": "Drift av idrettsanlegg"
+  },
+  {
+  "naceCode": "93.120",
+  "description": "Idrettslag og -klubber"
+  },
+  {
+  "naceCode": "93.130",
+  "description": "Treningssentre"
+  },
+  {
+  "naceCode": "93.190",
+  "description": "Andre sportsaktiviteter"
+  },
+  {
+  "naceCode": "93.210",
+  "description": "Drift av fornøyelses- og temaparker"
+  },
+  {
+  "naceCode": "93.291",
+  "description": "Opplevelsesaktiviteter"
+  },
+  {
+  "naceCode": "93.292",
+  "description": "Fritidsetablissement"
+  },
+  {
+  "naceCode": "93.299",
+  "description": "Fritidsvirksomhet ellers"
+  },
+  {
+  "naceCode": "94.110",
+  "description": "Næringslivs- og arbeidsgiverorganisasjoner"
+  },
+  {
+  "naceCode": "94.120",
+  "description": "Yrkessammenslutninger"
+  },
+  {
+  "naceCode": "94.200",
+  "description": "Arbeidstakerorganisasjoner"
+  },
+  {
+  "naceCode": "94.910",
+  "description": "Religiøse organisasjoner"
+  },
+  {
+  "naceCode": "94.920",
+  "description": "Partipolitiske organisasjoner"
+  },
+  {
+  "naceCode": "94.991",
+  "description": "Aktiviteter i andre interesseorganisasjoner ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "94.992",
+  "description": "Fond/legater som støtter veldedige og allmennyttige formål"
+  },
+  {
+  "naceCode": "95.110",
+  "description": "Reparasjon av datamaskiner og tilleggsutstyr"
+  },
+  {
+  "naceCode": "95.120",
+  "description": "Reparasjon av kommunikasjonsutstyr"
+  },
+  {
+  "naceCode": "95.210",
+  "description": "Reparasjon av elektronikk til husholdningsbruk"
+  },
+  {
+  "naceCode": "95.220",
+  "description": "Reparasjon av husholdningsvarer og hageredskaper"
+  },
+  {
+  "naceCode": "95.230",
+  "description": "Reparasjon av skotøy og lærvarer"
+  },
+  {
+  "naceCode": "95.240",
+  "description": "Reparasjon av møbler og boliginnredning"
+  },
+  {
+  "naceCode": "95.250",
+  "description": "Reparasjon av ur, gull- og sølvvarer"
+  },
+  {
+  "naceCode": "95.290",
+  "description": "Reparasjon av andre husholdningsvarer og varer til personlig bruk"
+  },
+  {
+  "naceCode": "96.010",
+  "description": "Vaskeri- og renserivirksomhet"
+  },
+  {
+  "naceCode": "96.020",
+  "description": "Frisering og annen skjønnhetspleie"
+  },
+  {
+  "naceCode": "96.030",
+  "description": "Begravelsesbyråvirksomhet og drift av kirkegårder og krematorier"
+  },
+  {
+  "naceCode": "96.040",
+  "description": "Virksomhet knyttet til kroppspleie og fysisk velvære"
+  },
+  {
+  "naceCode": "96.090",
+  "description": "Personlig tjenesteyting ikke nevnt annet sted"
+  },
+  {
+  "naceCode": "97.000",
+  "description": "Lønnet arbeid i private husholdninger"
+  },
+  {
+  "naceCode": "99.000",
+  "description": "Internasjonale organisasjoner og organer"
+  }
+  ],
+  "statusCode": 200
+  }

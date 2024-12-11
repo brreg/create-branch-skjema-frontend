@@ -1,8 +1,15 @@
-import { Field, ErrorMessage } from 'formik';
 import SkjemaProgressBar from '../../components/skjema/progressBar';
-import { Textfield } from '@digdir/designsystemet-react';
+import { Button } from '@digdir/designsystemet-react';
+import { getCookie } from '../../context/Cookie';
 
-export default function SkjemaPage4({ formik }: { formik: any }) {
+
+interface Props {
+  prevPage: () => void;
+}
+
+export default function SkjemaPage4({ prevPage }: Props) {
+  const existingCookie = getCookie();
+
   return (
     <main className="main-content">
       <section className="info-section">
@@ -11,19 +18,10 @@ export default function SkjemaPage4({ formik }: { formik: any }) {
         <SkjemaProgressBar page={4} />
       </section>
       <hr className='horisontal-divider' />
-      <section>
-        <Textfield
-          label="Personnavn"
-          name="personNavn"
-          value={formik.values.personNavn}
-          onChange={formik.handleChange}
-          className={formik.errors.personNavn && formik.touched.personNavn ? 'error' : ''}
-          required
-        />
-        {formik.errors.personNavn && formik.touched.personNavn && (
-          <div className="error-message">{formik.errors.personNavn}</div>
-        )}
-      </section>
+        <h2>Her kommer det løsning for signering snart</h2>
+        <div className="button-group">
+          <Button type="button" variant='tertiary' onClick={() => prevPage()}>Forrige</Button>
+        </div>
     </main>
   )
 }
