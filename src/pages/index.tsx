@@ -10,6 +10,7 @@ import { Client } from '@stomp/stompjs';
 import { WebSocket } from 'ws';
 import { createPortal } from 'react-dom'
 import WaitModal from '../components/waitModal'
+import { useFormik } from 'formik'
 Object.assign(global, { WebSocket });
 
 function IndexPage() {
@@ -101,7 +102,6 @@ function IndexPage() {
   async function sendDIDaddress() {
     try {
       setShowWaitModal(true)
-      if (!didAddress.trim()) return; // sjekker om input er tom
       if (!sessionId) return;
 
       const response = await fetch(backendUrl + "/api/message", {
@@ -121,6 +121,16 @@ function IndexPage() {
     }
   }
 
+  const formik = useFormik({
+    initialValues: {
+      didAddress: ''
+    },
+    onSubmit: (values) => {
+      setDidAddress(values.didAddress)
+      sendDIDaddress()
+    }
+  })
+
   return (
     <>
       <main className='center'>
@@ -136,20 +146,18 @@ function IndexPage() {
             <QRCodeSVG value={qrLink} className='qrimage' />
           }
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
-          <div className="didinput">
+          <form className="didinput" onSubmit={formik.handleSubmit}>
             <Textfield
               data-size="md"
               label="DID addresse til din personlommebok"
               htmlSize={40}
               required
-              value={didAddress}
-              onChange={(e) => setDidAddress(e.target.value)}
+              name='didAddress'
+              value={formik.values.didAddress}
+              onChange={formik.handleChange}
             />
-            <Button
-              onClick={() => sendDIDaddress()}
-              disabled={didAddress.trim().length === 0}
-            >Send inn</Button>
-          </div>
+            <Button type='submit'>Send inn</Button>
+          </form>
           {showWaitModal && createPortal(
             <WaitModal onClose={() => setShowWaitModal(false)} />,
             document.body
