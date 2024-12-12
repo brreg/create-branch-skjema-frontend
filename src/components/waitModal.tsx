@@ -9,7 +9,7 @@ export default function WaitModal({ onClose }: any) {
       <div className="modal-content">
 
         <HashLoader />
-        <h2>Henter NPID og EUID fra lommeboken din</h2>
+        <h2>Henter NPID og EUCC fra lommeboken din</h2>
         <p>Gå inn på Mattr Go appen og trykk aksepter</p>
         <Button className='modal-close' onClick={onClose}>Lukk</Button>
       </div>
