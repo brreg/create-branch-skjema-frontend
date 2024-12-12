@@ -9,8 +9,9 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
 
   const formik = useFormik({
     initialValues: {
-      personNavn: existingCookie?.formData?.representantNavn || '',
+      personNavn: existingCookie?.formData?.personNavn || '',
       personAdresse: existingCookie?.formData?.personAdresse || '',
+      personTelefonnummer: existingCookie?.formData?.personTelefonnummer || '',
       personPostnummer: existingCookie?.formData?.personPostnummer || '',
       personPoststed: existingCookie?.formData?.personPoststed || '',
       personLand: existingCookie?.formData?.personLand || '',
@@ -49,6 +50,14 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
               onChange={formik.handleChange}
               readOnly
             />
+            <Textfield
+              className='smal-input-box'
+              label="Phone number"
+              name="personTelefonnummer"
+              value={formik.values.personTelefonnummer}
+              onChange={formik.handleChange}
+              required
+            />
           </div>
           <div className='input-boxes-horisontal'>
             <Textfield
@@ -59,32 +68,30 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
               onChange={formik.handleChange}
               readOnly
             />
-          </div>
-          <div className='input-boxes-horisontal'>
             <Textfield
+              className='smal-input-box'
               style={{ marginRight: "20px" }}
               label="Postal code"
               name="personPostnummer"
               value={formik.values.personPostnummer}
               onChange={formik.handleChange}
-              htmlSize={40}
               readOnly
             />
             <Textfield
+              className='smal-input-box'
               style={{ marginRight: "20px" }}
               label="Postal district"
               name="personPoststed"
               value={formik.values.personPoststed}
               onChange={formik.handleChange}
-              htmlSize={40}
               readOnly
             />
             <Textfield
+              className='smal-input-box'
               label="Country"
               name="personLand"
               value={formik.values.personLand}
               onChange={formik.handleChange}
-              htmlSize={40}
               readOnly
             />
           </div>
