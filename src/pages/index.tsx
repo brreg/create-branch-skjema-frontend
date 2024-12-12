@@ -148,6 +148,7 @@ function IndexPage() {
           <h2>Eller fyll inn DID addressen til lommeboken din</h2>
           <form className="didinput" onSubmit={formik.handleSubmit}>
             <Textfield
+              type={'did' as any}
               data-size="md"
               label="DID addresse til din personlommebok"
               htmlSize={40}
@@ -155,7 +156,7 @@ function IndexPage() {
               name='didAddress'
               value={formik.values.didAddress}
               onChange={formik.handleChange}
-            />
+              />
             <Button type='submit'>Send inn</Button>
           </form>
           {showWaitModal && createPortal(
