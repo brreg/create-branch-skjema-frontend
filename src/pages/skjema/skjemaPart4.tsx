@@ -18,10 +18,22 @@ export default function SkjemaPage4({ prevPage }: Props) {
         <SkjemaProgressBar page={4} />
       </section>
       <hr className='horisontal-divider' />
-        <h2>Her kommer det løsning for signering snart</h2>
-        <div className="button-group">
-          <Button type="button" variant='tertiary' onClick={() => prevPage()}>Forrige</Button>
-        </div>
+      <span className='span-text'>Sign the form with a digital ID to complete the registration</span>
+      <div className='line-sign-section'>
+        <section className='sign-section'>
+          <h3>Use BankID to sign the registration form</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus.</p>
+          <Button>Sign with BankID</Button>
+        </section>
+        <section className='sign-section'>
+          <h3>Save and continue later</h3>
+          <p>Your session wil only last for 24 hours, press the button below to permanently store the application, and continue at a later time</p>
+          <Button>Save application</Button>
+        </section>
+      </div>
+      <div className="button-group">
+        <Button type="button" variant='tertiary' onClick={() => prevPage()}>Forrige</Button>
+      </div>
     </main>
   )
 }
