@@ -13,6 +13,7 @@ import { storeFormDataInCookie } from '../../context/Cookie';
 export default function SkjemaPage() {
   const navigate = useNavigate();
   const [step, setStep] = useState<number>(1)
+  const [ready, setReady] = useState(false)
   const { sessionId } = useSession()
 
   useEffect(() => {
@@ -60,6 +61,8 @@ export default function SkjemaPage() {
             representantPostnummer: sessionData.personPostnummer,
             representantPoststed: sessionData.personPoststed,
           })
+
+          setReady(true)
         }
 
         if (response.status === 204) {
@@ -74,6 +77,12 @@ export default function SkjemaPage() {
 
   const nextPage = () => { setStep((prev) => prev + 1) }
   const prevPage = () => { setStep((prev) => prev - 1) }
+
+  if (!ready) {
+    return (
+      <p>loading...</p>
+    )
+  }
 
   return (
     <>
