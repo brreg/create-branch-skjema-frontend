@@ -94,6 +94,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
               name="norskForetaksNavn"
               value={formik.values.norskForetaksNavn}
               onChange={formik.handleChange}
+              readOnly
             />
           </div>
         </Fieldset>
@@ -202,6 +203,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
             <div className='main-size-input-box'>
               <div className='input-boxes-horisontal-uten-maring'>
                 <Textfield
+                  className='smal-input-box'
                   label="Postal code"
                   style={{ marginRight: "20px" }}
                   name="filialPostnummer"
@@ -210,6 +212,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
                   readOnly
                 />
                 <Textfield
+                  className='smal-input-box'
                   label="Postal district"
                   name="filialPoststed"
                   value={formik.values.representantPoststed}

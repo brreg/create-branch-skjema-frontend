@@ -14,7 +14,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
   const formik = useFormik({
     initialValues: {
       foretakNavn: existingCookie?.formData?.foretakNavn || '',
-      foretakOrgnr: existingCookie?.formData?.foretakOrgnr?.split(":")[1] || '',
+      foretakOrgnr: existingCookie?.formData?.foretakOrgnr || '',
       foretakAdresse: existingCookie?.formData?.foretakAdresse?.split(";")[0] || '',
       foretakPostnummerOgSted: existingCookie?.formData?.foretakAdresse?.split(";")[1] || '',
       foretakLand: existingCookie?.formData?.foretakAdresse?.split(";")[2] || '',
@@ -101,6 +101,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
               readOnly
             />
             <Textfield
+              className='smal-input-box'
               label="Country"
               name="foretakLand"
               value={formik.values.foretakLand}
