@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 import { useSession } from '../context/SessionContext'
 import { backendWebsocketUrl, backendUrl } from '../const'
 import { QRCodeSVG } from 'qrcode.react'
-import { Button, Textfield } from '@digdir/designsystemet-react';
+import { Button, Fieldset, Textfield } from '@digdir/designsystemet-react';
 import { useNavigate } from 'react-router';
 import { HashLoader } from 'react-spinners';
 import { Client } from '@stomp/stompjs';
@@ -133,40 +133,77 @@ function IndexPage() {
 
   return (
     <>
-      <main className='center'>
-        <h1>Create branch info side</h1>
-        <p>Snedig info om hvordan denne prosessen vil være</p>
-        <div className='center'>
-          <h2>Scan QR koden for å laste opp credentials</h2>
-          {qrLink === "" ?
-            <div className='loader'>
-              <HashLoader />
-            </div>
-            :
-            <QRCodeSVG value={qrLink} className='qrimage' />
-          }
-          <h2>Eller fyll inn DID addressen til lommeboken din</h2>
-          <form className="didinput" onSubmit={formik.handleSubmit}>
-            <Textfield
-              type={'did' as any}
-              data-size="md"
-              label="DID addresse til din personlommebok"
-              htmlSize={40}
-              required
-              name='didAddress'
-              value={formik.values.didAddress}
-              onChange={formik.handleChange}
-              />
-            <Button type='submit'>Send inn</Button>
-          </form>
-          {showWaitModal && createPortal(
-            <WaitModal onClose={() => setShowWaitModal(false)} />,
-            document.body
-          )}
+      <main className='main'>
+        <div
+          style={{ paddingLeft: "20px"}}
+        >
+          <h1>Create branch</h1>
+          <p>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
+          <ol type='1'>
+            <li>First we need you NPID and EUCC credentials from your wallet.</li>
+            <li>Start with entering your DID address or QR code to connect your wallet</li>
+            <li>Then you will have to fill in missing information and  submit through our form</li>
+            <li>Then you can sign the form and submit it to be processed or save and continue later</li>
+            <li>We will then process your application automatically</li>
+          </ol>
+
+          {/* Bold */}
+          <h3>Start here</h3>
         </div>
-        <div className='center'>
-          <h1></h1>
-          <Button onClick={() => navigate("/testdata")}>MEN JEG TRENGER TESTDATA!</Button>
+        <Button onClick={() => navigate("/testdata")}>Collect credentials</Button>
+
+        {/* horisontal line*/}
+        <div className='horisontal-content'>
+          <div className='did-content'>
+            <hr className='horisontal-divider' />
+            <form className="didinput" onSubmit={formik.handleSubmit}>
+              <Fieldset
+                legend="Fill the DID address for your wallet">
+                <Textfield
+                  style={{ paddingTop: "20px" }}
+                  type={'did' as any}
+                  data-size="md"
+                  label="Your DID address"
+                  htmlSize={40}
+                  required
+                  name='didAddress'
+                  value={formik.values.didAddress}
+                  onChange={formik.handleChange}
+                />
+                <Button
+                  style={{ 
+                    margin: "0px",
+                    marginTop: "40px",
+                    width: "160px"
+                  }}
+                type='submit'>Send inn</Button>
+              </Fieldset>
+            </form>
+            {showWaitModal && createPortal(
+              <WaitModal onClose={() => setShowWaitModal(false)} />,
+              document.body
+            )}
+          </div>
+
+          {/** gray */}
+          <p className='gray-text'>OR</p>
+
+          <div className='did-content'>
+            <hr className='horisontal-divider' />
+            <Fieldset
+              legend="Scan QR code to upload credentials via wallet app"
+            >
+              <div style={{ paddingTop: "30px"}}>
+                {qrLink === "" ?
+                  <div className='loader'>
+                    <HashLoader />
+                  </div>
+                  :
+                  <QRCodeSVG value={qrLink} className='qrimage' />
+                }
+              </div>
+            </Fieldset>
+          </div>
         </div>
       </main>
     </>

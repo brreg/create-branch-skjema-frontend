@@ -6,6 +6,8 @@ import '@digdir/designsystemet-theme';
 // @ts-ignore
 import '@digdir/designsystemet-css';
 // @ts-ignore
+// import '@digdir/designsystemet-theme/brand/brreg/tokens';
+// @ts-ignore
 import '@fontsource/open-sans' 
 
 import './index.css'

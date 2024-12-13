@@ -1,3 +1,14 @@
+.main {
+  padding: 5em;
+  height: 4000px;
+}
+
+.horisontal-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .center {
   display: flex;
   flex-direction: column;
@@ -8,6 +19,13 @@
   width: 200px;
   height: 100%;
 }
+
+.gray-text {
+  margin-top: 200px;
+  color: gray;
+}
+
+
 
 .center h2 {
   padding-top: 2em;

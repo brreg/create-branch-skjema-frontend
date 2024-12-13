@@ -2,7 +2,6 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { CreateCookieIfMissing } from './context/Cookie'
 import IndexPage from './pages'
-import Debug from './components/debug'
 import Header from './components/header'
 import SkjemaPage from './pages/skjema/skjema'
 import ThanksPage from './pages/thanks'
@@ -14,7 +13,6 @@ function App() {
   return (
     <>
       <Header />
-      <Debug />
       <Routes>
         <Route path="/" element={<IndexPage />} />
         <Route path='/skjema' element={<SkjemaPage />} />
