@@ -20,6 +20,7 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
       updateFormData({
         personNavn: values.personNavn,
         personAdresse: values.personAdresse,
+        personTelefonnummer: values.personTelefonnummer,
         personPostnummer: values.personPostnummer,
         personPoststed: values.personPoststed,
         personLand: values.personLand,

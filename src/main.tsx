@@ -2,11 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { SessionProvider } from './context/SessionContext.tsx'
 // @ts-ignore
-import '@digdir/designsystemet-theme';
-// @ts-ignore
 import '@digdir/designsystemet-css';
 // @ts-ignore
-// import '@digdir/designsystemet-theme/brand/brreg/tokens';
+import '@digdir/designsystemet-theme/brand/brreg/tokens.css';
 // @ts-ignore
 import '@fontsource/open-sans' 
 

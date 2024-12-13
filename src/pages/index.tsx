@@ -135,7 +135,7 @@ function IndexPage() {
     <>
       <main className='main'>
         <div
-          style={{ paddingLeft: "20px"}}
+          style={{ paddingLeft: "20px" }}
         >
           <h1>Create branch</h1>
           <p>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
@@ -148,9 +148,14 @@ function IndexPage() {
           </ol>
 
           {/* Bold */}
-          <h3>Start here</h3>
+          <h3
+            style={{
+              paddingTop: "20px",
+              fontSize: "1.5rem"
+            }}
+          >Start here</h3>
+          <Button onClick={() => navigate("/testdata")}>Collect credentials</Button>
         </div>
-        <Button onClick={() => navigate("/testdata")}>Collect credentials</Button>
 
         {/* horisontal line*/}
         <div className='horisontal-content'>
@@ -171,12 +176,12 @@ function IndexPage() {
                   onChange={formik.handleChange}
                 />
                 <Button
-                  style={{ 
+                  style={{
                     margin: "0px",
                     marginTop: "40px",
                     width: "160px"
                   }}
-                type='submit'>Send inn</Button>
+                  type='submit'>Connect wallet</Button>
               </Fieldset>
             </form>
             {showWaitModal && createPortal(
@@ -193,7 +198,7 @@ function IndexPage() {
             <Fieldset
               legend="Scan QR code to upload credentials via wallet app"
             >
-              <div style={{ paddingTop: "30px"}}>
+              <div style={{ paddingTop: "30px" }}>
                 {qrLink === "" ?
                   <div className='loader'>
                     <HashLoader />

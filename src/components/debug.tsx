@@ -1,7 +1,9 @@
-import { useSession } from "../context/SessionContext"; 
+import { useSession } from "../context/SessionContext";
 import CSS from "csstype";
 import { useEffect, useState } from "react";
 import { DeleteCookie } from "../context/Cookie";
+import { Button } from "@digdir/designsystemet-react";
+import { BugIcon } from "@navikt/aksel-icons";
 
 export default function Debug() {
   const [ttl, setTtl] = useState(0);
@@ -32,14 +34,7 @@ export default function Debug() {
   const containerStyle: CSS.Properties = {
     position: "relative",
     display: "inline-block",
-    marginTop: "20px",
-  };
-
-  const buttonStyle: CSS.Properties = {
-    backgroundColor: "#ccc",
-    border: "1px solid #999",
-    padding: "5px 10px",
-    cursor: "pointer"
+    // marginTop: "20px",
   };
 
   const dropdownStyle: CSS.Properties = {
@@ -50,14 +45,17 @@ export default function Debug() {
     padding: "10px",
     marginTop: "5px",
     zIndex: 999,
-    whiteSpace: "nowrap" 
+    whiteSpace: "nowrap"
   };
 
   return (
     <div style={containerStyle}>
-      <button style={buttonStyle} onClick={toggleDropdown}>
+      <Button
+        variant='tertiary'
+        onClick={toggleDropdown}>
         Debug
-      </button>
+        <BugIcon title="a11y-title" fontSize="1.5rem" />
+      </Button>
       <div style={dropdownStyle}>
         <p><strong>Session ID:</strong> {sessionId}</p>
         <p>

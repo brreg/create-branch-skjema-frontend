@@ -1,12 +1,19 @@
 .main {
   padding: 5em;
-  height: 4000px;
+  /* max-width: fit-content; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+
+
 
 .horisontal-content {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
+  column-gap: 30px;
 }
 
 .center {
