@@ -17,7 +17,6 @@ function IndexPage() {
   const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("")
   const [showWaitModal, setShowWaitModal] = useState(false)
-  const [didAddress, setDidAddress] = useState('');
   const { sessionId } = useSession()
 
   const stompClient = new Client({
@@ -99,7 +98,7 @@ function IndexPage() {
     }
   }
 
-  async function sendDIDaddress() {
+  async function sendDIDaddress(didAddress: string) {
     try {
       setShowWaitModal(true)
       if (!sessionId) return;
@@ -113,11 +112,11 @@ function IndexPage() {
       })
 
       if (!response.ok) {
-        throw new Error("Failed to fetch QR link")
+        throw new Error("Failed to send message to wallet")
       }
 
     } catch (error) {
-      console.error("Error fetching QR link:", error)
+      console.error("Error sending message:", error)
     }
   }
 
@@ -126,8 +125,7 @@ function IndexPage() {
       didAddress: ''
     },
     onSubmit: (values) => {
-      setDidAddress(values.didAddress)
-      sendDIDaddress()
+      sendDIDaddress(values.didAddress)
     }
   })
 
