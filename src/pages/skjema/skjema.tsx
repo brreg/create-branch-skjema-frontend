@@ -9,6 +9,7 @@ import SkjemaPage2 from './skjemaPart2';
 import SkjemaPage3 from './skjemaPart3';
 import SkjemaPage4 from './skjemaPart4';
 import { storeFormDataInCookie } from '../../context/Cookie';
+import Header from '../../components/header';
 
 export default function SkjemaPage() {
   const navigate = useNavigate();
@@ -86,6 +87,7 @@ export default function SkjemaPage() {
 
   return (
     <>
+      <Header />
       {step === 1 && <SkjemaPage1 nextPage={nextPage} />}
       {step === 2 && <SkjemaPage2 nextPage={nextPage} prevPage={prevPage} />}
       {step === 3 && <SkjemaPage3 nextPage={nextPage} prevPage={prevPage} />}

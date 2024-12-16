@@ -11,6 +11,7 @@ import { WebSocket } from 'ws';
 import { createPortal } from 'react-dom'
 import WaitModal from '../components/waitModal'
 import { useFormik } from 'formik'
+import Header from '../components/header'
 Object.assign(global, { WebSocket });
 
 function IndexPage() {
@@ -131,6 +132,7 @@ function IndexPage() {
 
   return (
     <>
+      <Header />
       <main className='main'>
         <div
           style={{ paddingLeft: "20px" }}
