@@ -1,4 +1,4 @@
-import './index.css'
+import './start.css'
 import { useEffect, useState } from 'react'
 import { useSession } from '../context/SessionContext'
 import { backendWebsocketUrl, backendUrl } from '../const'
@@ -14,7 +14,8 @@ import { useFormik } from 'formik'
 import Header from '../components/header'
 Object.assign(global, { WebSocket });
 
-function IndexPage() {
+
+function StartPage() {
   const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("")
   const [showWaitModal, setShowWaitModal] = useState(false)
@@ -215,4 +216,4 @@ function IndexPage() {
   )
 }
 
-export default IndexPage
+export default StartPage
