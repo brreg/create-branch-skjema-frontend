@@ -2,9 +2,9 @@ export interface FormComplete {
   personNavn?: string;
   personFnr?: string;
   personTelefonnummer?: string,
-  personAdresse?: string;
-  personPostnummer?: string;
-  personPoststed?: string;
+  personVeiAddresse?: string;
+  personPostcode?: string;
+  personBy?: string;
   personLand?: string;
 
   issuingAuthority?: string;

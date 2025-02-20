@@ -10,19 +10,19 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
   const formik = useFormik({
     initialValues: {
       personNavn: existingCookie?.formData?.personNavn || '',
-      personAdresse: existingCookie?.formData?.personAdresse || '',
+      personVeiAddresse: existingCookie?.formData?.personVeiAddresse || '',
       personTelefonnummer: existingCookie?.formData?.personTelefonnummer || '',
-      personPostnummer: existingCookie?.formData?.personPostnummer || '',
-      personPoststed: existingCookie?.formData?.personPoststed || '',
+      personPostcode: existingCookie?.formData?.personPostcode || '',
+      personBy: existingCookie?.formData?.personBy || '',
       personLand: existingCookie?.formData?.personLand || '',
     },
     onSubmit: (values) => {
       updateFormData({
         personNavn: values.personNavn,
-        personAdresse: values.personAdresse,
+        personVeiAddresse: values.personVeiAddresse,
         personTelefonnummer: values.personTelefonnummer,
-        personPostnummer: values.personPostnummer,
-        personPoststed: values.personPoststed,
+        personPostcode: values.personPostcode,
+        personBy: values.personBy,
         personLand: values.personLand,
       });
       nextPage();
@@ -64,8 +64,8 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
             <Textfield
               className='main-size-input-box'
               label="P.O. Box, street, house number or place"
-              name="personAdresse"
-              value={formik.values.personAdresse}
+              name="personVeiAddresse"
+              value={formik.values.personVeiAddresse}
               onChange={formik.handleChange}
               readOnly
             />
@@ -73,8 +73,8 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
               className='smal-input-box'
               style={{ marginRight: "20px" }}
               label="Postal code"
-              name="personPostnummer"
-              value={formik.values.personPostnummer}
+              name="personPostcode"
+              value={formik.values.personPostcode}
               onChange={formik.handleChange}
               readOnly
             />
@@ -82,8 +82,8 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
               className='smal-input-box'
               style={{ marginRight: "20px" }}
               label="Postal district"
-              name="personPoststed"
-              value={formik.values.personPoststed}
+              name="personBy"
+              value={formik.values.personBy}
               onChange={formik.handleChange}
               readOnly
             />

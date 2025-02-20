@@ -1,9 +1,9 @@
 export interface SessionResponse {
   personNavn: string;
   personFnr: string;
-  personAdresse: string;
-  personPostnummer: string;
-  personPoststed: string;
+  personVeiAddresse: string;
+  personPostcode: string;
+  personBy: string;
   personLand: string;
   issuingAuthority: string;
   issuingAuthorityId: string;

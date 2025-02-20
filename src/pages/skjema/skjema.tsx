@@ -36,9 +36,9 @@ export default function SkjemaPage() {
           storeFormDataInCookie({
             personNavn: sessionData.personNavn,
             personFnr: sessionData.personFnr,
-            personAdresse: sessionData.personAdresse,
-            personPostnummer: sessionData.personPostnummer,
-            personPoststed: sessionData.personPoststed,
+            personVeiAddresse: sessionData.personVeiAddresse,
+            personPostcode: sessionData.personPostcode,
+            personBy: sessionData.personBy,
             personLand: sessionData.personLand,
 
             issuingAuthority: sessionData.issuingAuthority,
@@ -58,9 +58,9 @@ export default function SkjemaPage() {
 
             representantNavn: sessionData.personNavn,
             representantFnr: sessionData.personFnr,
-            representantAdresse: sessionData.personAdresse,
-            representantPostnummer: sessionData.personPostnummer,
-            representantPoststed: sessionData.personPoststed,
+            representantAdresse: sessionData.personVeiAddresse,
+            representantPostnummer: sessionData.personPostcode,
+            representantPoststed: sessionData.personBy,
           })
 
           setReady(true)
