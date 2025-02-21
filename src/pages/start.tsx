@@ -154,8 +154,8 @@ function StartPage() {
               paddingTop: "20px",
               fontSize: "1.5rem"
             }}
-          >Start here</h3>
-          <Button onClick={() => navigate("/testdata")}>Collect credentials</Button>
+          >Do you need test or demo data?</h3>
+          <Button onClick={() => navigate("/testdata")}>Fetch test/demo data</Button>
         </div>
 
         {/* horisontal line*/}
