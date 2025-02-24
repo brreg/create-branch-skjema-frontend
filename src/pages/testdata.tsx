@@ -51,13 +51,13 @@ export default function TestdataPage() {
   useEffect(() => {
     if (buttonContent) {
       // API call to get EUCC URI with buttonContent as a parameter
-      fetch(`${backendUrl}/api/testdata/qrcodeNpid?button=${encodeURIComponent(buttonContent)}`)
+      fetch(`${backendUrl}/api/testdata/qrcodeEucc?button=${encodeURIComponent(buttonContent)}`)
         .then(response => response.json())
         .then(data => setEuccUri(data.didcommUri))
         .catch(error => console.error("Error fetching EUCC URI:", error));
 
       // API call to get NPID URI with buttonContent as a parameter
-      fetch(`${backendUrl}/api/testdata/qrcodeEucc?button=${encodeURIComponent(buttonContent)}`)
+      fetch(`${backendUrl}/api/testdata/qrcodeNpid?button=${encodeURIComponent(buttonContent)}`)
         .then(response => response.json())
         .then(data => setNpidUri(data.didcommUri))
         .catch(error => console.error("Error fetching NPID URI:", error));
