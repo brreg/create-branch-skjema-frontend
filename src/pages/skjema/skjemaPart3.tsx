@@ -239,6 +239,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
                 formik.setFieldValue('filialNaceKode', data)
               }}
               virtual
+              placeholder="Search by NACE code or start typing"
             >
               {
                 naceCodesData.data.map((code) => (

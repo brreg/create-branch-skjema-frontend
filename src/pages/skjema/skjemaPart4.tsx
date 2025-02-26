@@ -8,6 +8,7 @@ interface Props {
   prevPage: () => void;
 }
 
+
 export default function SkjemaPage4({ prevPage }: Props) {
   const navigate = useNavigate();
   // const existingCookie = getCookie();
@@ -15,8 +16,7 @@ export default function SkjemaPage4({ prevPage }: Props) {
   return (
     <main className="main-content">
       <section className="info-section">
-        <h1 className='info-header'>Complete your registration</h1>
-        <p className='info-paragraph'>Form for Norwegian registered foreign business enterprise( NUF) for registration in the Central Coordinating Register for Legal Entities, the Register of Business Enterprises, NAV Aa register, The Business Register of Statistics Norway and the Corporate Taxation Data Register.  All fields must be filled out. </p>
+        <h1 className='info-header' style={{ marginBottom: '20px' }}>Complete your registration</h1>
         <SkjemaProgressBar page={4} />
       </section>
       <hr className='horisontal-divider' />
@@ -29,7 +29,7 @@ export default function SkjemaPage4({ prevPage }: Props) {
         </section>
         <section className='sign-section'>
           <h3>Save and continue later</h3>
-          <p>Your session wil only last for 24 hours, press the button below to permanently store the application, and continue at a later time</p>
+          <p>The session is valid for 24 hours and must be completed to avoid restarting the registration process.</p>
           <Button onClick={() => navigate("/thanks")}>Save application</Button>
         </section>
       </div>

@@ -40,7 +40,7 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
       <form onSubmit={formik.handleSubmit}>
         <Fieldset
           legend="Submitter/person liable for fee"
-          description="The person or entity submitting the form will receive the feedback related to the case, and will receive any invoice connected to the registration in The Central Coordinating Register for Legal Entities/The Register of Business Enterprises This information is prefilled based on your NPID and can not be changed."
+          description="The person or entity submitting the form will receive the feedback related to the case, and will receive any invoice connected to the registration in The Central Coordinating Register for Legal Entities/The Register of Business Enterprises. This information is prefilled based on your NPID and can not be changed."
         >
           <div className='input-boxes-horisontal'>
             <Textfield

@@ -56,7 +56,7 @@ export default function PortalPage() {
         </div>
         <div style={resultStyle} onClick={() => navigate("/start")}>
           <h2>Create branch - Norway</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p>Register as a NUF(Norwegian registered foreign business) to recive an organisasion number.</p>
           <Button>Go to service</Button>
         </div>
       </main>
