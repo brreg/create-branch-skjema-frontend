@@ -157,8 +157,8 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
           </div>
         </Fieldset>
         <div className="button-group">
-          <Button type="submit">Neste</Button>
-          <Button type="button" variant='tertiary' onClick={handlePrevious}>Forrige</Button>
+          <Button type="submit">Next</Button>
+          <Button type="button" variant='tertiary' onClick={handlePrevious}>Previous</Button>
         </div>
       </form>
     </main>

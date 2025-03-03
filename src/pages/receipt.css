@@ -1,4 +1,4 @@
-.main {
+.thank-you {
   margin: 10em;
   padding: 2em;
   display: flex;
@@ -7,11 +7,17 @@
   background-color: #E5F3F9;
 }
 
-.main h1 {
+.thank-you h1 {
   margin: 0;
 }
 
-.main p {
+.thank-you p {
   margin-top: 2em;
   margin-bottom: 8em;
 }
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* Adjust the gap value to set the space between buttons */
+} 

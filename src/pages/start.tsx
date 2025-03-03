@@ -19,6 +19,7 @@ function StartPage() {
   const [qrLink, setQrLink] = useState("")
   const [showWaitModal, setShowWaitModal] = useState(false)
   const { sessionId } = useSession()
+  const refreshCount = useRef(0);
   
   // Use a ref to keep track of whether fetchQrLink has been called
   const hasFetchedQrLink = useRef(false);
@@ -26,6 +27,19 @@ function StartPage() {
   const stompClient = new Client({
     brokerURL: backendWebsocketUrl + "/ws"
   })
+
+  useEffect(() => {
+    const refreshTimer = setTimeout(() => {
+      if (refreshCount.current < 3) {
+        refreshCount.current += 1;
+        window.location.reload();
+      }
+    }, 270000); // 270 seconds
+
+    return () => {
+      clearTimeout(refreshTimer);
+    };
+  }, []);
 
   // stompClient.debug = (str) => {
   //   console.log('STOMP: ' + str);
@@ -146,7 +160,7 @@ function StartPage() {
           style={{ paddingLeft: "20px" }}
         >
           <h1>Create branch</h1>
-          <p>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
+          <p style={{ marginBottom: "20px" }}>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
           <ol type='1'>
             <li>First we need you NPID and EUCC credentials from your wallet.</li>
             <li>Start with entering your DID address or QR code to connect your wallet</li>

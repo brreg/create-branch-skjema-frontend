@@ -89,8 +89,8 @@ export default function TestdataPage() {
         </div>
         )}
         <div style={buttonContainerStyle}>
-          <Button style={buttonStyle} onClick={() => handleButtonClick("USELVISK JEGER")}>USELVISK JEGER</Button>
-          <Button style={buttonStyle} onClick={() => handleButtonClick("FORMBAR OPPORTUNIST")}>FORMBAR OPPORTUNIST</Button>
+          <Button style={buttonStyle} onClick={() => handleButtonClick("USELVISK JEGER")}>Ola Norman</Button>
+          <Button style={buttonStyle} onClick={() => handleButtonClick("FORMBAR OPPORTUNIST")}>Kari Norman</Button>
           <Button style={buttonStyle} onClick={() => handleButtonClick("UTNYTTENDE ÆRFUGL")}>UTNYTTENDE ÆRFUGL</Button>
           <Button style={buttonStyle} onClick={() => handleButtonClick("UTØRST KLINKEKULE")}>UTØRST KLINKEKULE</Button>
           <Button style={buttonStyle} onClick={() => handleButtonClick("VIRTUELL PERSEPSJON")}>VIRTUELL PERSEPSJON</Button>

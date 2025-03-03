@@ -239,7 +239,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
                 formik.setFieldValue('filialNaceKode', data)
               }}
               virtual
-              placeholder="Search by NACE code or start typing"
+              placeholder={formik.values.filialNaceKode?.length === 0 ? "Search by NACE code or start typing" : undefined}
             >
               {
                 naceCodesData.data.map((code) => (
@@ -253,8 +253,8 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
         </Fieldset>
 
         <div className="button-group">
-          <Button type="submit">Neste</Button>
-          <Button type="button" variant='tertiary' onClick={handlePrevious}>Forrige</Button>
+          <Button type="submit">Next</Button>
+          <Button type="button" variant='tertiary' onClick={handlePrevious}>Previous</Button>
         </div>
       </form>
     </main>
