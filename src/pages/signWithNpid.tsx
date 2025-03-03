@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from 'react';
 import { useSession } from '../context/SessionContext';
 import { backendWebsocketUrl, backendUrl } from '../const';
 import { QRCodeSVG } from 'qrcode.react';
-import { Button, Fieldset } from '@digdir/designsystemet-react';
+import { Fieldset } from '@digdir/designsystemet-react';
 import { useNavigate } from 'react-router';
 import { HashLoader } from 'react-spinners';
 import { Client } from '@stomp/stompjs';
@@ -15,7 +15,6 @@ Object.assign(global, { WebSocket });
 export default function SignWithNpid() {
   const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("");
-  const [showWaitModal, setShowWaitModal] = useState(false);
   const { sessionId } = useSession();
   
   // Use a ref to keep track of whether fetchQrLink has been called
