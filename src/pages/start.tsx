@@ -1,5 +1,5 @@
 import './start.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useRef } from 'react'
 import { useSession } from '../context/SessionContext'
 import { backendWebsocketUrl, backendUrl } from '../const'
 import { QRCodeSVG } from 'qrcode.react'
@@ -14,12 +14,14 @@ import { useFormik } from 'formik'
 import Header from '../components/header'
 Object.assign(global, { WebSocket });
 
-
 function StartPage() {
   const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("")
   const [showWaitModal, setShowWaitModal] = useState(false)
   const { sessionId } = useSession()
+  
+  // Use a ref to keep track of whether fetchQrLink has been called
+  const hasFetchedQrLink = useRef(false);
 
   const stompClient = new Client({
     brokerURL: backendWebsocketUrl + "/ws"
@@ -48,7 +50,12 @@ function StartPage() {
   useEffect(() => {
     stompClient.activate();
     checkIfSessionHasData();
-    fetchQrLink()
+
+    // Only call fetchQrLink if it hasn't been called yet
+    if (!hasFetchedQrLink.current) {
+      fetchQrLink();
+      hasFetchedQrLink.current = true;
+    }
 
     return () => {
       stompClient.deactivate()
@@ -143,7 +150,7 @@ function StartPage() {
           <ol type='1'>
             <li>First we need you NPID and EUCC credentials from your wallet.</li>
             <li>Start with entering your DID address or QR code to connect your wallet</li>
-            <li>Then you will have to fill in missing information and  submit through our form</li>
+            <li>Then you will have to fill in missing information and submit through our form</li>
             <li>Then you can sign the form and submit it to be processed or save and continue later</li>
             <li>We will then process your application automatically</li>
           </ol>

@@ -1,0 +1,127 @@
+import './signWithNpid.css';
+import { useEffect, useState, useRef } from 'react';
+import { useSession } from '../context/SessionContext';
+import { backendWebsocketUrl, backendUrl } from '../const';
+import { QRCodeSVG } from 'qrcode.react';
+import { Button, Fieldset } from '@digdir/designsystemet-react';
+import { useNavigate } from 'react-router';
+import { HashLoader } from 'react-spinners';
+import { Client } from '@stomp/stompjs';
+import { WebSocket } from 'ws';
+import Header from '../components/header';
+
+Object.assign(global, { WebSocket });
+
+export default function SignWithNpid() {
+  const navigate = useNavigate();
+  const [qrLink, setQrLink] = useState("");
+  const [showWaitModal, setShowWaitModal] = useState(false);
+  const { sessionId } = useSession();
+  
+  // Use a ref to keep track of whether fetchQrLink has been called
+  const hasFetchedQrLink = useRef(false);
+
+  const stompClient = new Client({
+    brokerURL: backendWebsocketUrl + "/ws"
+  });
+
+  stompClient.onConnect = () => {
+    console.log('STOMP connected');
+    stompClient.subscribe(`/topic/sessions/${sessionId}_signed`, (message) => {
+      console.log("Data mottatt: ", message.body);
+      navigate("/thanks");
+    });
+  };
+
+  stompClient.onWebSocketError = (error) => {
+    console.error('Error with websocket', error);
+  };
+
+  stompClient.onDisconnect = () => {
+    console.log("STOMP disconnected");
+  };
+
+  useEffect(() => {
+    stompClient.activate();
+    checkIfSessionHasData();
+
+    // Only call fetchQrLink if it hasn't been called yet
+    if (!hasFetchedQrLink.current) {
+      fetchQrLink();
+      hasFetchedQrLink.current = true;
+    }
+
+    return () => {
+      stompClient.deactivate();
+    };
+  }, [sessionId]);
+
+  const checkIfSessionHasData = async () => {
+    try {
+      if (sessionId) {
+        const response = await fetch(backendUrl + "/api/session", {
+          headers: {
+            "x-session-id": sessionId
+          }
+        });
+        if (response.status === 200) {
+          console.log("data found in /api/session");
+        }
+
+        if (response.status === 204) {
+          console.log("no data found in /api/session");
+          navigate("/start")
+        }
+      }
+    } catch (error) {
+      console.error("Error fetching data for session: ", error);
+    }
+  };
+
+  const fetchQrLink = async () => {
+    try {
+      if (sessionId) {
+        const response = await fetch(backendUrl + "/api/qrcodeNpid", {
+          method: "POST",
+          headers: {
+            "x-session-id": sessionId
+          }
+        });
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch QR link");
+        }
+
+        const data = await response.json();
+        console.log("received data from /api/qrcodeNpid");
+        setQrLink(data.didcommUri);
+      }
+    } catch (error) {
+      console.error("Error fetching QR link:", error);
+    }
+  };
+
+  return (
+    <>
+      <Header />
+      <div className="thank-you" >
+        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h1>Scan the QR code with your wallet to sign for this application</h1>
+        </div>
+        <div className="sign_with_qr_kode" style={{ display: 'flex', justifyContent: 'center' }}>
+          <Fieldset legend="NPID request">
+            <div style={{ paddingTop: "20px" }}>
+              {qrLink === "" ? (
+                <div className='loader'>
+                  <HashLoader />
+                </div>
+              ) : (
+                <QRCodeSVG value={qrLink} className='qrimage' />
+              )}
+            </div>
+          </Fieldset>
+        </div>
+      </div>
+    </>
+  );
+}

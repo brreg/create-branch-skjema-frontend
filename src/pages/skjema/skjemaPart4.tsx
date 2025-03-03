@@ -28,6 +28,11 @@ export default function SkjemaPage4({ prevPage }: Props) {
           <Button onClick={() => navigate("/thanks")}>Sign with BankID</Button>
         </section>
         <section className='sign-section'>
+          <h3>Sign the registration form with your NPID</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus.</p>
+          <Button onClick={() => navigate("/signWithNpid")}>Sign with NPID</Button>
+        </section>
+        <section className='sign-section'>
           <h3>Save and continue later</h3>
           <p>The session is valid for 24 hours and must be completed to avoid restarting the registration process.</p>
           <Button onClick={() => navigate("/thanks")}>Save application</Button>
