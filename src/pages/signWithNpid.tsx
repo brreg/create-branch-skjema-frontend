@@ -105,7 +105,7 @@ export default function SignWithNpidPage() {
   return (
     <>
       <Header />
-      <div className="sign-with-npid" >
+      <div className="main" >
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <h1>Scan the QR code with your wallet to sign for this application</h1>
         </div>
@@ -122,7 +122,7 @@ export default function SignWithNpidPage() {
             </div>
           </Fieldset>
         </div>
-        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+        <div className="button-container">
           <Button onClick={handleBackToStart}>Back to Start</Button>
         </div>
       </div>

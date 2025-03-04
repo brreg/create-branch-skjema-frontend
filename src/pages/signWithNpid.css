@@ -3,15 +3,44 @@
   padding: 2em;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   background-color: #E5F3F9;
 }
 
 .main h1 {
   margin: 0;
+  text-align: center;
 }
 
 .main p {
   margin-top: 2em;
   margin-bottom: 8em;
+  text-align: center;
+}
+
+.sign_with_qr_kode {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sign_with_qr_kode fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+.qrimage {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
 }
