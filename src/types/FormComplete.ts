@@ -29,6 +29,7 @@ export interface FormComplete {
   representantAdresse?: string;
   representantPostnummer?: string;
   representantPoststed?: string;
+  representantSignaturRegel?: string;
 
   norskForetaksNavn?: string;
   harFilialINorge?: boolean;

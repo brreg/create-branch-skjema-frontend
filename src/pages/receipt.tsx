@@ -1,4 +1,3 @@
-import { useNavigate } from 'react-router-dom';
 import Header from '../components/header';
 import './receipt.css'
 import { Button, Fieldset } from "@digdir/designsystemet-react";
@@ -7,10 +6,9 @@ import { useSession } from '../context/SessionContext';
 import { backendUrl } from '../const';
 import { HashLoader } from 'react-spinners';
 import { QRCodeSVG } from 'qrcode.react';
-import { DeleteCookie } from '../context/Cookie';
+import { DeleteCookie, CreateCookieIfMissing } from '../context/Cookie';
 
 export default function ReceiptPage() {
-  const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("");
   const hasFetchedQrLink = useRef(false);
   const { sessionId } = useSession();
@@ -51,7 +49,8 @@ export default function ReceiptPage() {
 
   const handleNewRegistration = () => {
     DeleteCookie();
-    navigate("/start");
+    CreateCookieIfMissing();
+    window.location.href = "/start";
   };
 
   return (

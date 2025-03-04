@@ -18,6 +18,5 @@
 
 .button-container {
   display: flex;
-  justify-content: center;
   gap: 10px; /* Adjust the gap value to set the space between buttons */
 }

@@ -1,0 +1,26 @@
+.main {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+ul {
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+[data-color="danger"] {
+  background-color: var(--ds-color-danger-50);
+  border-color: var(--ds-color-danger-200);
+  color: var(--ds-color-danger-900);
+}
