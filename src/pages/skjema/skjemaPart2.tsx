@@ -49,7 +49,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
     <main className="main-content">
       <section className="info-section">
         <h1 className='info-header'>Complete your registration</h1>
-        <p className='info-paragraph'>Vestibulum id ligula porta felis euismod semper. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.</p>
+        <p className='info-paragraph'>Form for Norwegian registered foreign business enterprise( NUF) for registration in the Central Coordinating Register for Legal Entities, the Register of Business Enterprises, NAV Aa register, The Business Register of Statistics Norway and the Corporate Taxation Data Register.  All fields must be filled out. </p>
         <SkjemaProgressBar page={2} />
       </section>
       <hr className='horisontal-divider' />
@@ -157,8 +157,8 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
           </div>
         </Fieldset>
         <div className="button-group">
-          <Button type="submit">Neste</Button>
-          <Button type="button" variant='tertiary' onClick={handlePrevious}>Forrige</Button>
+          <Button type="submit">Next</Button>
+          <Button type="button" variant='tertiary' onClick={handlePrevious}>Previous</Button>
         </div>
       </form>
     </main>

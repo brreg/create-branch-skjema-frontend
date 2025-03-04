@@ -1,6 +1,5 @@
 .main {
   padding: 5em;
-  /* max-width: fit-content; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -8,18 +7,11 @@
 }
 
 
-
 .horisontal-content {
   display: flex;
   flex-direction: row;
   justify-content: left;
   column-gap: 30px;
-}
-
-.center {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .qrimage {
@@ -30,12 +22,6 @@
 .gray-text {
   margin-top: 200px;
   color: gray;
-}
-
-
-
-.center h2 {
-  padding-top: 2em;
 }
 
 .didinput {

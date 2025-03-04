@@ -1,0 +1,52 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20em;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.main h1 {
+  text-align: center;
+  width: 100%;
+  padding-top: 2em;
+  margin: 0;
+}
+
+.qr-code-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 2em;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}
+
+.button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  min-width: 200px;
+}
+
+.last-button {
+  padding: 0.5em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 3em;
+  min-width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+} 

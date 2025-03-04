@@ -56,12 +56,18 @@ export default function SkjemaPage() {
             foretakNaceBeskrivelse: sessionData.foretakNaceBeskrivelse,
             foretakAktive: sessionData.foretakAktive,
 
-            representantNavn: sessionData.personNavn,
+            representantNavn: sessionData.representantNavn,
             representantFnr: sessionData.personFnr,
             representantAdresse: sessionData.personVeiAddresse,
             representantPostnummer: sessionData.personPostcode,
             representantPoststed: sessionData.personBy,
+            representantSignaturRegel: sessionData.representantSignaturRegel,
           })
+          if (sessionData.representantNavn !== sessionData.personNavn || sessionData.representantSignaturRegel !== "alone") {
+            navigate("/error");
+          }
+
+
 
           setReady(true)
         }

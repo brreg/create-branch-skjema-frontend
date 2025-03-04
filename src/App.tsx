@@ -7,7 +7,8 @@ import ThanksPage from './pages/thanks'
 import TestdataPage from './pages/testdata'
 import PortalPage from './pages/portal'
 import SignWithNpid from './pages/signWithNpid'
-import Recite from './pages/recite'
+import Receipt from './pages/receipt'
+import ErrorPage from './pages/error'
 
 function App() {
   CreateCookieIfMissing()
@@ -21,8 +22,8 @@ function App() {
         <Route path='/thanks' element={<ThanksPage />} />
         <Route path='/testdata' element={<TestdataPage />} />
         <Route path='/signWithNpid' element={<SignWithNpid />} />
-        <Route path='/recite' element={<Recite />} />
-        
+        <Route path='/receipt' element={<Receipt />} />
+        <Route path='/error' element={<ErrorPage />} />
       </Routes>
     </>
   )

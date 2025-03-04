@@ -19,23 +19,33 @@ function StartPage() {
   const [qrLink, setQrLink] = useState("")
   const [showWaitModal, setShowWaitModal] = useState(false)
   const { sessionId } = useSession()
-  
-  // Use a ref to keep track of whether fetchQrLink has been called
-  const hasFetchedQrLink = useRef(false);
+  const refreshCount = useRef(0);
+  const qrCodeCache = useRef<string | null>(null);
+  const hasInitialized = useRef(false);
 
   const stompClient = new Client({
     brokerURL: backendWebsocketUrl + "/ws"
   })
 
-  // stompClient.debug = (str) => {
-  //   console.log('STOMP: ' + str);
-  // };
+  useEffect(() => {
+    const refreshTimer = setTimeout(() => {
+      if (refreshCount.current < 3) {
+        refreshCount.current += 1;
+        qrCodeCache.current = null; // Clear the cache before refresh
+        window.location.reload();
+      }
+    }, 270000); // 270 seconds
+
+    return () => {
+      clearTimeout(refreshTimer);
+    };
+  }, []);
 
   stompClient.onConnect = () => {
     console.log('STOMP connected');
     stompClient.subscribe(`/topic/sessions/${sessionId}`, (message) => {
       console.log("Data mottatt: ", message.body);
-      navigate("/skjema")
+      navigate("/skjema");
     });
   };
 
@@ -48,19 +58,21 @@ function StartPage() {
   }
 
   useEffect(() => {
-    stompClient.activate();
-    checkIfSessionHasData();
+    if (!sessionId || hasInitialized.current) return;
 
-    // Only call fetchQrLink if it hasn't been called yet
-    if (!hasFetchedQrLink.current) {
-      fetchQrLink();
-      hasFetchedQrLink.current = true;
-    }
+    const initializePage = async () => {
+      hasInitialized.current = true;
+      stompClient.activate();
+      await checkIfSessionHasData();
+      await fetchQrLink();
+    };
+
+    initializePage();
 
     return () => {
-      stompClient.deactivate()
+      stompClient.deactivate();
     }
-  }, [sessionId])
+  }, [sessionId]);
 
   const checkIfSessionHasData = async () => {
     try {
@@ -87,6 +99,12 @@ function StartPage() {
   const fetchQrLink = async () => {
     try {
       if (sessionId) {
+        // Return cached QR code if available
+        if (qrCodeCache.current) {
+          setQrLink(qrCodeCache.current);
+          return;
+        }
+
         const response = await fetch(backendUrl + "/api/qrcode", {
           method: "POST",
           headers: {
@@ -100,6 +118,7 @@ function StartPage() {
 
         const data = await response.json()
         console.log("received data from /api/qrcode")
+        qrCodeCache.current = data.didcommUri; // Cache the new QR code
         setQrLink(data.didcommUri)
       }
     } catch (error) {
@@ -146,7 +165,7 @@ function StartPage() {
           style={{ paddingLeft: "20px" }}
         >
           <h1>Create branch</h1>
-          <p>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
+          <p style={{ marginBottom: "20px" }}>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
           <ol type='1'>
             <li>First we need you NPID and EUCC credentials from your wallet.</li>
             <li>Start with entering your DID address or QR code to connect your wallet</li>

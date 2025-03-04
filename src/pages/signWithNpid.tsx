@@ -4,21 +4,21 @@ import { useSession } from '../context/SessionContext';
 import { backendWebsocketUrl, backendUrl } from '../const';
 import { QRCodeSVG } from 'qrcode.react';
 import { Fieldset } from '@digdir/designsystemet-react';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import { HashLoader } from 'react-spinners';
 import { Client } from '@stomp/stompjs';
 import { WebSocket } from 'ws';
 import Header from '../components/header';
+import { Button } from "@digdir/designsystemet-react";
+import { DeleteCookie, CreateCookieIfMissing } from '../context/Cookie';
 
 Object.assign(global, { WebSocket });
 
-export default function SignWithNpid() {
+export default function SignWithNpidPage() {
   const navigate = useNavigate();
   const [qrLink, setQrLink] = useState("");
   const { sessionId } = useSession();
   
-  // Use a ref to keep track of whether fetchQrLink has been called
-  const hasFetchedQrLink = useRef(false);
 
   const stompClient = new Client({
     brokerURL: backendWebsocketUrl + "/ws"
@@ -44,11 +44,7 @@ export default function SignWithNpid() {
     stompClient.activate();
     checkIfSessionHasData();
 
-    // Only call fetchQrLink if it hasn't been called yet
-    if (!hasFetchedQrLink.current) {
       fetchQrLink();
-      hasFetchedQrLink.current = true;
-    }
 
     return () => {
       stompClient.deactivate();
@@ -100,10 +96,16 @@ export default function SignWithNpid() {
     }
   };
 
+  const handleBackToStart = () => {
+    DeleteCookie();
+    CreateCookieIfMissing();
+    window.location.href = "/start";
+  };
+
   return (
     <>
       <Header />
-      <div className="thank-you" >
+      <div className="sign-with-npid" >
         <div style={{ textAlign: 'center', marginBottom: '40px' }}>
           <h1>Scan the QR code with your wallet to sign for this application</h1>
         </div>
@@ -119,6 +121,9 @@ export default function SignWithNpid() {
               )}
             </div>
           </Fieldset>
+        </div>
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
+          <Button onClick={handleBackToStart}>Back to Start</Button>
         </div>
       </div>
     </>

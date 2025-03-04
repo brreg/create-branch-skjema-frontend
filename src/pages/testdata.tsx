@@ -1,44 +1,11 @@
-import Header from "../components/header";
-import CSS from "csstype";
-import { useEffect, useState } from "react";
-import { QRCodeSVG } from 'qrcode.react';
-import { backendUrl } from '../const';
-import { Button } from '@digdir/designsystemet-react';
-import { useNavigate } from 'react-router';
-import { useLocation } from 'react-router-dom';
-
-const mainStyle: CSS.Properties = {
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  paddingTop: '10em'
-};
-
-
-
-const qrCodeContainerStyle: CSS.Properties = {
-  display: 'flex',
-  justifyContent: 'space-around',
-  width: '100%'
-};
-
-const buttonContainerStyle: CSS.Properties = {
-  display: 'flex',
-  justifyContent: 'center',
-  gap: '1em', // Adds space between buttons
-  marginTop: '2em'
-};
-
-const buttonStyle: CSS.Properties = {
-  padding: '0.5em 1em',
-  fontSize: '1em',
-  cursor: 'pointer'
-};
-
-const lastButtonStyle: CSS.Properties = {
-  ...buttonStyle,
-  marginTop: '3em' // Adjust this value to add more space
-};
+import './testdata.css'
+import { Button } from '@digdir/designsystemet-react'
+import { useNavigate, useLocation } from 'react-router'
+import { useEffect, useState } from 'react'
+import { backendUrl } from '../const'
+import { QRCodeSVG } from 'qrcode.react'
+import Header from '../components/header'
+import { DeleteCookie, CreateCookieIfMissing } from '../context/Cookie'
 
 export default function TestdataPage() {
   const [euccUri, setEuccUri] = useState<string | null>(null);
@@ -68,34 +35,43 @@ export default function TestdataPage() {
     navigate(`/testdata?button=${encodeURIComponent(buttonContent)}`);
   };
 
+  const handleBackToStart = () => {
+    DeleteCookie();
+    CreateCookieIfMissing();
+    window.location.href = "/start";
+  };
+
   return(
     <>
       <Header />
-      <main style={mainStyle}>
+      <main className='main'>
         {buttonContent && (
-        <div style={qrCodeContainerStyle}>
-          {euccUri && (
-            <div>
-              <QRCodeSVG value={euccUri} />
-              <p>EUCC</p>
+          <>
+            <h1>Demo credentials Issued</h1>
+            <div className='qr-code-container'>
+              {euccUri && (
+                <div>
+                  <QRCodeSVG value={euccUri} />
+                  <p>EUCC</p>
+                </div>
+              )}
+              {npidUri && (
+                <div>
+                  <QRCodeSVG value={npidUri} />
+                  <p>NPID</p>
+                </div>
+              )}
             </div>
-          )}
-          {npidUri && (
-            <div>
-              <QRCodeSVG value={npidUri} />
-              <p>NPID</p>
-            </div>
-          )}
-        </div>
+          </>
         )}
-        <div style={buttonContainerStyle}>
-          <Button style={buttonStyle} onClick={() => handleButtonClick("USELVISK JEGER")}>USELVISK JEGER</Button>
-          <Button style={buttonStyle} onClick={() => handleButtonClick("FORMBAR OPPORTUNIST")}>FORMBAR OPPORTUNIST</Button>
-          <Button style={buttonStyle} onClick={() => handleButtonClick("UTNYTTENDE ÆRFUGL")}>UTNYTTENDE ÆRFUGL</Button>
-          <Button style={buttonStyle} onClick={() => handleButtonClick("UTØRST KLINKEKULE")}>UTØRST KLINKEKULE</Button>
-          <Button style={buttonStyle} onClick={() => handleButtonClick("VIRTUELL PERSEPSJON")}>VIRTUELL PERSEPSJON</Button>
+        <div className='button-container'>
+          <Button className='button' onClick={() => handleButtonClick("Ola Norman")}>Ola Norman</Button>
+          <Button className='button' onClick={() => handleButtonClick("Kari Norman")}>Kari Norman</Button>
+          <Button className='button' onClick={() => handleButtonClick("UTNYTTENDE ÆRFUGL")}>UTNYTTENDE ÆRFUGL</Button>
+          <Button className='button' onClick={() => handleButtonClick("UTØRST KLINKEKULE")}>UTØRST KLINKEKULE</Button>
+          <Button className='button' onClick={() => handleButtonClick("VIRTUELL PERSEPSJON")}>VIRTUELL PERSEPSJON</Button>
         </div>
-        <Button style={lastButtonStyle} onClick={() => navigate("/start")}>Back to Start</Button>
+        <Button className='last-button' onClick={handleBackToStart}>Back to Start</Button>
       </main>
     </>
   )

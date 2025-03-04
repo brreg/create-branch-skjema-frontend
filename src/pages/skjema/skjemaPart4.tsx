@@ -24,22 +24,26 @@ export default function SkjemaPage4({ prevPage }: Props) {
       <div className='line-sign-section'>
         <section className='sign-section'>
           <h3>Use BankID to sign the registration form</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus.</p>
-          <Button onClick={() => navigate("/thanks")}>Sign with BankID</Button>
+          <div className="button-container">
+            <Button onClick={() => navigate("/thanks")}>Sign with BankID</Button>
+          </div>
         </section>
         <section className='sign-section'>
-          <h3>Sign the registration form with your NPID</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus.</p>
-          <Button onClick={() => navigate("/signWithNpid")}>Sign with NPID</Button>
+          <h3>Sign the registration form with your Personal Wallet</h3>
+          <div className="button-container">
+            <Button onClick={() => navigate("/signWithNpid")}>Sign with NPID</Button>
+          </div>
         </section>
         <section className='sign-section'>
           <h3>Save and continue later</h3>
           <p>The session is valid for 24 hours and must be completed to avoid restarting the registration process.</p>
-          <Button onClick={() => navigate("/thanks")}>Save application</Button>
+          <div className="button-container">
+            <Button onClick={() => navigate("/thanks")}>Save application</Button>
+          </div>
         </section>
       </div>
       <div className="button-group">
-        <Button type="button" variant='tertiary' onClick={() => prevPage()}>Forrige</Button>
+        <Button type="button" variant='tertiary' onClick={() => prevPage()}>Previous</Button>
       </div>
     </main>
   )

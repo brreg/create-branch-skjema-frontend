@@ -6,6 +6,13 @@ export default defineConfig({
   plugins: [react()],
   server: {
     port: 3000,
+    hmr: {
+      overlay: true,
+      clientPort: 3000
+    },
+    watch: {
+      usePolling: true
+    }
   },
   define: {
     global: {}
