@@ -1,5 +1,5 @@
 import './signWithNpid.css';
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { useSession } from '../context/SessionContext';
 import { backendWebsocketUrl, backendUrl } from '../const';
 import { QRCodeSVG } from 'qrcode.react';
