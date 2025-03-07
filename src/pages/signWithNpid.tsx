@@ -110,7 +110,8 @@ export default function SignWithNpidPage() {
           <h1>Scan the QR code with your wallet to sign for this application</h1>
         </div>
         <div className="sign_with_qr_kode" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Fieldset legend="NPID request">
+          <Fieldset>
+            <Fieldset.Legend>NPID request</Fieldset.Legend>
             <div style={{ paddingTop: "20px" }}>
               {qrLink === "" ? (
                 <div className='loader'>

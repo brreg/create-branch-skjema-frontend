@@ -11,7 +11,7 @@ fieldset legend {
   margin-top: 2em;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: flex-end;
 }
 
 .input-boxes-horisontal-uten-maring {
@@ -30,6 +30,13 @@ fieldset legend {
   margin-right: 1em;
   justify-content: flex-end;
   min-height: 85px;
+}
+
+/* Add new styles for label height consistency */
+.main-size-input-box label {
+  min-height: 1em;  /* Provides space for up to 2 lines of text */
+  display: flex;
+  align-items: flex-start;
 }
 
 .smal-input-box {

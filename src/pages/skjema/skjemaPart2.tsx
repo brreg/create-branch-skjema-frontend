@@ -54,9 +54,8 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
       </section>
       <hr className='horisontal-divider' />
       <form onSubmit={formik.handleSubmit}>
-        <Fieldset
-          legend="Information about the business in the country of origin"
-        >
+        <Fieldset>
+          <Fieldset.Legend>Information about the business in the country of origin</Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
@@ -66,22 +65,19 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
               onChange={formik.handleChange}
               readOnly
             />
-
             <Textfield
-              className='strange-input-box'
+              className='main-size-input-box'
               label="State the enterprise's registration number/ID number in the country of origin"
               name="foretakOrgnr"
               value={formik.values.foretakOrgnr}
               onChange={formik.handleChange}
-              htmlSize={30}
               readOnly
             />
           </div>
         </Fieldset>
         <hr className='horisontal-divider' />
-        <Fieldset
-          legend="Head office address in the country of origin"
-        >
+        <Fieldset>
+          <Fieldset.Legend>Head office address in the country of origin</Fieldset.Legend>
           <div className='input-boxes-horisontal'>
 
             <Textfield
@@ -127,9 +123,8 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
           </div>
         </Fieldset>
         <hr className='horisontal-divider' />
-        <Fieldset
-          legend="Type of organisation in the country of origin"
-        >
+        <Fieldset>
+          <Fieldset.Legend>Type of organisation in the country of origin</Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box '
@@ -142,10 +137,9 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
           </div>
         </Fieldset>
         <hr className='horisontal-divider' />
-        <Fieldset
-          legend="The business register in the country of origin"
-        >
-        <div className='input-boxes-horisontal'>
+        <Fieldset>
+          <Fieldset.Legend>The business register in the country of origin</Fieldset.Legend>
+          <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box '
               label="Name of register"

@@ -84,9 +84,8 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
       </section>
       <hr className='horisontal-divider' />
       <form onSubmit={formik.handleSubmit}>
-        <Fieldset
-          legend="Information about the enterprise's operations in Norway"
-        >
+        <Fieldset>
+          <Fieldset.Legend>Information about the enterprise's operations in Norway</Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
@@ -101,18 +100,16 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
 
         <hr className='horisontal-divider' />
 
-        <Fieldset
-          legend="Address in Norway"
-        >
+        <Fieldset>
+          <Fieldset.Legend>Address in Norway</Fieldset.Legend>
           <div className='input-boxes-horisontal'>
 
             <Checkbox
               checked={formik.values.harFilialINorge as boolean}
               onClick={(e) => formik.setFieldValue('harFilialINorge', e.currentTarget.checked)}
               value={formik.values.norskForetaksNavn}
-            >
-              The enterprise has no premises in Norway
-            </Checkbox>
+              label = "The enterprise has no premises in Norway"
+            />
           </div>
           <div className='input-boxes-horisontal'>
             <Textfield
@@ -170,9 +167,8 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
 
         <hr className='horisontal-divider' />
 
-        <Fieldset
-          legend="General manager, contact person or business manager"
-        >
+        <Fieldset>
+          <Fieldset.Legend>General manager, contact person or business manager</Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
@@ -226,9 +222,8 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
 
         <hr className='horisontal-divider' />
 
-        <Fieldset
-          legend="Add company activity/industry"
-        >
+        <Fieldset>
+          <Fieldset.Legend>Add company activity/industry</Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Combobox
               className='main-size-input-box'

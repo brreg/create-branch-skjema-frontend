@@ -189,14 +189,13 @@ function StartPage() {
           <div className='did-content'>
             <hr className='horisontal-divider' />
             <form className="didinput" onSubmit={formik.handleSubmit}>
-              <Fieldset
-                legend="Fill the DID address for your wallet">
+              <Fieldset>
+                <Fieldset.Legend>Fill the DID address for your wallet</Fieldset.Legend>
                 <Textfield
                   style={{ paddingTop: "20px" }}
                   type={'did' as any}
                   data-size="md"
                   label="Your DID address"
-                  htmlSize={40}
                   required
                   name='didAddress'
                   value={formik.values.didAddress}
@@ -222,9 +221,8 @@ function StartPage() {
 
           <div className='did-content'>
             <hr className='horisontal-divider' />
-            <Fieldset
-              legend="Scan QR code to upload credentials via wallet app"
-            >
+            <Fieldset>
+              <Fieldset.Legend>Scan QR code to upload credentials via wallet app</Fieldset.Legend>
               <div style={{ paddingTop: "30px" }}>
                 {qrLink === "" ?
                   <div className='loader'>

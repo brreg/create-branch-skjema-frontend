@@ -61,7 +61,8 @@ export default function ReceiptPage() {
         <p>You are now registered in the Business Register. Scan the following QR code to receive a Proof of Registered Branch in your wallet.</p>
 
         <div className="sign_with_qr_kode" style={{ display: 'flex', justifyContent: 'center' }}>
-          <Fieldset legend="Receipt for Proof of Registration">
+          <Fieldset>
+            <Fieldset.Legend>Receipt for Proof of Registration</Fieldset.Legend>
             <div style={{ paddingTop: "20px" }}>
               {qrLink === "" ? (
                 <div className='loader'>

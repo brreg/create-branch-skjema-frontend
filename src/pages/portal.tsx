@@ -17,7 +17,8 @@ export default function PortalPage() {
           <div className='search'>
             <Textfield
               className='search-input'
-              size="medium"
+              data-size="md"
+              label="Search for services"
             />
             <Button
               className='search-button'

@@ -4,7 +4,7 @@ import { SessionProvider } from './context/SessionContext.tsx'
 // @ts-ignore
 import '@digdir/designsystemet-css';
 // @ts-ignore
-import '@digdir/designsystemet-theme/brand/brreg/tokens.css';
+import '@digdir/designsystemet-theme';//brand/brreg/tokens.css';
 // @ts-ignore
 import '@fontsource/open-sans' 
 

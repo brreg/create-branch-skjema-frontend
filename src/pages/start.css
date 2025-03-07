@@ -4,14 +4,37 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
-
 
 .horisontal-content {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: center;
+  align-items: flex-start;
   column-gap: 30px;
+  width: 100%;
+  position: relative;
+}
+
+.did-content {
+  flex: 1;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.did-content fieldset {
+  margin-top: 40px;
+}
+
+.horisontal-divider {
+  width: 100%;
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ccc;
 }
 
 .qrimage {
@@ -20,8 +43,12 @@
 }
 
 .gray-text {
-  margin-top: 200px;
+  display: flex;
+  align-items: center;
   color: gray;
+  padding: 0 20px;
+  margin: 0;
+  height: 60px;
 }
 
 .didinput {
