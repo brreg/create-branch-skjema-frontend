@@ -166,13 +166,6 @@ function StartPage() {
         >
           <h1>Create branch</h1>
           <p style={{ marginBottom: "20px" }}>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
-          <ol type='1'>
-            <li>First we need you NPID and EUCC credentials from your wallet.</li>
-            <li>Start with entering your DID address or QR code to connect your wallet</li>
-            <li>Then you will have to fill in missing information and submit through our form</li>
-            <li>Then you can sign the form and submit it to be processed or save and continue later</li>
-            <li>We will then process your application automatically</li>
-          </ol>
 
           {/* Bold */}
           <h3
