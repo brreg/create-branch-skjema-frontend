@@ -63,9 +63,9 @@ export default function SkjemaPage() {
             representantPoststed: sessionData.personBy,
             representantSignaturRegel: sessionData.representantSignaturRegel,
           })
-          if (sessionData.representantNavn !== sessionData.personNavn || sessionData.representantSignaturRegel !== "alone") {
-            navigate("/error");
-          }
+          //          if (sessionData.representantNavn !== sessionData.personNavn || sessionData.representantSignaturRegel !== "alone") {
+          //            navigate("/error");
+          //          }
 
 
 
