@@ -17,7 +17,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<PortalPage />} />
+        <Route path="/" element={<BranchRegistrationGuide />} />
+        <Route path="/portal" element={<PortalPage />} />
         <Route path="/start" element={<StartPage />} />
         <Route path='/skjema' element={<SkjemaPage />} />
         <Route path='/thanks' element={<ThanksPage />} />

@@ -1,0 +1,100 @@
+.guide-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.guide-intro {
+  color: #333;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.guide-step {
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.guide-step:hover {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.step-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+.step-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+.controls-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.expand-icon {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.step-content {
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  background-color: #f8f9fa;
+}
+
+.step-content h3 {
+  color: #444;
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.step-content p {
+  color: #666;
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.guide-step.expanded {
+  border-color: #0066cc;
+}
+
+.guide-step.expanded .step-header {
+  background-color: #f0f7ff;
+}
+
+.next-button {
+  background-color: #0066cc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.next-button:hover {
+  background-color: #0052a3;
+}
+
+.guide-footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  color: #666;
+  line-height: 1.5;
+} 
