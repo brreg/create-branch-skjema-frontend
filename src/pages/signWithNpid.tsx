@@ -9,7 +9,6 @@ import { HashLoader } from 'react-spinners';
 import { Client } from '@stomp/stompjs';
 import { WebSocket } from 'ws';
 import Header from '../components/header';
-import { Button } from "@digdir/designsystemet-react";
 import { DeleteCookie, CreateCookieIfMissing } from '../context/Cookie';
 
 Object.assign(global, { WebSocket });
@@ -122,9 +121,6 @@ export default function SignWithNpidPage() {
               )}
             </div>
           </Fieldset>
-        </div>
-        <div className="button-container">
-          <Button onClick={handleBackToStart}>Back to Start</Button>
         </div>
       </div>
     </>
