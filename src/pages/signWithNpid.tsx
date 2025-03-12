@@ -9,7 +9,6 @@ import { HashLoader } from 'react-spinners';
 import { Client } from '@stomp/stompjs';
 import { WebSocket } from 'ws';
 import Header from '../components/header';
-import { DeleteCookie, CreateCookieIfMissing } from '../context/Cookie';
 
 Object.assign(global, { WebSocket });
 
@@ -93,12 +92,6 @@ export default function SignWithNpidPage() {
     } catch (error) {
       console.error("Error fetching QR link:", error);
     }
-  };
-
-  const handleBackToStart = () => {
-    DeleteCookie();
-    CreateCookieIfMissing();
-    window.location.href = "/start";
   };
 
   return (
