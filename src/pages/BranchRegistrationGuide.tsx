@@ -66,7 +66,7 @@ const BranchRegistrationGuide = () => {
                 variant="secondary"
                 onClick={(e) => {
                   e.stopPropagation();
-                  window.open('https://npid-issuer.example.com', '_blank');
+                  window.open('https://info.tt02.altinn.no/skjemaoversikt/bronnoysundregistrene/lag-gyldig-virksomhetslommebok/', '_blank');
                 }}
               >
                 Visit NPID Issuer
