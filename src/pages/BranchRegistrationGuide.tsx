@@ -102,7 +102,7 @@ const BranchRegistrationGuide = () => {
                 variant="secondary"
                 onClick={(e) => {
                   e.stopPropagation();
-                  window.open('https://bolagsverket.se', '_blank');
+                  window.open('https://attestering-portal-pilot-ui.k821.system.bolagsverket.se/', '_blank');
                 }}
               >
                 Visit Bolagsverket
