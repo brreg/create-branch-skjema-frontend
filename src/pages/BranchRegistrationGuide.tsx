@@ -14,11 +14,43 @@ const BranchRegistrationGuide = () => {
     <>
       <Header />
       <div className="guide-container">
-        <h1>Guide to Registering a Branch Using Verifiable Credentials</h1>
+        <h2>Register a branch using wallet services</h2>
         <p className="guide-intro">
-          This guide provides step-by-step instructions on how to register a branch using verifiable credentials. Follow the
-          steps below to complete the process.
+        With this service you can register for a company branch using wallet services. For this  to work you need a functional wallet with the Natural personal Identifactation data(NPID) and European Company Credientials(EUCC). If you don’t have this, you can follow the the steps under the  “Need Help” section below.
         </p>
+        <div className={`guide-step ${expandedStep === 4 ? 'expanded' : ''}`} onClick={() => handleStepClick(4)}>
+          <div className="step-header">
+            <h2>Start Branch Registration at Brønnøysundregisterne</h2>
+            
+            <div className="controls-container">
+              <Button
+                data-size="sm"
+                variant="primary"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  window.location.href = '/start';
+                }}
+              >
+                Apply here
+              </Button>
+              <span className="expand-icon">{expandedStep === 4 ? '▼' : '▶'}</span>
+            </div>
+          </div>
+          {expandedStep === 4 && (
+            <div className="step-content">
+              
+            <p>With your attestations in place, proceed to apply for branch registration.</p>
+            <ol>
+              <li>Where to register? Use the Apply here button above</li>
+              <li>Complete the application process using your stored attestations.</li>
+              <li>After submitting your application, you will receive a confirmation attestation.</li>
+              <li>Then you will receive your organisation number within 24 hours in your wallet-app.</li>
+            </ol>
+
+            </div>
+          )}
+        </div>
+        <h2>Need Help ?</h2>
 
         <div className={`guide-step ${expandedStep === 1 ? 'expanded' : ''}`} onClick={() => handleStepClick(1)}>
           <div className="step-header">

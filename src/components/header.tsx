@@ -18,10 +18,6 @@ export default function Header() {
 					<MagnifyingGlassIcon title="a11y-title" fontSize="1.5rem" />
 				</Button>
 				<Button variant='tertiary'>
-					Log in
-					<PersonIcon title="a11y-title" fontSize="1.5rem" />
-				</Button>
-				<Button variant='tertiary'>
 					Menu
 					<MenuHamburgerIcon title="a11y-title" fontSize="1.5rem" />
 				</Button>
