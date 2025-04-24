@@ -66,19 +66,14 @@ export default function SkjemaPage4({ prevPage }: Props) {
       </section>
       <hr className='horisontal-divider' />
       <span className='span-text'>Sign the form with a digital ID to complete the registration</span>
+      <p>You can sign the registration form with your wallet-app or use BankID if you want to use the wallet-app, you will have to scan a QR code.</p>
+
+      <div className="signing-buttons">
+        <Button onClick={() => handleSubmitForm("/signWithNpid")}>Sign with wallet-app</Button>
+        <Button onClick={() => handleSubmitForm("/thanks")}>Sign with BankID</Button>
+      </div>
+
       <div className='line-sign-section'>
-        <section className='sign-section'>
-          <h3>Use BankID to sign the registration form</h3>
-          <div className="button-container">
-            <Button onClick={() => handleSubmitForm("/thanks")}>Sign with BankID</Button>
-          </div>
-        </section>
-        <section className='sign-section'>
-          <h3>Sign the registration form with your Personal Wallet</h3>
-          <div className="button-container">
-            <Button onClick={() => handleSubmitForm("/signWithNpid")}>Sign with NPID</Button>
-          </div>
-        </section>
         <section className='sign-section'>
           <h3>Save and continue later</h3>
           <p>The session is valid for 24 hours and must be completed to avoid restarting the registration process.</p>

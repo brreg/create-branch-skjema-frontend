@@ -164,13 +164,13 @@ function StartPage() {
         <div
           style={{ paddingLeft: "20px" }}
         >
-          <h1>Create branch</h1>
-          <p style={{ marginBottom: "20px" }}>All foreign businesses in need of a Norwegian organisation number must register as a Norwegian registered foreign business (NUF).</p>
+          <h1>Create branch Application</h1>
+          <p style={{ marginBottom: "20px", textAlign: "left" }}>Please provide us with the EUCC and NPID attestation , so we can use the data to prefill the application form for you. You can do this by either sharing these attestations  with a link from your desktop-wallet or using the QR code with your wallet-app on your mobile phone.</p>
 
           {/* Bold */}
           <h3
             style={{
-              paddingTop: "20px",
+              paddingTop: "10px",
               fontSize: "1.5rem"
             }}
           >Do you need test or demo data?</h3>
@@ -178,12 +178,32 @@ function StartPage() {
         </div>
 
         {/* horisontal line*/}
-        <div className='horisontal-content'>
+          {/* QR Code Section */}
+          <div className='did-content'>
+            <hr className='horisontal-divider' />
+            <Fieldset>
+              <Fieldset.Legend>Scan QR code to upload credentials via wallet app</Fieldset.Legend>
+              <div style={{ paddingTop: "10px" }}>
+                {qrLink === "" ?
+                  <div className='loader'>
+                    <HashLoader />
+                  </div>
+                  :
+                  <QRCodeSVG value={qrLink} className='qrimage' />
+                }
+              </div>
+            </Fieldset>
+          </div>
+
+          {/* OR divider */}
+          <p className='black-text'>OR</p>
+
+          {/* DID Input Section */}
           <div className='did-content'>
             <hr className='horisontal-divider' />
             <form className="didinput" onSubmit={formik.handleSubmit}>
               <Fieldset>
-                <Fieldset.Legend>Fill the DID address for your wallet</Fieldset.Legend>
+                <Fieldset.Legend>If you don't have a wallet-app on your phone you can insert a link from your desktop-wallet instead.</Fieldset.Legend>
                 <Textfield
                   style={{ paddingTop: "20px" }}
                   type={'did' as any}
@@ -208,26 +228,6 @@ function StartPage() {
               document.body
             )}
           </div>
-
-          {/** gray */}
-          <p className='gray-text'>OR</p>
-
-          <div className='did-content'>
-            <hr className='horisontal-divider' />
-            <Fieldset>
-              <Fieldset.Legend>Scan QR code to upload credentials via wallet app</Fieldset.Legend>
-              <div style={{ paddingTop: "30px" }}>
-                {qrLink === "" ?
-                  <div className='loader'>
-                    <HashLoader />
-                  </div>
-                  :
-                  <QRCodeSVG value={qrLink} className='qrimage' />
-                }
-              </div>
-            </Fieldset>
-          </div>
-        </div>
       </main>
     </>
   )

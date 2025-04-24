@@ -79,7 +79,8 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
     <main className="main-content">
       <section className="info-section">
         <h1 className='info-header'>Complete your registration</h1>
-        <p className='info-paragraph'>Form for Norwegian registered foreign business enterprise( NUF) for registration in the Central Coordinating Register for Legal Entities, the Register of Business Enterprises, NAV Aa register, The Business Register of Statistics Norway and the Corporate Taxation Data Register.  All fields must be filled out. </p>
+        <p className='info-firstline' style={{ fontWeight: 'bold' }}> Thank you for your attestations - we have used the data in them to pre-fill the form.</p>
+        <p className='info-paragraph' style={{ fontWeight: 'bold' }}> If you want to change the pre-filled fields you need to go to the authority that issued the attestations. There will likely be data fields that we could not fill in from the attestations, these are marked with a red *. Please fill them in to go to the next page.</p>
         <SkjemaProgressBar page={3} />
       </section>
       <hr className='horisontal-divider' />
@@ -114,7 +115,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
-              label="Street, building number or place"
+              label={<span>Street, building number or place <span style={{ color: 'red' }}>*</span></span>}
               name="filialAdresse"
               value={formik.values.filialAdresse}
               onChange={formik.handleChange}
@@ -124,7 +125,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
             <div className='main-size-input-box'>
               <div className='input-boxes-horisontal-uten-maring'>
                 <Textfield
-                  label="Postal code"
+                  label={<span>Postal code <span style={{ color: 'red' }}>*</span></span>}
                   style={{ marginRight: "20px" }}
                   name="filialPostnummer"
                   value={formik.values.filialPostnummer}
@@ -133,7 +134,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
                   required
                 />
                 <Textfield
-                  label="Postal district"
+                  label={<span>Postal district <span style={{ color: 'red' }}>*</span></span>}
                   name="filialPoststed"
                   value={formik.values.filialPoststed}
                   onChange={formik.handleChange}
@@ -227,7 +228,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
           <div className='input-boxes-horisontal'>
             <Combobox
               className='main-size-input-box'
-              label="Add industry"
+              label={<span>Add industry <span style={{ color: 'red' }}>*</span></span>}
               value={formik.values.filialNaceKode}
               multiple
               onValueChange={(data) => {

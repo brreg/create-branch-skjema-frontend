@@ -92,16 +92,16 @@ const BranchRegistrationGuide = () => {
               <h3>2. How to get the wallet-app?</h3>
               <p>Visit https://igrant.io/datawallet.html and follow the instructions to set up your wallet-app.</p>
               <div className="app-store-links">
-                <a href="https://apps.apple.com/dummy-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://apple.co/2Mz9nJp" target="_blank" rel="noopener noreferrer">
                   <img 
-                    src="/public/app-store-badge.png" 
+                    src="/app-store-badge.png" 
                     alt="Download on the App Store" 
                     height="40"
                   />
                 </a>
-                <a href="https://play.google.com/store/dummy-link" target="_blank" rel="noopener noreferrer">
+                <a href="https://play.google.com/store/apps/details?id=io.igrant.mobileagent" target="_blank" rel="noopener noreferrer">
                   <img 
-                    src="/public/google-play-badge.png" 
+                    src="/google-play-badge.png" 
                     alt="Get it on Google Play" 
                     height="40"
                   />

@@ -61,6 +61,10 @@ fieldset legend {
   margin: 0;
 }
 
+.info-firstline {
+  font-weight: bold;
+}
+
 .info-section p {
   width: 70%;
   font-size: medium;
@@ -114,4 +118,15 @@ fieldset legend {
 
 .span-text {
   font-size: 1.5rem;
+}
+
+.signing-buttons {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem 0;
+  justify-content: flex-start;
+}
+
+.signing-buttons button {
+  width: 200px;
 }
