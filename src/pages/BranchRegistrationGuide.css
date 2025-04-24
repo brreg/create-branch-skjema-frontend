@@ -97,4 +97,61 @@
   border-radius: 4px;
   color: #666;
   line-height: 1.5;
+}
+
+.app-store-links {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+  align-items: center;
+}
+
+.app-store-links img {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.app-store-links img:hover {
+  opacity: 0.8;
+}
+
+.verification-box {
+  background-color: #E6F3FF;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  width: 65%;
+}
+
+.qr-section {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.qr-placeholder {
+  flex-shrink: 0;
+}
+
+.qr-dummy {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.verification-text {
+  flex-grow: 1;
+}
+
+.verification-text h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1E1E1E;
+  font-size: 1.1rem;
+}
+
+.verification-text p {
+  margin: 0;
+  color: #1E1E1E;
+  line-height: 1.5;
 } 

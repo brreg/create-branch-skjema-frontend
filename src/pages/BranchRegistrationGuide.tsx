@@ -16,7 +16,7 @@ const BranchRegistrationGuide = () => {
       <div className="guide-container">
         <h2>Register a branch using wallet services</h2>
         <p className="guide-intro">
-        With this service you can register for a company branch using wallet services. For this  to work you need a functional wallet with the Natural personal Identifactation data(NPID) and European Company Credientials(EUCC). If you don’t have this, you can follow the the steps under the  “Need Help” section below.
+        With this service you can register for a company branch using wallet services. For this  to work you need a functional wallet with the Natural personal Identifactation data(NPID) and European Company Credientials(EUCC). If you don't have this, you can follow the the steps under the  "Need Help" section below.
         </p>
         <div className={`guide-step ${expandedStep === 4 ? 'expanded' : ''}`} onClick={() => handleStepClick(4)}>
           <div className="step-header">
@@ -51,34 +51,65 @@ const BranchRegistrationGuide = () => {
           )}
         </div>
         <h2>Need Help ?</h2>
+        <p>The step-by-step instructions below shows you the tasks you need to complete to get ready to register a branch using wallet services. If you already have a wallet-app and the defined attestations you can start to Apply for Branch Registration at Brønnøysundregistrene. </p>
 
+        <div className="verification-box">
+          <div className="qr-section">
+            <div className="qr-placeholder">
+              {/* Placeholder for QR code */}
+              <div className="qr-dummy"></div>
+            </div>
+            <div className="verification-text">
+              <h3>Check if you have the right attestations?</h3>
+              <p>Scan this QR code with your EUID Wallet app to check or verify your attestations before starting your application.</p>
+            </div>
+          </div>
+        </div>
+        
+        <h3>Perparations before registering a branch:</h3>
         <div className={`guide-step ${expandedStep === 1 ? 'expanded' : ''}`} onClick={() => handleStepClick(1)}>
           <div className="step-header">
-            <h2>Step 1: Get a Wallet at iGrant</h2>
+            <h2>Step 1: Get an EUID Wallet-app</h2>
             <div className="controls-container">
               <Button
                 data-size="sm"
-                variant="secondary"
+                variant="primary"
                 onClick={(e) => {
                   e.stopPropagation();
                   window.open('https://www.igrant.io/datawallet.html', '_blank');
                 }}
               >
-                Visit IGrant
+                Get wallet-app
               </Button>
               <span className="expand-icon">{expandedStep === 1 ? '▼' : '▶'}</span>
             </div>
           </div>
           {expandedStep === 1 && (
             <div className="step-content">
-              <h3>1. What is iGrant?</h3>
-              <p>iGrant is a platform that allows you to manage your verifiable credentials securely.</p>
+              <h3>1. What is an EUDI wallet-app? </h3>
+              <p>EUDI wallet is an app that allows you to store and share your attestations securely.</p>
 
-              <h3>2. How to get the wallet?</h3>
-              <p>Visit https://igrant.io/datawallet.html and follow the instructions to set up your wallet.</p>
+              <h3>2. How to get the wallet-app?</h3>
+              <p>Visit https://igrant.io/datawallet.html and follow the instructions to set up your wallet-app.</p>
+              <div className="app-store-links">
+                <a href="https://apps.apple.com/dummy-link" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src="/public/app-store-badge.png" 
+                    alt="Download on the App Store" 
+                    height="40"
+                  />
+                </a>
+                <a href="https://play.google.com/store/dummy-link" target="_blank" rel="noopener noreferrer">
+                  <img 
+                    src="/public/google-play-badge.png" 
+                    alt="Get it on Google Play" 
+                    height="40"
+                  />
+                </a>
+              </div>
 
               <h3>3. Next Steps</h3>
-              <p>Once set up, your wallet will be ready to store and manage credentials.</p>
+              <p>Once set up, your wallet-app will be ready to  store and share attestations.</p>
 
               <Button className="next-button" onClick={(e) => {
                 e.stopPropagation();
@@ -91,30 +122,29 @@ const BranchRegistrationGuide = () => {
 
         <div className={`guide-step ${expandedStep === 2 ? 'expanded' : ''}`} onClick={() => handleStepClick(2)}>
           <div className="step-header">
-            <h2>Step 2: Get NPID Credentials</h2>
+            <h2>Step 2: Get attestation of Natural Person Identification Data (NPID)</h2>
             <div className="controls-container">
               <Button
                 data-size="sm"
-                variant="secondary"
+                variant="primary"
                 onClick={(e) => {
                   e.stopPropagation();
                   window.open('https://info.tt02.altinn.no/skjemaoversikt/bronnoysundregistrene/lag-gyldig-virksomhetslommebok/', '_blank');
                 }}
               >
-                Visit NPID Issuer
+                Get NPID
               </Button>
               <span className="expand-icon">{expandedStep === 2 ? '▼' : '▶'}</span>
             </div>
           </div>
           {expandedStep === 2 && (
             <div className="step-content">
-              <p>Next, obtain your Natural Personal Identifier (NPID) credentials.</p>
+              <p>Next, obtain your Natural Personal Identifier (NPID) attestation.</p>
 
-              <h3>1. Where to get them?</h3>
-              <p>Visit NPID Issuer.</p>
-
-              <h3>2. What to do?</h3>
-              <p>Follow the instructions to obtain and store your NPID credentials in your iGrant wallet.</p>
+              <ol>
+                <li>Where to get it? Visit NPID Issuer service.</li>
+                <li>Follow the instructions to obtain and store your NPID attestation in your wallet-app.</li>
+              </ol>
 
               <Button className="next-button" onClick={(e) => {
                 e.stopPropagation();
@@ -127,30 +157,29 @@ const BranchRegistrationGuide = () => {
 
         <div className={`guide-step ${expandedStep === 3 ? 'expanded' : ''}`} onClick={() => handleStepClick(3)}>
           <div className="step-header">
-            <h2>Step 3: Get EUCC Credentials at Bolagsverket</h2>
+            <h2>Step 3: Get attestation of EU Company Certificate (EUCC)</h2>
             <div className="controls-container">
               <Button
                 data-size="sm"
-                variant="secondary"
+                variant="primary"
                 onClick={(e) => {
                   e.stopPropagation();
                   window.open('https://attestering-portal-pilot-ui.k821.system.bolagsverket.se/', '_blank');
                 }}
               >
-                Visit Bolagsverket
+                Get EUCC
               </Button>
               <span className="expand-icon">{expandedStep === 3 ? '▼' : '▶'}</span>
             </div>
           </div>
           {expandedStep === 3 && (
             <div className="step-content">
-              <p>You will need European Company Credentials (EUCC) issued by Bolagsverket.</p>
+              <p>You will need European Company Certificate (EUCC) issued by Bolagsverket.</p>
 
-              <h3>1. Where to get them?</h3>
-              <p>Visit Bolagsverket and request your EUCC credentials.</p>
-
-              <h3>2. What to do?</h3>
-              <p>Once issued, store them securely in your iGrant wallet.</p>
+              <ol>
+                <li>Where to get it? Visit Bolagsverket and request your EUCC credentials.</li>
+                <li>Once issued, it is stored securely in your wallet-app.</li>
+              </ol>
 
               <Button className="next-button" onClick={(e) => {
                 e.stopPropagation();
@@ -161,35 +190,6 @@ const BranchRegistrationGuide = () => {
           )}
         </div>
 
-        <div className={`guide-step ${expandedStep === 4 ? 'expanded' : ''}`} onClick={() => handleStepClick(4)}>
-          <div className="step-header">
-            <h2>Step 4: Apply for Branch Registration at Brønnøysundregisterne</h2>
-            
-            <div className="controls-container">
-              <Button
-                data-size="sm"
-                variant="secondary"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  window.location.href = '/start';
-                }}
-              >
-                Register Branch
-              </Button>
-              <span className="expand-icon">{expandedStep === 4 ? '▼' : '▶'}</span>
-            </div>
-          </div>
-          {expandedStep === 4 && (
-            <div className="step-content">
-              <p>You are now ready to register your company branch in norway as NUF. Please follow the Register Branch button to get startet</p>
-            </div>
-          )}
-        </div>
-
-        <p className="guide-footer">
-          By following these steps, you successfully complete the registration process using verifiable credentials. If you
-          encounter any issues, refer to the respective platforms' support sections for assistance.
-        </p>
       </div>
     </>
   );
