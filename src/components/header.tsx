@@ -1,7 +1,7 @@
 import { Button } from '@digdir/designsystemet-react'
 import Debug from './debug'
 import './header.css'
-import { LanguageIcon, MagnifyingGlassIcon, MenuHamburgerIcon, PersonIcon } from '@navikt/aksel-icons'
+import { LanguageIcon, MagnifyingGlassIcon, MenuHamburgerIcon } from '@navikt/aksel-icons'
 
 export default function Header() {
 	return (
@@ -16,10 +16,6 @@ export default function Header() {
 				<Button variant='tertiary'>
 					Search
 					<MagnifyingGlassIcon title="a11y-title" fontSize="1.5rem" />
-				</Button>
-				<Button variant='tertiary'>
-					Log in
-					<PersonIcon title="a11y-title" fontSize="1.5rem" />
 				</Button>
 				<Button variant='tertiary'>
 					Menu

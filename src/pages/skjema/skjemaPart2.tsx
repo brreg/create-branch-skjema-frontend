@@ -2,6 +2,7 @@ import SkjemaProgressBar from '../../components/skjema/progressBar';
 import { Button, Fieldset, Textfield } from '@digdir/designsystemet-react';
 import { getCookie, updateFormData } from '../../context/Cookie';
 import { useFormik } from 'formik';
+import { QuestionmarkCircleIcon } from '@navikt/aksel-icons';
 
 interface Props {
   nextPage: () => void;
@@ -49,13 +50,13 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
     <main className="main-content">
       <section className="info-section">
         <h1 className='info-header'>Complete your registration</h1>
-        <p className='info-paragraph'>Form for Norwegian registered foreign business enterprise( NUF) for registration in the Central Coordinating Register for Legal Entities, the Register of Business Enterprises, NAV Aa register, The Business Register of Statistics Norway and the Corporate Taxation Data Register.  All fields must be filled out. </p>
+        <p className='info-paragraph'>Thank you for your attestations - we have used the data in them to pre-fill the form. If you want to change the pre-filled fields you need to go to the authority that issued the attestations. There will likely be data fields that we could not fill in from the attestations, these are marked with a red *. Please fill them in to go to the next page.</p>
         <SkjemaProgressBar page={2} />
       </section>
       <hr className='horisontal-divider' />
       <form onSubmit={formik.handleSubmit}>
         <Fieldset>
-          <Fieldset.Legend>Information about the business in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>Information about the business in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
@@ -77,7 +78,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
         </Fieldset>
         <hr className='horisontal-divider' />
         <Fieldset>
-          <Fieldset.Legend>Head office address in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>Head office address in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
 
             <Textfield
@@ -124,7 +125,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
         </Fieldset>
         <hr className='horisontal-divider' />
         <Fieldset>
-          <Fieldset.Legend>Type of organisation in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>Type of organisation in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box '
@@ -138,7 +139,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
         </Fieldset>
         <hr className='horisontal-divider' />
         <Fieldset>
-          <Fieldset.Legend>The business register in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>The business register in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box '

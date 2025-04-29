@@ -3,27 +3,21 @@ import SkjemaProgressBar from "../../components/skjema/progressBar";
 import { Button, Fieldset, Textfield } from '@digdir/designsystemet-react';
 import { getCookie, updateFormData } from '../../context/Cookie';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { QuestionmarkCircleIcon } from '@navikt/aksel-icons';
+
 
 export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
   const existingCookie = getCookie();
-
-  const validationSchema = Yup.object({
-    personTelefonnummer: Yup.string()
-      .matches(/^\+47\s?[0-9]{8}$/, 'Phone number must be in format: +47 followed by 8 digits')
-      .required('Phone number is required'),
-  });
 
   const formik = useFormik({
     initialValues: {
       personNavn: existingCookie?.formData?.personNavn || '',
       personVeiAddresse: existingCookie?.formData?.personVeiAddresse || '',
-      personTelefonnummer: existingCookie?.formData?.personTelefonnummer || '+47',
+      personTelefonnummer: existingCookie?.formData?.personTelefonnummer || '',
       personPostcode: existingCookie?.formData?.personPostcode || '',
       personBy: existingCookie?.formData?.personBy || '',
       personLand: existingCookie?.formData?.personLand || '',
     },
-    validationSchema,
     onSubmit: (values) => {
       updateFormData({
         personNavn: values.personNavn,
@@ -41,13 +35,14 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
     <main className="main-content">
       <section className="info-section">
         <h1 className='info-header'>Complete your registration</h1>
-        <p className='info-paragraph'>Form for Norwegian registered foreign business enterprise( NUF) for registration in the Central Coordinating Register for Legal Entities, the Register of Business Enterprises, NAV Aa register, The Business Register of Statistics Norway and the Corporate Taxation Data Register.  All fields must be filled out.</p>
+        <p className='info-paragraph'>Thank you for your attestations - we have used the data in them to pre-fill the form. If you want to change the pre-filled fields you need to go to the authority that issued the attestations. There will likely be data fields that we could not fill in from the attestations, these are marked with a red *. Please fill them in to go to the next page.</p>
         <SkjemaProgressBar page={1} />
       </section>
       <hr className='horisontal-divider' />
       <form onSubmit={formik.handleSubmit}>
         <Fieldset>
-          <Fieldset.Legend>Submitter/person liable for fee</Fieldset.Legend>
+          <Fieldset.Legend>Submitter/person liable for fee <QuestionmarkCircleIcon />
+          </Fieldset.Legend>
           <p className='info-paragraph'>The person or entity submitting the form will receive the feedback related to the case, and will receive any invoice connected to the registration in The Central Coordinating Register for Legal Entities/The Register of Business Enterprises. This information is prefilled based on your NPID and can not be changed.</p>
           <div className='input-boxes-horisontal'>
             <Textfield
@@ -60,12 +55,10 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
             />
             <Textfield
               className='smal-input-box'
-              label="Phone number"
+              label={<span>Phone number <span style={{ color: 'red' }}>*</span></span>}
               name="personTelefonnummer"
               value={formik.values.personTelefonnummer}
               onChange={formik.handleChange}
-              error={formik.touched.personTelefonnummer && formik.errors.personTelefonnummer}
-              onBlur={formik.handleBlur}
               required
             />
           </div>
