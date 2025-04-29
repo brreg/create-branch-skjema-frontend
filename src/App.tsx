@@ -10,6 +10,7 @@ import SignWithNpid from './pages/signWithNpid'
 import Receipt from './pages/receipt'
 import ErrorPage from './pages/error'
 import BranchRegistrationGuide from './pages/BranchRegistrationGuide'
+import CountrySelection from './pages/CountrySelection'
 
 function App() {
   CreateCookieIfMissing()
@@ -27,6 +28,7 @@ function App() {
         <Route path='/receipt' element={<Receipt />} />
         <Route path='/error' element={<ErrorPage />} />
         <Route path='/guide' element={<BranchRegistrationGuide />} />
+        <Route path='/credentialguidpage' element={<CountrySelection />} />
       </Routes>
     </>
   )

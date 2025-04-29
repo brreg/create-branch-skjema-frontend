@@ -129,7 +129,7 @@ const BranchRegistrationGuide = () => {
                 variant="primary"
                 onClick={(e) => {
                   e.stopPropagation();
-                  window.open('https://info.tt02.altinn.no/skjemaoversikt/bronnoysundregistrene/lag-gyldig-virksomhetslommebok/', '_blank');
+                  window.open('/credentialguidpage#npid', '_blank');
                 }}
               >
                 Get NPID
@@ -164,7 +164,7 @@ const BranchRegistrationGuide = () => {
                 variant="primary"
                 onClick={(e) => {
                   e.stopPropagation();
-                  window.open('https://attestering-portal-pilot-ui.k821.system.bolagsverket.se/', '_blank');
+                  window.open('/credentialguidpage#eucc', '_blank');
                 }}
               >
                 Get EUCC

@@ -1,7 +1,7 @@
 import { Button } from '@digdir/designsystemet-react'
 import Debug from './debug'
 import './header.css'
-import { LanguageIcon, MagnifyingGlassIcon, MenuHamburgerIcon, PersonIcon } from '@navikt/aksel-icons'
+import { LanguageIcon, MagnifyingGlassIcon, MenuHamburgerIcon } from '@navikt/aksel-icons'
 
 export default function Header() {
 	return (

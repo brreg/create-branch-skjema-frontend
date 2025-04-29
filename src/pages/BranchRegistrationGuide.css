@@ -41,6 +41,14 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  min-width: 200px;
+  justify-content: flex-end;
+}
+
+.controls-container button {
+  width: 120px;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .expand-icon {
