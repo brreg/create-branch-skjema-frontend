@@ -6,6 +6,8 @@ import { useSession } from '../context/SessionContext'
 import { QRCodeSVG } from 'qrcode.react'
 import { backendUrl } from '../const'
 import { HashLoader } from 'react-spinners';
+import { DeleteCookie, CreateCookieIfMissing } from '../context/Cookie';
+
 
 const BranchRegistrationGuide = () => {
   const [expandedStep, setExpandedStep] = useState<number>(1);
@@ -68,6 +70,8 @@ const BranchRegistrationGuide = () => {
                 data-size="sm"
                 variant="primary"
                 onClick={(e) => {
+                  DeleteCookie();
+                  CreateCookieIfMissing();
                   e.stopPropagation();
                   window.location.href = '/start';
                 }}
