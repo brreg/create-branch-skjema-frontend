@@ -10,6 +10,7 @@ import SkjemaPage3 from './skjemaPart3';
 import SkjemaPage4 from './skjemaPart4';
 import { storeFormDataInCookie } from '../../context/Cookie';
 import Header from '../../components/header';
+import { QuestionmarkCircleIcon } from '@navikt/aksel-icons';
 
 export default function SkjemaPage() {
   const navigate = useNavigate();

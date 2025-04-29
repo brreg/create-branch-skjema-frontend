@@ -3,6 +3,8 @@ import SkjemaProgressBar from "../../components/skjema/progressBar";
 import { Button, Fieldset, Textfield } from '@digdir/designsystemet-react';
 import { getCookie, updateFormData } from '../../context/Cookie';
 import { useFormik } from 'formik';
+import { QuestionmarkCircleIcon } from '@navikt/aksel-icons';
+
 
 export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
   const existingCookie = getCookie();
@@ -39,7 +41,8 @@ export default function SkjemaPage1({ nextPage }: { nextPage: any }) {
       <hr className='horisontal-divider' />
       <form onSubmit={formik.handleSubmit}>
         <Fieldset>
-          <Fieldset.Legend>Submitter/person liable for fee</Fieldset.Legend>
+          <Fieldset.Legend>Submitter/person liable for fee <QuestionmarkCircleIcon />
+          </Fieldset.Legend>
           <p className='info-paragraph'>The person or entity submitting the form will receive the feedback related to the case, and will receive any invoice connected to the registration in The Central Coordinating Register for Legal Entities/The Register of Business Enterprises. This information is prefilled based on your NPID and can not be changed.</p>
           <div className='input-boxes-horisontal'>
             <Textfield

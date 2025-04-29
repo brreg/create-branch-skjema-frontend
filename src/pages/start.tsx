@@ -166,15 +166,6 @@ function StartPage() {
         >
           <h1>Create branch Application</h1>
           <p style={{ marginBottom: "20px", textAlign: "left" }}>Please provide us with the EUCC and NPID attestation , so we can use the data to prefill the application form for you. You can do this by either sharing these attestations  with a link from your desktop-wallet or using the QR code with your wallet-app on your mobile phone.</p>
-
-          {/* Bold */}
-          <h3
-            style={{
-              paddingTop: "10px",
-              fontSize: "1.5rem"
-            }}
-          >Do you need test or demo data?</h3>
-          <Button onClick={() => navigate("/testdata")}>Fetch test/demo data</Button>
         </div>
 
         {/* horisontal line*/}

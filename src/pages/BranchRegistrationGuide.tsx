@@ -1,14 +1,55 @@
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './BranchRegistrationGuide.css';
 import { Button  } from '@digdir/designsystemet-react'
 import Header from '../components/header';
+import { useSession } from '../context/SessionContext'
+import { QRCodeSVG } from 'qrcode.react'
+import { backendUrl } from '../const'
+import { HashLoader } from 'react-spinners';
 
 const BranchRegistrationGuide = () => {
   const [expandedStep, setExpandedStep] = useState<number>(1);
+  const [qrLink, setQrLink] = useState("")
+  const { sessionId } = useSession()
+  const qrCodeCache = useRef<string | null>(null);
+
 
   const handleStepClick = (stepNumber: number) => {
     setExpandedStep(expandedStep === stepNumber ? 0 : stepNumber);
   };
+
+  const fetchQrLink = async () => {
+    try {
+      if (sessionId) {
+        // Return cached QR code if available
+
+        const response = await fetch(backendUrl + "/api/qrcode", {
+          method: "POST",
+          headers: {
+            "x-session-id": sessionId
+          }
+        })
+
+        if (!response.ok) {
+          throw new Error("Failed to fetch QR link")
+        }
+
+        const data = await response.json()
+        console.log("received data from /api/qrcode")
+        qrCodeCache.current = data.didcommUri; // Cache the new QR code
+        setQrLink(data.didcommUri)
+      }
+    } catch (error) {
+      console.error("Error fetching QR link:", error)
+    }
+  }
+
+  useEffect(() => {
+    fetchQrLink();
+
+    return () => {
+    }
+  }, [sessionId]);
 
   return (
     <>
@@ -56,8 +97,13 @@ const BranchRegistrationGuide = () => {
         <div className="verification-box">
           <div className="qr-section">
             <div className="qr-placeholder">
-              {/* Placeholder for QR code */}
-              <div className="qr-dummy"></div>
+            {qrLink === "" ?
+                  <div className='loader'>
+                    <HashLoader />
+                  </div>
+                  :
+                  <QRCodeSVG value={qrLink} className='qrimage' />
+                }
             </div>
             <div className="verification-text">
               <h3>Check if you have the right attestations?</h3>

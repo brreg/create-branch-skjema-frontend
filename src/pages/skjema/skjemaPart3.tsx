@@ -3,6 +3,8 @@ import { Button, Checkbox, Combobox, Fieldset, Textfield } from '@digdir/designs
 import { getCookie, updateFormData } from '../../context/Cookie';
 import { useFormik } from 'formik';
 import naceCodesData from '../../data/naceCodes.json';
+import { QuestionmarkCircleIcon } from '@navikt/aksel-icons';
+
 
 interface Props {
   nextPage: () => void;
@@ -86,7 +88,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
       <hr className='horisontal-divider' />
       <form onSubmit={formik.handleSubmit}>
         <Fieldset>
-          <Fieldset.Legend>Information about the enterprise's operations in Norway</Fieldset.Legend>
+          <Fieldset.Legend>Information about the enterprise's operations in Norway<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
@@ -102,7 +104,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
         <hr className='horisontal-divider' />
 
         <Fieldset>
-          <Fieldset.Legend>Address in Norway</Fieldset.Legend>
+          <Fieldset.Legend>Address in Norway<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
 
             <Checkbox
@@ -169,7 +171,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
         <hr className='horisontal-divider' />
 
         <Fieldset>
-          <Fieldset.Legend>General manager, contact person or business manager</Fieldset.Legend>
+          <Fieldset.Legend>General manager, contact person or business manager<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
@@ -224,7 +226,7 @@ export default function SkjemaPage3({ nextPage, prevPage }: Props) {
         <hr className='horisontal-divider' />
 
         <Fieldset>
-          <Fieldset.Legend>Add company activity/industry</Fieldset.Legend>
+          <Fieldset.Legend>Add company activity/industry<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Combobox
               className='main-size-input-box'

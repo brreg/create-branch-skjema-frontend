@@ -2,6 +2,7 @@ import SkjemaProgressBar from '../../components/skjema/progressBar';
 import { Button, Fieldset, Textfield } from '@digdir/designsystemet-react';
 import { getCookie, updateFormData } from '../../context/Cookie';
 import { useFormik } from 'formik';
+import { QuestionmarkCircleIcon } from '@navikt/aksel-icons';
 
 interface Props {
   nextPage: () => void;
@@ -55,7 +56,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
       <hr className='horisontal-divider' />
       <form onSubmit={formik.handleSubmit}>
         <Fieldset>
-          <Fieldset.Legend>Information about the business in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>Information about the business in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box'
@@ -77,7 +78,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
         </Fieldset>
         <hr className='horisontal-divider' />
         <Fieldset>
-          <Fieldset.Legend>Head office address in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>Head office address in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
 
             <Textfield
@@ -124,7 +125,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
         </Fieldset>
         <hr className='horisontal-divider' />
         <Fieldset>
-          <Fieldset.Legend>Type of organisation in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>Type of organisation in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box '
@@ -138,7 +139,7 @@ export default function SkjemaPage2({ nextPage, prevPage }: Props) {
         </Fieldset>
         <hr className='horisontal-divider' />
         <Fieldset>
-          <Fieldset.Legend>The business register in the country of origin</Fieldset.Legend>
+          <Fieldset.Legend>The business register in the country of origin<QuestionmarkCircleIcon /></Fieldset.Legend>
           <div className='input-boxes-horisontal'>
             <Textfield
               className='main-size-input-box '
